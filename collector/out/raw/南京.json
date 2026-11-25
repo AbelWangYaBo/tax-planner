@@ -1,0 +1,18 @@
+{
+  "city": "南京",
+  "province": "江苏省",
+  "kind": "housing",
+  "site": "https://gjj.nanjing.gov.cn/",
+  "year": 2026,
+  "fetchedAt": "2026-11-23T10:57:21.881Z",
+  "ok": false,
+  "via": "cdp",
+  "error": "未找到含基数上下限的公告",
+  "home": {
+    "url": "https://gjj.nanjing.gov.cn/",
+    "textLen": 323
+  },
+  "listPages": [],
+  "candidates": [],
+  "result": null
+}

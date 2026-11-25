@@ -1,0 +1,18 @@
+{
+  "city": "南昌",
+  "province": "江西省",
+  "kind": "housing",
+  "site": "https://gjj.nc.gov.cn/",
+  "year": 2026,
+  "fetchedAt": "2026-11-23T11:01:59.707Z",
+  "ok": false,
+  "via": "cdp",
+  "error": "未找到含基数上下限的公告",
+  "home": {
+    "url": "chrome-error://chromewebdata/",
+    "textLen": 325
+  },
+  "listPages": [],
+  "candidates": [],
+  "result": null
+}

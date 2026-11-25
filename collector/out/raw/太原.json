@@ -1,0 +1,18 @@
+{
+  "city": "太原",
+  "province": "山西省",
+  "kind": "housing",
+  "site": "https://gjj.taiyuan.gov.cn/",
+  "year": 2026,
+  "fetchedAt": "2026-11-23T11:00:31.106Z",
+  "ok": false,
+  "via": "cdp",
+  "error": "未找到含基数上下限的公告",
+  "home": {
+    "url": "chrome-error://chromewebdata/",
+    "textLen": 340
+  },
+  "listPages": [],
+  "candidates": [],
+  "result": null
+}

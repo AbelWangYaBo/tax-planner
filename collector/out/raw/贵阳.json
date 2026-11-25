@@ -1,0 +1,60 @@
+{
+  "city": "贵阳",
+  "province": "贵州省",
+  "kind": "housing",
+  "site": "https://gjj.guiyang.gov.cn/",
+  "year": 2026,
+  "fetchedAt": "2026-11-23T11:00:03.779Z",
+  "ok": true,
+  "via": "http",
+  "error": null,
+  "home": {
+    "url": "https://gjj.guiyang.gov.cn/",
+    "textLen": 720
+  },
+  "listPages": [
+    "https://gjj.guiyang.gov.cn/fzlm/zwgkgb/",
+    "https://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/fdzdgknrfggw/fggwbmwj/",
+    "https://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/fdzdgknrfggw/xxgkgfgwzcjd/",
+    "https://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/gggs/fdzdgknrtzgg/"
+  ],
+  "candidates": [
+    {
+      "title": "筑公积金通字〔2026〕1号 贵阳市住房公积金管理中心关于做好2026年度缴存基数调整工作的通知",
+      "url": "http://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/fdzdgknrfggw/fggwbmwj/202601/t20260108_89128326.html"
+    },
+    {
+      "title": "贵阳市住房公积金管理中心关于2026年度贵阳贵安住房公积金缴存基数及缴存比例执行标准的通知",
+      "url": "http://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/gggs/fdzdgknrtzgg/202607/t20260708_90598362.html"
+    },
+    {
+      "title": "·&nbsp; 筑公积金通字〔2026〕58号 贵阳市住房公积金管理中心关于调整贷款额度流...",
+      "url": "https://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/fdzdgknrfggw/fggwbmwj/202610/t20261009_90967005.html"
+    },
+    {
+      "title": "筑公积金通字〔2026〕58号 贵阳市住房公积金管理中心关于调整贷款额度流动性调节系数的通知",
+      "url": "http://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/fdzdgknrfggw/fggwbmwj/202610/t20261009_90967005.html"
+    },
+    {
+      "title": "筑公积金通字〔2026〕61号 贵阳市住房公积金管理中心关于提取住房公积金支付自住住房物业费的通知",
+      "url": "http://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/fdzdgknrfggw/fggwbmwj/202610/t20261010_90975094.html"
+    },
+    {
+      "title": "筑公积金通字〔2026〕60号 贵阳市住房公积金管理中心关于提取住房公积金装修自住住房的通知",
+      "url": "http://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/fdzdgknrfggw/fggwbmwj/202610/t20261010_90974991.html"
+    }
+  ],
+  "result": {
+    "upper": 25392,
+    "lower": 2130,
+    "period": null,
+    "confidence": "medium",
+    "snippets": [
+      "3.2026年度贵阳贵安住房公积金缴存基数上限当前执行标准为25392元,月缴存额上限为6094元,待2025年度贵阳市全口径城镇单位就业人员年平均工资标准调整后作相应调整",
+      "2.2026年度贵阳贵安住房公积金缴存基数下限为2130元,月缴存额下限为214元"
+    ],
+    "title": "筑公积金通字〔2026〕1号 贵阳市住房公积金管理中心关于做好2026年度缴存基数调整工作的通知",
+    "url": "http://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/fdzdgknrfggw/fggwbmwj/202601/t20260108_89128326.html",
+    "score": 89
+  }
+}

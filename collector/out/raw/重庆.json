@@ -1,0 +1,47 @@
+{
+  "city": "重庆",
+  "province": "重庆市",
+  "kind": "housing",
+  "site": "https://www.cqgjj.cn/",
+  "year": 2026,
+  "fetchedAt": "2026-11-23T10:55:58.804Z",
+  "ok": false,
+  "via": "http",
+  "error": "未找到含基数上下限的公告",
+  "home": {
+    "url": "https://www.cqgjj.cn/",
+    "textLen": 2200
+  },
+  "listPages": [
+    "https://www.cqgjj.cn/info/iList.jsp?cat_id=10002",
+    "https://www.cqgjj.cn/info/iIndex.jsp?cat_id=11368",
+    "https://www.cqgjj.cn/info/iList.jsp?cat_id=10087"
+  ],
+  "candidates": [
+    {
+      "title": "重庆市住房公积金管理中心关于调整住房公积金缴存基数下限的通知",
+      "url": "https://www.cqgjj.cn/zwgk/zcfg/hczc/3173.htm"
+    },
+    {
+      "title": "住房公积金缴存比例调整",
+      "url": "https://www.cqgjj.cn/zwgk/ywzn/gjjhczn/3085.htm"
+    },
+    {
+      "title": "重庆市住房公积金管理委员会关于优化调整住房公积金提取使用政策的通知",
+      "url": "https://www.cqgjj.cn/zwgk/zcfg/cqzc/3502.htm"
+    },
+    {
+      "title": "关于优化调整住房公积金使用政策的通知",
+      "url": "https://www.cqgjj.cn/zwgk/zcfg/dkzc/3150.htm"
+    },
+    {
+      "title": "关于优化调整住房公积金个人住房贷款政策的通知",
+      "url": "https://www.cqgjj.cn/zwgk/zcfg/dkzc/3124.htm"
+    },
+    {
+      "title": "重庆市住房公积金管理中心关于调整住房公积金个人住房贷款有关政策的通知",
+      "url": "https://www.cqgjj.cn/zwgk/zcfg/zfgjj/dkzc/2801.htm"
+    }
+  ],
+  "result": null
+}

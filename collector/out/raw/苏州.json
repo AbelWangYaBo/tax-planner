@@ -1,0 +1,48 @@
+{
+  "city": "苏州",
+  "province": "江苏省",
+  "kind": "housing",
+  "site": "https://gjj.suzhou.gov.cn/",
+  "year": 2026,
+  "fetchedAt": "2026-11-23T10:57:23.883Z",
+  "ok": false,
+  "via": "http",
+  "error": "未找到含基数上下限的公告",
+  "home": {
+    "url": "https://gjj.suzhou.gov.cn/",
+    "textLen": 4197
+  },
+  "listPages": [
+    "https://gjj.suzhou.gov.cn/szgjj/zcfg/nav_xjzl_zc.shtml",
+    "http://www.suzhou.gov.cn/szsrmzf/szsjyj5876/xxgkml_bm.shtml?deptcode=12320500466950710L",
+    "https://gjj.suzhou.gov.cn/szgjj/tzgg/list.shtml",
+    "https://mp.weixin.qq.com/s/TtL_GEHaeHG6jM2YiVxpRw"
+  ],
+  "candidates": [
+    {
+      "title": "缴存基数调整",
+      "url": "https://gjj.suzhou.gov.cn/szgjj/ndyw/202001/15d9bf34ed5243c7a38068e9ab7500fd.shtml"
+    },
+    {
+      "title": "缴存比例调整",
+      "url": "https://gjj.suzhou.gov.cn/szgjj/tsyw/201811/0e383d5fa6074c77be65a5c9e601ba89.shtml"
+    },
+    {
+      "title": "对《关于调整优化住房公积金使用政策的...",
+      "url": "https://gjj.suzhou.gov.cn/szgjj/zcjd/202410/8d894aba6f2544f0af37d2f3fe4ffd83.shtml"
+    },
+    {
+      "title": "关于调整住房公积金使用政策的通知政策...",
+      "url": "https://gjj.suzhou.gov.cn/szgjj/zcjd/202406/37474ea6091e477badf533e1b099ae37.shtml"
+    },
+    {
+      "title": "对《关于调整住房公积金使用政策的通知...",
+      "url": "https://gjj.suzhou.gov.cn/szgjj/zcjd/202310/c019d617d1c44ae98008e5028e45c858.shtml"
+    },
+    {
+      "title": "对《关于调整住房公积金使用政策的通知...",
+      "url": "https://gjj.suzhou.gov.cn/szgjj/zcjd/202305/b9eb611fd09149b6a2c38dcdf05b2e15.shtml"
+    }
+  ],
+  "result": null
+}

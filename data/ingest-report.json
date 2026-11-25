@@ -1,0 +1,30 @@
+{
+  "at": "2026-11-23T11:15:39.671Z",
+  "file": "/Volumes/APFS_2/abel/agent-benchmark/tax-planner/data/ai-ingest.jsonl",
+  "results": [
+    {
+      "ok": true,
+      "id": "杭州",
+      "kind": "housing",
+      "year": 2026,
+      "min": 2660,
+      "max": 42151,
+      "from": "2026-07-01",
+      "confidence": "high",
+      "status": "verified",
+      "merged": "inserted"
+    },
+    {
+      "ok": true,
+      "id": "杭州",
+      "kind": "housing",
+      "year": 2025,
+      "min": 2490,
+      "max": 40694,
+      "from": "2025-07-01",
+      "confidence": "high",
+      "status": "verified",
+      "merged": "inserted"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "city": "杭州",
+  "province": "浙江省",
+  "kind": "housing",
+  "site": "https://gjj.hangzhou.gov.cn/",
+  "year": 2026,
+  "fetchedAt": "2026-11-23T10:57:02.331Z",
+  "ok": true,
+  "via": "http",
+  "error": null,
+  "home": {
+    "url": "https://gjj.hangzhou.gov.cn/",
+    "textLen": 1192
+  },
+  "listPages": [
+    "https://gjj.hangzhou.gov.cn/col/col1229287673/index.html",
+    "https://gjj.hangzhou.gov.cn/col/col1570545/index.html",
+    "https://gjj.hangzhou.gov.cn/col/col1571008/index.html",
+    "https://www.zj.gov.cn/col/col1229577560/index.html"
+  ],
+  "candidates": [
+    {
+      "title": "2026年度住房公积金调整、验审专栏",
+      "url": "http://gjj.hangzhou.gov.cn/col/col1229810545/index.html"
+    },
+    {
+      "title": "2026年杭州住房公积金管理中心公开招聘编外工作人员公告",
+      "url": "https://gjj.hangzhou.gov.cn/col/col1229287673/art/2026/art_a8dbe1f97d63e24de9ba961199055882.html"
+    },
+    {
+      "title": "杭州住房公积金管理中心2026年第三期资金竞争性存放项目中标公告",
+      "url": "https://gjj.hangzhou.gov.cn/col/col1229287673/art/2026/art_81121409129f7f50bb55c0bff998b249.html"
+    },
+    {
+      "title": "2026年杭州住房公积金管理中心公开招聘编外工作人员补充公告",
+      "url": "https://gjj.hangzhou.gov.cn/col/col1229287673/art/2026/art_0af9a55d72a346a7cbe6d59aedd81a57.html"
+    },
+    {
+      "title": "关于《杭州住房公积金管理中心责令整改事先告知书》（杭公积金预责2026013363号）送达公告",
+      "url": "https://gjj.hangzhou.gov.cn/col/col1229287674/art/2026/art_54d14b28ecec4dd5b78fabed6f18349d.html"
+    },
+    {
+      "title": "关于《杭州住房公积金管理中心责令整改事先告知书》（杭公积金预责2026030634号）送达公告",
+      "url": "https://gjj.hangzhou.gov.cn/col/col1229287674/art/2026/art_0da76c1e9a634ee8955a5fb0e19df2f4.html"
+    }
+  ],
+  "result": {
+    "upper": 42151,
+    "lower": 2660,
+    "period": {
+      "from": "2026-07-01",
+      "to": "2027-06-30",
+      "text": "2026年7月1日至2027年6月30日"
+    },
+    "confidence": "medium",
+    "snippets": [
+      "答:单位职工缴存基数上限按杭州市2025年全市非私营单位就业人员月平均工资的3倍确定,缴存基数上限为42151元",
+      "缴存基数下限为政府公布执行的当地月最低工资标准,其中杭州市区为2660元,桐庐县、淳安县、建德市为2430元"
+    ],
+    "title": "杭州市2026年度住房公积金调整工作问题解答",
+    "url": "https://gjj.hangzhou.gov.cn/col/col1229810545/art/2026/art_a66f73ccb67f4176ab91a1af60b05c1a.html",
+    "depth": 2,
+    "score": 82
+  }
+}

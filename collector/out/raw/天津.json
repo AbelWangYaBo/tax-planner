@@ -1,0 +1,34 @@
+{
+  "city": "天津",
+  "province": "天津市",
+  "kind": "housing",
+  "site": "https://www.zfgjj.cn/",
+  "year": 2026,
+  "fetchedAt": "2026-11-23T10:55:57.216Z",
+  "ok": false,
+  "via": "http",
+  "error": "未找到含基数上下限的公告",
+  "home": {
+    "url": "https://www.zfgjj.cn/",
+    "textLen": 1066
+  },
+  "listPages": [
+    "https://www.zfgjj.cn/mainSitePc/regalution1.thtml?cid=10843",
+    "https://www.zfgjj.cn/mainSitePc/zcwj.thtml?cid=11116"
+  ],
+  "candidates": [
+    {
+      "title": "公告 2026-11-17",
+      "url": "https://www.zfgjj.cn/mainSitePc/content/pc_xwdt/xwdt_zxxw/xwdt_zxxw/391938.html"
+    },
+    {
+      "title": "公告 2026-10-16",
+      "url": "https://www.zfgjj.cn/mainSitePc/content/pc_xwdt/xwdt_zxxw/xwdt_zxxw/381023.html"
+    },
+    {
+      "title": "公告 2026-09-15",
+      "url": "https://www.zfgjj.cn/mainSitePc/content/pc_xwdt/xwdt_zxxw/xwdt_zxxw/380530.html"
+    }
+  ],
+  "result": null
+}

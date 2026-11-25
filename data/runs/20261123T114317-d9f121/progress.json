@@ -1,0 +1,169 @@
+{
+  "runId": "20261123T114317-d9f121",
+  "startedAt": "2026-11-23T11:43:17.244Z",
+  "updatedAt": "2026-11-23T11:43:35.572Z",
+  "years": [
+    2025,
+    2024
+  ],
+  "completed": 2,
+  "total": 2,
+  "current": {
+    "id": "上海市",
+    "kind": "social",
+    "year": 2024
+  },
+  "items": [
+    {
+      "id": "上海市",
+      "kind": "social",
+      "year": 2025,
+      "ok": false,
+      "error": "候选页面均未抽到上下限",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": [],
+      "tried": [
+        {
+          "url": "https://rsj.sh.gov.cn/tgsgg_17341/20261119/d68bf748ca2c4af9bc954542efa5062f.html",
+          "title": "关于上海市第四康复医院院区调整的公告",
+          "via": "cdp",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://rsj.sh.gov.cn/tshbx_17729/20260929/t0035_1444015.html",
+          "title": "上海市人力资源和社会保障局关于调整本市因工死亡人员供...",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": 1987,
+          "confidence": "low",
+          "reason": "找到下限但缺上限"
+        },
+        {
+          "url": "https://rsj.sh.gov.cn/tshbx_17729/20260929/t0035_1443999.html",
+          "title": "上海市人力资源和社会保障局关于调整本市工伤人员伤残津...",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": 9468,
+          "confidence": "low",
+          "reason": "找到下限但缺上限"
+        },
+        {
+          "url": "https://rsj.sh.gov.cn/tzcjd_17352_17352/20260929/t0035_1443997.html",
+          "title": "《上海市人力资源和社会保障局关于调整本市因工死亡人员...",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": 1987,
+          "confidence": "low",
+          "reason": "找到下限但缺上限"
+        },
+        {
+          "url": "https://rsj.sh.gov.cn/tzcjd_17352_17352/20260929/t0035_1443996.html",
+          "title": "《上海市人力资源和社会保障局关于调整本市工伤人员伤残...",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": 9468,
+          "confidence": "low",
+          "reason": "找到下限但缺上限"
+        },
+        {
+          "url": "https://rsj.sh.gov.cn/tqt_17733/20261029/t0035_1444429.html",
+          "title": "上海市人力资源和社会保障局等四部门关于调整户口仍在外地的农婚知青生活困难补助标准的通知",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        }
+      ]
+    },
+    {
+      "id": "上海市",
+      "kind": "social",
+      "year": 2024,
+      "ok": false,
+      "error": "候选页面均未抽到上下限",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": [],
+      "tried": [
+        {
+          "url": "https://rsj.sh.gov.cn/tgsgg_17341/20261119/d68bf748ca2c4af9bc954542efa5062f.html",
+          "title": "关于上海市第四康复医院院区调整的公告",
+          "via": "cdp",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://rsj.sh.gov.cn/tshbx_17729/20260929/t0035_1444015.html",
+          "title": "上海市人力资源和社会保障局关于调整本市因工死亡人员供...",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": 1987,
+          "confidence": "low",
+          "reason": "找到下限但缺上限"
+        },
+        {
+          "url": "https://rsj.sh.gov.cn/tshbx_17729/20260929/t0035_1443999.html",
+          "title": "上海市人力资源和社会保障局关于调整本市工伤人员伤残津...",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": 9468,
+          "confidence": "low",
+          "reason": "找到下限但缺上限"
+        },
+        {
+          "url": "https://rsj.sh.gov.cn/tzcjd_17352_17352/20260929/t0035_1443997.html",
+          "title": "《上海市人力资源和社会保障局关于调整本市因工死亡人员...",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": 1987,
+          "confidence": "low",
+          "reason": "找到下限但缺上限"
+        },
+        {
+          "url": "https://rsj.sh.gov.cn/tzcjd_17352_17352/20260929/t0035_1443996.html",
+          "title": "《上海市人力资源和社会保障局关于调整本市工伤人员伤残...",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": 9468,
+          "confidence": "low",
+          "reason": "找到下限但缺上限"
+        },
+        {
+          "url": "https://rsj.sh.gov.cn/tqt_17733/20261029/t0035_1444429.html",
+          "title": "上海市人力资源和社会保障局等四部门关于调整户口仍在外地的农婚知青生活困难补助标准的通知",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        }
+      ]
+    }
+  ],
+  "running": false
+}

@@ -1,0 +1,18 @@
+{
+  "city": "呼和浩特",
+  "province": "内蒙古自治区",
+  "kind": "housing",
+  "site": "https://gjj.huhhot.gov.cn/",
+  "year": 2026,
+  "fetchedAt": "2026-11-23T11:04:02.349Z",
+  "ok": false,
+  "via": "cdp",
+  "error": "未找到含基数上下限的公告",
+  "home": {
+    "url": "chrome-error://chromewebdata/",
+    "textLen": 337
+  },
+  "listPages": [],
+  "candidates": [],
+  "result": null
+}

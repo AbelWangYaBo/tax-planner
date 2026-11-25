@@ -1,0 +1,1595 @@
+{
+  "runId": "20261123T112312-fe5b9a",
+  "startedAt": "2026-11-23T11:23:12.343Z",
+  "updatedAt": "2026-11-23T11:28:50.465Z",
+  "years": [
+    2026,
+    2025
+  ],
+  "completed": 26,
+  "total": 26,
+  "current": {
+    "id": "贵阳",
+    "kind": "housing",
+    "year": 2025
+  },
+  "items": [
+    {
+      "id": "重庆",
+      "kind": "housing",
+      "year": 2026,
+      "ok": false,
+      "error": "正文是 PDF/附件，已加入 AI 识别队列（1 篇）",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": [],
+      "tried": [
+        {
+          "url": "https://www.cqgjj.cn/zwgk/zcfg/hczc/3173.htm",
+          "title": "重庆市住房公积金管理中心关于调整住房公积金缴存基数下限的通知",
+          "via": "cdp",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://www.cqgjj.cn/zwgk/ywzn/gjjhczn/3085.htm",
+          "title": "住房公积金缴存比例调整",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://www.cqgjj.cn/zcfg/zfgjj/hczc/25550.htm",
+          "title": "重庆市住房公积金管理委员会关于贯彻落实国家四部委和市政府规范和调整住房公积金缴存..",
+          "via": "cdp",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://www.cqgjj.cn/upload/CMScqgjj/202207/2022070774rus26595.xlsx",
+          "title": "住房公积金缴存比例特殊调整申请表.xlsx",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://www.cqgjj.cn/info/iList.jsp?cat_id=10024",
+          "title": "公积金缴存指南",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://www.cqgjj.cn/info/iList.jsp?cat_id=10072",
+          "title": "缴存银行网点",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://www.cqgjj.cn/zwgk/zcfg/zfbt/3530.htm",
+          "title": "关于印发《重庆市住房补贴缴存和提取实施细则》的通知",
+          "via": "cdp",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://www.cqgjj.cn/zwgk/zcfg/zfbt/3530.htm",
+          "title": "关于印发《重庆市住房补贴缴存和提取实施细则》的通知",
+          "needsAI": true,
+          "relevant": false,
+          "attachment": "https://www.cqgjj.cn/upload/CMScqgjj/202611/20261106c2xebdtpdt.docx"
+        },
+        {
+          "url": "https://www.cqgjj.cn/zwgk/ywzn/gjjcqzn/2772.htm",
+          "title": "住房公积金缴存职工个人婚姻信息申报",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        }
+      ]
+    },
+    {
+      "id": "重庆",
+      "kind": "housing",
+      "year": 2025,
+      "ok": false,
+      "error": "正文是 PDF/附件，已加入 AI 识别队列（1 篇）",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": [],
+      "tried": [
+        {
+          "url": "https://www.cqgjj.cn/zwgk/gsgg/3484.htm",
+          "title": "重庆市住房公积金管理中心2025年度部门决算公开",
+          "via": "cdp",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://www.cqgjj.cn/zwgk/gsgg/3484.htm",
+          "title": "重庆市住房公积金管理中心2025年度部门决算公开",
+          "needsAI": true,
+          "relevant": true,
+          "attachment": "https://www.cqgjj.cn/upload/CMScqgjj/202609/20260901ddirtyfkfd.pdf"
+        },
+        {
+          "url": "https://www.cqgjj.cn/zwgk/zcfg/hczc/3173.htm",
+          "title": "重庆市住房公积金管理中心关于调整住房公积金缴存基数下限的通知",
+          "via": "cdp",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://www.cqgjj.cn/zwgk/ywzn/gjjhczn/3085.htm",
+          "title": "住房公积金缴存比例调整",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://www.cqgjj.cn/zcfg/zfgjj/hczc/25550.htm",
+          "title": "重庆市住房公积金管理委员会关于贯彻落实国家四部委和市政府规范和调整住房公积金缴存..",
+          "via": "cdp",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://www.cqgjj.cn/upload/CMScqgjj/202207/2022070774rus26595.xlsx",
+          "title": "住房公积金缴存比例特殊调整申请表.xlsx",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://www.cqgjj.cn/info/iList.jsp?cat_id=10024",
+          "title": "公积金缴存指南",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://www.cqgjj.cn/info/iList.jsp?cat_id=10072",
+          "title": "缴存银行网点",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://www.cqgjj.cn/zwgk/zcfg/zfbt/3530.htm",
+          "title": "关于印发《重庆市住房补贴缴存和提取实施细则》的通知",
+          "via": "cdp",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        }
+      ]
+    },
+    {
+      "id": "苏州",
+      "kind": "housing",
+      "year": 2026,
+      "ok": false,
+      "error": "正文是 PDF/附件，已加入 AI 识别队列（1 篇）",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": [],
+      "tried": [
+        {
+          "url": "https://gjj.suzhou.gov.cn/szgjj/tzgg/202601/2be48ebd69b54f22b88d2e4723ddb179.shtml",
+          "title": "关于调整春节期间住房公积金单位委托收款扣款结算日期、还贷委托提取日期的通告2be48ebd69b54f22b88d2e4723ddb179",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.suzhou.gov.cn/szgjj/tzgg/202608/377d4d140db24bafbe3d7798d1ed9d5e.shtml",
+          "title": "关于苏州全市住房公积金部分业务暂停办理的通告377d4d140db24bafbe3d7798d1ed9d5e",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.suzhou.gov.cn/szgjj/tzgg/202607/957f5a4078c645f9b526e1c896b28844.shtml",
+          "title": "关于开展《苏州市住房公积金管理办法》立法后评估工作的公告957f5a4078c645f9b526e1c896b28844",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.suzhou.gov.cn/szgjj/tzgg/202607/957f5a4078c645f9b526e1c896b28844.shtml",
+          "title": "关于开展《苏州市住房公积金管理办法》立法后评估工作的公告957f5a4078c645f9b526e1c896b28844",
+          "needsAI": true,
+          "relevant": false,
+          "attachment": "https://gjj.suzhou.gov.cn/szgjj/tzgg/202607/957f5a4078c645f9b526e1c896b28844/files/c6f0221eb3eb4cf1b20cb93f4d53ce6b.pdf"
+        },
+        {
+          "url": "https://gjj.suzhou.gov.cn/szgjj/tzgg/202606/7c43effc440b49968842c484095b5fdd.shtml",
+          "title": "关于住房公积金年度结息暂停部分业务的通告7c43effc440b49968842c484095b5fdd",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.suzhou.gov.cn/szgjj/zcjd/202310/c019d617d1c44ae98008e5028e45c858.shtml",
+          "title": "对《关于调整住房公积金使用政策的通知...",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.suzhou.gov.cn/szgjj/zcjd/202305/b9eb611fd09149b6a2c38dcdf05b2e15.shtml",
+          "title": "对《关于调整住房公积金使用政策的通知...",
+          "via": "http",
+          "ok": false,
+          "upper": 3000,
+          "lower": null,
+          "confidence": "low",
+          "reason": "找到上限但缺下限"
+        },
+        {
+          "url": "https://gjj.suzhou.gov.cn/szgjj/tzgg/202307/aa742608be3a441280fe48d73eeaf4e8.shtml",
+          "title": "住房公积金服务网点调整公告aa742608be3a441280fe48d73eeaf4e8",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "http://gjj.suzhou.gov.cn/",
+          "title": "苏州市住房公积金管理中心",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        }
+      ]
+    },
+    {
+      "id": "苏州",
+      "kind": "housing",
+      "year": 2025,
+      "ok": false,
+      "error": "候选页面均未抽到上下限",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": [],
+      "tried": [
+        {
+          "url": "https://gjj.suzhou.gov.cn/szgjj/tzgg/202604/d8f80999b5fd48328307198d6c274898.shtml",
+          "title": "苏州市住房公积金管理中心2025年度法治政府建设情况报告d8f80999b5fd48328307198d6c274898",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.suzhou.gov.cn/szgjj/tzgg/202511/fe0379638a1c46e4926427bc1d470a23.shtml",
+          "title": "中共苏州市住房公积金管理中心党组关于巡察整改进展情况的通报fe0379638a1c46e4926427bc1d470a23",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.suzhou.gov.cn/szgjj/tzgg/202506/c838f19337e3421c925bc6e06cd459c9.shtml",
+          "title": "关于住房公积金年度结息暂停部分业务的通告c838f19337e3421c925bc6e06cd459c9",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "http://gjj.suzhou.gov.cn/",
+          "title": "苏州市住房公积金管理中心",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.suzhou.gov.cn/szgjj/zcjd/202410/8d894aba6f2544f0af37d2f3fe4ffd83.shtml",
+          "title": "对《关于调整优化住房公积金使用政策的...",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.suzhou.gov.cn/szgjj/zcjd/202406/37474ea6091e477badf533e1b099ae37.shtml",
+          "title": "关于调整住房公积金使用政策的通知政策...",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.suzhou.gov.cn/szgjj/zcjd/202310/c019d617d1c44ae98008e5028e45c858.shtml",
+          "title": "对《关于调整住房公积金使用政策的通知...",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.suzhou.gov.cn/szgjj/zcjd/202305/b9eb611fd09149b6a2c38dcdf05b2e15.shtml",
+          "title": "对《关于调整住房公积金使用政策的通知...",
+          "via": "http",
+          "ok": false,
+          "upper": 3000,
+          "lower": null,
+          "confidence": "low",
+          "reason": "找到上限但缺下限"
+        }
+      ]
+    },
+    {
+      "id": "无锡",
+      "kind": "housing",
+      "year": 2026,
+      "ok": false,
+      "error": "未发现候选公告（站点不可达或无相关栏目）",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": []
+    },
+    {
+      "id": "无锡",
+      "kind": "housing",
+      "year": 2025,
+      "ok": false,
+      "error": "未发现候选公告（站点不可达或无相关栏目）",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": []
+    },
+    {
+      "id": "武汉",
+      "kind": "housing",
+      "year": 2026,
+      "ok": false,
+      "error": "正文是 PDF/附件，已加入 AI 识别队列（1 篇）",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": [],
+      "tried": [
+        {
+          "url": "https://gjj.wuhan.gov.cn/zwgk/zc/gfxwj/202605/t20260511_2762746.html",
+          "title": "【其他】武公中规〔2026〕4号《武汉住房公积金管理中心关于印发武汉市灵活就业人员住房公积金缴存使用管理办法、缴存提取管理实施细则和个人住房贷款实施细则的通知》",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.wuhan.gov.cn/xxfw/zdgz/gzbsjz/zxyw/202611/t20261117_2880841.html",
+          "title": "武汉住房公积金管理中心参加2026年度《行风连线》直播节目履职担当赋能高效政务",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.wuhan.gov.cn/zwgk/zc/gfxwj/202611/t20261104_2874124.html",
+          "title": "【提取】武公中规〔2026〕6号《武汉住房公积金管理中心关于印发武汉住房公积金提取管理办法及提取管理实施细则的通知》",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.wuhan.gov.cn/zwgk/zc/gfxwj/202605/t20260511_2762714.html",
+          "title": "【贷款】武公中规〔2026〕3号《关于印发武汉住房公积金异地个人住房贷款实施细则的通知》",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.wuhan.gov.cn/zwgk/zc/gfxwj/202604/t20260403_2748856.html",
+          "title": "【贷款】武公中规〔2026〕2号武汉住房公积金管理中心关于优化住房公积金使用政策的通知",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.wuhan.gov.cn/zwgk/zc/gfxwj/202604/t20260413_2752292.html",
+          "title": "【委托扣划】武公中规〔2026〕1号《武汉住房公积金管理中心关于印发委托扣划住房公积金偿还住房公积金贷款实施细则的通知》",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.wuhan.gov.cn/zwgk/xxgkzn/202502/t20250212_2531628.html",
+          "title": "武汉住房公积金管理中心政府信息主动公开基本目录（2026版）",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.wuhan.gov.cn/zwgk/xxgkzn/202502/t20250212_2531628.html",
+          "title": "武汉住房公积金管理中心政府信息主动公开基本目录（2026版）",
+          "needsAI": true,
+          "relevant": true,
+          "attachment": "https://gjj.wuhan.gov.cn/zwgk/xxgkzn/202502/P020250212335230128465.xls"
+        },
+        {
+          "url": "https://gjj.wuhan.gov.cn/zwgk/xxgkzn/202502/t20250212_2531758.html",
+          "title": "武汉住房公积金管理中心政府信息公开指南（2026年版）",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        }
+      ]
+    },
+    {
+      "id": "武汉",
+      "kind": "housing",
+      "year": 2025,
+      "ok": false,
+      "error": "候选页面均未抽到上下限",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": [],
+      "tried": [
+        {
+          "url": "https://gjj.wuhan.gov.cn/zwgk/zc/gfxwj/202512/t20251230_2704304.html",
+          "title": "【贷款】武公中规〔2025〕2号《武汉个人住房商业贷款转住房公积金贷款实施细则》",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.wuhan.gov.cn/zwgk/ndbg/202603/t20260326_2745342.html",
+          "title": "武汉住房公积金2025年年度报告",
+          "via": "http",
+          "ok": false,
+          "upper": 560.25,
+          "lower": null,
+          "confidence": "low",
+          "reason": "找到上限但缺下限"
+        },
+        {
+          "url": "https://gjj.wuhan.gov.cn/zwgk/ndbg/202601/t20260115_2711929.html",
+          "title": "武汉住房公积金管理中心2025年政府信息公开工作年度报告",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.wuhan.gov.cn/bsfw/bmgj/gjjjsq_95309/hkbjjsq/index.html",
+          "title": "公积金计算器",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "http://gjj.huangshi.gov.cn/",
+          "title": "黄石市住房公积金网",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "http://gjj.shiyan.gov.cn/",
+          "title": "十堰住房公积金管理中心",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "http://gjj.yichang.gov.cn/",
+          "title": "宜昌住房公积金网",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "http://gjj.xiangyang.gov.cn/",
+          "title": "襄阳市住房公积金管理中心",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        }
+      ]
+    },
+    {
+      "id": "成都",
+      "kind": "housing",
+      "year": 2026,
+      "ok": true,
+      "error": null,
+      "upper": 32969,
+      "lower": 2330,
+      "confidence": "high",
+      "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156365/2026-07/31/content_d0fc769d206943f99514a012d02bb981.shtml",
+      "merged": "duplicate",
+      "notes": [
+        "公积金上下限比值 14.15 异常"
+      ],
+      "title": "[种子]",
+      "from": "2026-01-01",
+      "to": null,
+      "tried": [
+        {
+          "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156365/2026-07/31/content_d0fc769d206943f99514a012d02bb981.shtml",
+          "title": "[种子]",
+          "via": "cdp",
+          "ok": true,
+          "upper": 32969,
+          "lower": 2330,
+          "confidence": "high"
+        }
+      ],
+      "observation": {
+        "kind": "housing",
+        "scope": "city",
+        "id": "成都",
+        "province": "四川省",
+        "policyYear": 2026,
+        "from": "2026-01-01",
+        "to": null,
+        "min": 2330,
+        "max": 32969,
+        "basisYear": 2025,
+        "rate": {
+          "min": 0.05,
+          "max": 0.12
+        },
+        "docNo": "成公积金委〔2026〕5号",
+        "title": "网站首页 政务公开 政府信息公开 中心概况 机构职能 领导分工 组织机构 法制信息 普法工作 行政执法 公开年报 年度报告 年报解读 涉企行政检查公示 行政检查事项和依据 行政检查频次上限 行政检查标准 专项检查计划 行政检查文书 骗提套取",
+        "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156365/2026-07/31/content_d0fc769d206943f99514a012d02bb981.shtml",
+        "publishedAt": "2026-07-31",
+        "via": "cdp",
+        "ocr": false,
+        "confidence": "high",
+        "evidence": [
+          {
+            "snippet": "根据市统计局公布的2025年全市城镇非私营单位就业人员年平均工资,我市住房公积金缴存基数上限为32969元",
+            "label": "上限",
+            "score": 12
+          },
+          {
+            "snippet": "根据2025年全市月最低工资标准,我市住房公积金缴存基数下限为:城市新区(四川天府新区、成都东部新区、成都高新区)和中心城区(锦江区、青羊区、金牛区、武侯区、成华区、龙泉驿区、青白江区、新都区、温江区、双流区、郫都区、新津区)2330元",
+            "label": "下限",
+            "score": -2
+          }
+        ],
+        "notes": [
+          "公积金上下限比值 14.15 异常"
+        ],
+        "hash": "55215089829ce36545fbcb213558698e91a42063",
+        "collectedAt": "2026-11-23T11:25:59.126Z",
+        "runId": "20261123T112312-fe5b9a",
+        "status": "verified",
+        "candidatesTried": [
+          {
+            "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156365/2026-07/31/content_d0fc769d206943f99514a012d02bb981.shtml",
+            "title": "[种子]",
+            "via": "cdp",
+            "ok": true,
+            "upper": 32969,
+            "lower": 2330,
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    {
+      "id": "成都",
+      "kind": "housing",
+      "year": 2025,
+      "ok": false,
+      "error": "正文是 PDF/附件，已加入 AI 识别队列（1 篇）",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": [],
+      "tried": [
+        {
+          "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156367/2025-08/14/content_48b34f0f1ec74ac2b791457a20534932.shtml",
+          "title": "《成都住房公积金管理委员会等4部门关于成德眉资缴存职工在四市区域内非缴存地购房有关...",
+          "via": "cdp",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156358/2025-02/25/content_f3c24473b2f04066ba033d47ec0c76e8.shtml",
+          "title": "住房城乡建设部办公厅关于整合住房公积金个人证明事项推动“亮码可办”工作的通知",
+          "via": "cdp",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156358/2025-02/25/content_f3c24473b2f04066ba033d47ec0c76e8.shtml",
+          "title": "住房城乡建设部办公厅关于整合住房公积金个人证明事项推动“亮码可办”工作的通知",
+          "needsAI": true,
+          "relevant": false,
+          "attachment": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156358/2025-02/25/f3c24473b2f04066ba033d47ec0c76e8/files/ad4c0a7a6d394388bf4f9b2319259ed4.doc"
+        },
+        {
+          "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156358/2025-02/25/content_a78e73c057b54aa99ed94bd6aaa4455f.shtml",
+          "title": "住房和城乡建设部关于加快住房公积金数字化发展的指导意见",
+          "via": "cdp",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s/u4eT32kGHIB_xr5-9Qkeew",
+          "title": "@单位经办人看过来，这里有一份缴存基数调整攻略→",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156367/2025-08/04/content_2ca7bb111f88443cb09c5f25f644c101.shtml",
+          "title": "《成都住房公积金管理中心关于调整住房公积金贷款额度计算公式的通知》解读文本",
+          "via": "cdp",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156367/2025-02/08/content_a54d879e0d9a461bac6a018a16a6f87c.shtml",
+          "title": "《成都住房公积金管理中心关于调整住房公积金贷款到期日的通知》解读文本",
+          "via": "cdp",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156366/2025-12/31/content_d7546d1e3499490e8ade2a88c043a19f.shtml",
+          "title": "《成都住房公积金管理中心关于购房提取代际互助规定的通知》解读",
+          "via": "cdp",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156366/2025-09/17/content_efb1476dd1b449b3a9d7b6f1de7f3fe9.shtml",
+          "title": "《成都住房公积金管理中心关于优化重大疾病提取住房公积金的通知》解读",
+          "via": "cdp",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        }
+      ]
+    },
+    {
+      "id": "郑州",
+      "kind": "housing",
+      "year": 2026,
+      "ok": true,
+      "error": null,
+      "upper": 28849,
+      "lower": 2350,
+      "confidence": "medium",
+      "url": "https://zzgjj.zhengzhou.gov.cn/zcfg/10197385.jhtml",
+      "merged": "inserted",
+      "notes": [
+        "公积金上下限比值 12.28 异常"
+      ],
+      "title": "郑州住房公积金管理中心关于调整2026年度住房公积金缴存基数的通知2026-08-11",
+      "from": "2026-07-01",
+      "to": null,
+      "tried": [
+        {
+          "url": "https://zzgjj.zhengzhou.gov.cn/zcfg/10197385.jhtml",
+          "title": "郑州住房公积金管理中心关于调整2026年度住房公积金缴存基数的通知2026-08-11",
+          "via": "http",
+          "ok": true,
+          "upper": 28849,
+          "lower": 2350,
+          "confidence": "medium"
+        },
+        {
+          "url": "https://zzgjj.zhengzhou.gov.cn/zcfg/10273620.jhtml",
+          "title": "郑州住房公积金管理中心关于优化调整住房公积金提取政策的通知2026-09-29",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://zzgjj.zhengzhou.gov.cn/zcfg/10002751.jhtml",
+          "title": "郑州住房公积金管理中心关于调整住房公积金个人住房贷款借款人年龄上限的通知2026-04-16",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://zzgjj.zhengzhou.gov.cn/zcfg/10333354.jhtml",
+          "title": "郑州住房公积金管理中心关于支持自住住房装修提取住房公积金有关事项的通知2026-11-04",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://zzgjj.zhengzhou.gov.cn/zcfg/10333367.jhtml",
+          "title": "郑州住房公积金管理中心郑州市自然资源和规划局郑州市住房保障和房地产管理局关于推行个人住房公积金贷款及抵押权登记“不见面审批”服务的通知2026-10-30",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://zzgjj.zhengzhou.gov.cn/zcfg/10333367.jhtml",
+          "title": "郑州住房公积金管理中心郑州市自然资源和规划局郑州市住房保障和房地产管理局关于推行个人住房公积金贷款及抵押权登记“不见面审批”服务的通知2026-10-30",
+          "needsAI": true,
+          "relevant": true,
+          "attachment": "https://zzgjj.zhengzhou.gov.cn/attachment/%E9%83%91%E5%B7%9E%E4%BD%8F%E6%88%BF%E5%85%AC%E7%A7%AF%E9%87%91%E8%B4%B7%E6%AC%BE%E5%8F%8A%E6%8A%B5%E6%8A%BC%E6%9D%83%E7%99%BB%E8%AE%B0%E2%80%9C%E4%B8%8D%E8%A7%81%E9%9D%A2%E5%AE%A1%E6%89%B9%E2%80%9D%E6%B5%81%E7%A8%8B.docx?fmlH8c7l07AhTovm4bpv1k1gQdeKF74UwKS6MXdj4KkPi-O3rCyjT7BtROAyBHhQmqkSQN4mOaR3idBIul2ozP22RQad"
+        },
+        {
+          "url": "https://zzgjj.zhengzhou.gov.cn/zcfg/10218628.jhtml",
+          "title": "郑州住房公积金管理中心关于进一步优化住房公积金贷款政策的通知2026-08-26",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://zzgjj.zhengzhou.gov.cn/zcfg/10079499.jhtml",
+          "title": "郑州住房公积金管理中心郑州市住房保障和房地产管理局关于预提住房公积金支付存量住房购房款有关事项的通知2026-06-02",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://zzgjj.zhengzhou.gov.cn/zcfg/10014648.jhtml",
+          "title": "郑州住房公积金管理中心关于住房公积金部分提取业务实行“免证办”有关事项的通知2026-04-17",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        }
+      ],
+      "observation": {
+        "kind": "housing",
+        "scope": "city",
+        "id": "郑州",
+        "province": "河南省",
+        "policyYear": 2026,
+        "from": "2026-07-01",
+        "to": null,
+        "min": 2350,
+        "max": 28849,
+        "basisYear": 2025,
+        "rate": {
+          "min": 0.05,
+          "max": 0.12
+        },
+        "docNo": "郑公积金〔2026〕18号",
+        "title": "河南省人民政府 河南省住房和城乡建设厅 郑州市人民政府 郑州政务服务网 繁體 登录 首页 机构介绍 中心介绍 机构设置 领导集体 工作职责 联系方式 最新动态 政务要闻 中心动态 行政审批公示 政务服务 行政执法 执法依据 执法公告 维权须",
+        "url": "https://zzgjj.zhengzhou.gov.cn/zcfg/10197385.jhtml",
+        "publishedAt": "2026-08-11",
+        "via": "http",
+        "ocr": false,
+        "confidence": "medium",
+        "evidence": [
+          {
+            "snippet": "(二)缴存基数规定 住房公积金缴存基数为职工个人上一年度月平均工资,职工工资应根据国家统计局关于工资总额组成的规定核定,最高不得超过郑州市2025年度非私营单位在岗职工月平均工资的3倍28849元,最低不低于郑州市2025年度最低工资标准2350元",
+            "label": "3倍",
+            "score": 3
+          },
+          {
+            "snippet": "(二)缴存基数规定 住房公积金缴存基数为职工个人上一年度月平均工资,职工工资应根据国家统计局关于工资总额组成的规定核定,最高不得超过郑州市2025年度非私营单位在岗职工月平均工资的3倍28849元,最低不低于郑州市2025年度最低工资标准2350元",
+            "label": "最低",
+            "score": 3
+          }
+        ],
+        "notes": [
+          "公积金上下限比值 12.28 异常"
+        ],
+        "hash": "32f58e62e814306a1e2324f7216412109d4dbe77",
+        "collectedAt": "2026-11-23T11:26:19.473Z",
+        "runId": "20261123T112312-fe5b9a",
+        "status": "suspect",
+        "candidatesTried": [
+          {
+            "url": "https://zzgjj.zhengzhou.gov.cn/zcfg/10197385.jhtml",
+            "title": "郑州住房公积金管理中心关于调整2026年度住房公积金缴存基数的通知2026-08-11",
+            "via": "http",
+            "ok": true,
+            "upper": 28849,
+            "lower": 2350,
+            "confidence": "medium"
+          },
+          {
+            "url": "https://zzgjj.zhengzhou.gov.cn/zcfg/10273620.jhtml",
+            "title": "郑州住房公积金管理中心关于优化调整住房公积金提取政策的通知2026-09-29",
+            "via": "http",
+            "ok": false,
+            "upper": null,
+            "lower": null,
+            "confidence": "low",
+            "reason": "未找到基数上下限"
+          },
+          {
+            "url": "https://zzgjj.zhengzhou.gov.cn/zcfg/10002751.jhtml",
+            "title": "郑州住房公积金管理中心关于调整住房公积金个人住房贷款借款人年龄上限的通知2026-04-16",
+            "via": "http",
+            "ok": false,
+            "upper": null,
+            "lower": null,
+            "confidence": "low",
+            "reason": "未找到基数上下限"
+          },
+          {
+            "url": "https://zzgjj.zhengzhou.gov.cn/zcfg/10333354.jhtml",
+            "title": "郑州住房公积金管理中心关于支持自住住房装修提取住房公积金有关事项的通知2026-11-04",
+            "via": "http",
+            "ok": false,
+            "upper": null,
+            "lower": null,
+            "confidence": "low",
+            "reason": "未找到基数上下限"
+          },
+          {
+            "url": "https://zzgjj.zhengzhou.gov.cn/zcfg/10333367.jhtml",
+            "title": "郑州住房公积金管理中心郑州市自然资源和规划局郑州市住房保障和房地产管理局关于推行个人住房公积金贷款及抵押权登记“不见面审批”服务的通知2026-10-30",
+            "via": "http",
+            "ok": false,
+            "upper": null,
+            "lower": null,
+            "confidence": "low",
+            "reason": "未找到基数上下限"
+          },
+          {
+            "url": "https://zzgjj.zhengzhou.gov.cn/zcfg/10333367.jhtml",
+            "title": "郑州住房公积金管理中心郑州市自然资源和规划局郑州市住房保障和房地产管理局关于推行个人住房公积金贷款及抵押权登记“不见面审批”服务的通知2026-10-30",
+            "needsAI": true,
+            "relevant": true,
+            "attachment": "https://zzgjj.zhengzhou.gov.cn/attachment/%E9%83%91%E5%B7%9E%E4%BD%8F%E6%88%BF%E5%85%AC%E7%A7%AF%E9%87%91%E8%B4%B7%E6%AC%BE%E5%8F%8A%E6%8A%B5%E6%8A%BC%E6%9D%83%E7%99%BB%E8%AE%B0%E2%80%9C%E4%B8%8D%E8%A7%81%E9%9D%A2%E5%AE%A1%E6%89%B9%E2%80%9D%E6%B5%81%E7%A8%8B.docx?fmlH8c7l07AhTovm4bpv1k1gQdeKF74UwKS6MXdj4KkPi-O3rCyjT7BtROAyBHhQmqkSQN4mOaR3idBIul2ozP22RQad"
+          },
+          {
+            "url": "https://zzgjj.zhengzhou.gov.cn/zcfg/10218628.jhtml",
+            "title": "郑州住房公积金管理中心关于进一步优化住房公积金贷款政策的通知2026-08-26",
+            "via": "http",
+            "ok": false,
+            "upper": null,
+            "lower": null,
+            "confidence": "low",
+            "reason": "未找到基数上下限"
+          },
+          {
+            "url": "https://zzgjj.zhengzhou.gov.cn/zcfg/10079499.jhtml",
+            "title": "郑州住房公积金管理中心郑州市住房保障和房地产管理局关于预提住房公积金支付存量住房购房款有关事项的通知2026-06-02",
+            "via": "http",
+            "ok": false,
+            "upper": null,
+            "lower": null,
+            "confidence": "low",
+            "reason": "未找到基数上下限"
+          },
+          {
+            "url": "https://zzgjj.zhengzhou.gov.cn/zcfg/10014648.jhtml",
+            "title": "郑州住房公积金管理中心关于住房公积金部分提取业务实行“免证办”有关事项的通知2026-04-17",
+            "via": "http",
+            "ok": false,
+            "upper": null,
+            "lower": null,
+            "confidence": "low",
+            "reason": "未找到基数上下限"
+          }
+        ]
+      }
+    },
+    {
+      "id": "郑州",
+      "kind": "housing",
+      "year": 2025,
+      "ok": false,
+      "error": "候选页面均未抽到上下限",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": [],
+      "tried": [
+        {
+          "url": "https://zzgjj.zhengzhou.gov.cn/zcfg/9827092.jhtml",
+          "title": "郑州住房公积金管理中心关于开通住房公积金个人住房贷款网上申请有关事项的通知2025-11-11",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        }
+      ]
+    },
+    {
+      "id": "长沙",
+      "kind": "housing",
+      "year": 2026,
+      "ok": false,
+      "error": "未发现候选公告（站点不可达或无相关栏目）",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": []
+    },
+    {
+      "id": "长沙",
+      "kind": "housing",
+      "year": 2025,
+      "ok": false,
+      "error": "未发现候选公告（站点不可达或无相关栏目）",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": []
+    },
+    {
+      "id": "合肥",
+      "kind": "housing",
+      "year": 2026,
+      "ok": false,
+      "error": "未发现候选公告（站点不可达或无相关栏目）",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": []
+    },
+    {
+      "id": "合肥",
+      "kind": "housing",
+      "year": 2025,
+      "ok": false,
+      "error": "未发现候选公告（站点不可达或无相关栏目）",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": []
+    },
+    {
+      "id": "青岛",
+      "kind": "housing",
+      "year": 2026,
+      "ok": false,
+      "error": "未发现候选公告（站点不可达或无相关栏目）",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": []
+    },
+    {
+      "id": "青岛",
+      "kind": "housing",
+      "year": 2025,
+      "ok": false,
+      "error": "未发现候选公告（站点不可达或无相关栏目）",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": []
+    },
+    {
+      "id": "济南",
+      "kind": "housing",
+      "year": 2026,
+      "ok": false,
+      "error": "未发现候选公告（站点不可达或无相关栏目）",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": []
+    },
+    {
+      "id": "济南",
+      "kind": "housing",
+      "year": 2025,
+      "ok": false,
+      "error": "未发现候选公告（站点不可达或无相关栏目）",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": []
+    },
+    {
+      "id": "宁波",
+      "kind": "housing",
+      "year": 2026,
+      "ok": false,
+      "error": "未发现候选公告（站点不可达或无相关栏目）",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": []
+    },
+    {
+      "id": "宁波",
+      "kind": "housing",
+      "year": 2025,
+      "ok": false,
+      "error": "未发现候选公告（站点不可达或无相关栏目）",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": []
+    },
+    {
+      "id": "昆明",
+      "kind": "housing",
+      "year": 2026,
+      "ok": false,
+      "error": "候选页面均未抽到上下限",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": [],
+      "tried": [
+        {
+          "url": "http://zfgjj.km.gov.cn/c/2026-02-08/5058577.shtml",
+          "title": "春风策马踏新途&#32;聚力同行攀高峰—昆明市住房公积金管理中心2026...",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "http://zfgjj.km.gov.cn/c/2026-09-18/5114023.shtml",
+          "title": "昆明市住房公积金管理中心关于调整灵活就业缴存人住房公积金贷款倍数的通知",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "http://zfgjj.km.gov.cn/c/2026-11-11/5125560.shtml",
+          "title": "【金金乐道】想查住房公积金每月缴存了多少？不用跑大厅，手机就能查",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "http://zfgjj.km.gov.cn/c/2026-09-18/5114027.shtml",
+          "title": "昆明市住房公积金管理中心关于进一步优化调整住房公积金提取使用政策的通知",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "http://zfgjj.km.gov.cn/c/2026-09-18/5114028.shtml",
+          "title": "【金金乐道】昆明市灵活就业缴存人住房公积金贷款倍数提高",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "http://zfgjj.km.gov.cn/c/2026-10-22/5120966.shtml",
+          "title": "昆明市住房公积金管理中心关于恢复业务办理的通告",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "http://zfgjj.km.gov.cn/c/2026-11-20/5127760.shtml",
+          "title": "滴！您的首付款已支付成功!&#32;昆明公积金“直付”托起安居梦",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "http://zfgjj.km.gov.cn/c/2026-10-23/5121200.shtml",
+          "title": "【金金乐道】就近办！公积金服务网点一键导航‘",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        }
+      ]
+    },
+    {
+      "id": "昆明",
+      "kind": "housing",
+      "year": 2025,
+      "ok": false,
+      "error": "候选页面均未抽到上下限",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": [],
+      "tried": [
+        {
+          "url": "http://zfgjj.km.gov.cn/c/2025-08-27/5014370.shtml",
+          "title": "以运动之实&#32;奏团结之歌—昆明市住房公积金管理中心在2025年市直...",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "http://zfgjj.km.gov.cn/c/2025-08-01/5006165.shtml",
+          "title": "昆明市住房公积金管理中心关于调整购买昆明市行政区域外住房提取住房公积金政策的通知",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "http://zfgjj.km.gov.cn/c/2025-07-23/5003082.shtml",
+          "title": "昆明市住房公积金管理中心关于进一步优化调整住房公积金个人住房贷款住房套数认定标准的通知",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "http://zfgjj.km.gov.cn/c/2025-06-17/4990888.shtml",
+          "title": "住建部住房公积金监管司司长杨佳燕一行到昆明调研指导住房公积金...",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "http://zfgjj.km.gov.cn/c/2026-03-30/5067684.shtml",
+          "title": "昆明市住房公积金2025年年度报告解读",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "http://zfgjj.km.gov.cn/c/2025-08-01/5006166.shtml",
+          "title": "关于调整购买昆明市行政区域外住房&#32;提取住房公积金的政策解读",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://zfgjj.km.gov.cn/",
+          "title": "昆明市住房公积金管理中心",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "http://zfgjj.km.gov.cn/c/2026-09-18/5114023.shtml",
+          "title": "昆明市住房公积金管理中心关于调整灵活就业缴存人住房公积金贷款倍数的通知",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        }
+      ]
+    },
+    {
+      "id": "贵阳",
+      "kind": "housing",
+      "year": 2026,
+      "ok": false,
+      "error": "候选页面均未抽到上下限",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": [],
+      "tried": [
+        {
+          "url": "https://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/fdzdgknrfggw/fggwbmwj/202610/t20261009_90967005.html",
+          "title": "·&nbsp;筑公积金通字〔2026〕58号贵阳市住房公积金管理中心关于调整贷款额度流...",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "http://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/fdzdgknrfggw/fggwbmwj/202610/t20261009_90967005.html",
+          "title": "筑公积金通字〔2026〕58号贵阳市住房公积金管理中心关于调整贷款额度流动性...",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/fdzdgknrfggw/fggwbmwj/202610/t20261010_90975094.html",
+          "title": "·&nbsp;筑公积金通字〔2026〕61号贵阳市住房公积金管理中心关于提取住房公积金...",
+          "via": "http",
+          "ok": false,
+          "upper": 3000,
+          "lower": null,
+          "confidence": "low",
+          "reason": "找到上限但缺下限"
+        },
+        {
+          "url": "https://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/fdzdgknrfggw/fggwbmwj/202610/t20261010_90974991.html",
+          "title": "·&nbsp;筑公积金通字〔2026〕60号贵阳市住房公积金管理中心关于提取住房公积金...",
+          "via": "http",
+          "ok": false,
+          "upper": 100000,
+          "lower": null,
+          "confidence": "low",
+          "reason": "找到上限但缺下限"
+        },
+        {
+          "url": "https://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/fdzdgknrfggw/fggwbmwj/202610/t20261010_90974970.html",
+          "title": "·&nbsp;筑公积金管委字〔2026〕3号贵阳市住房公积金管理委员会关于印发《贵阳...",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/fdzdgknrfggw/fggwbmwj/202608/t20260824_90774382.html",
+          "title": "·&nbsp;筑公积金通字〔2026〕51号贵阳市住房公积金管理中心关于进一步规范住房...",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/fdzdgknrfggw/fggwbmwj/202608/t20260818_90742740.html",
+          "title": "·&nbsp;筑公积金通字〔2026〕46号贵阳市住房公积金管理中心关于印发《贵阳市住...",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/fdzdgknrfggw/fggwbmwj/202605/t20260519_90188908.html",
+          "title": "·&nbsp;筑公积金通字〔2026〕30号贵阳市住房公积金管理中心关于印发《贵阳市住...",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        }
+      ]
+    },
+    {
+      "id": "贵阳",
+      "kind": "housing",
+      "year": 2025,
+      "ok": false,
+      "error": "正文是 PDF/附件，已加入 AI 识别队列（1 篇）",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": [],
+      "tried": [
+        {
+          "url": "https://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/fdzdgknrzdxxlygk/cxjs/",
+          "title": "住房公积金监督",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "http://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/fdzdgknrfggw/xxgkgfgwzcjd/202610/t20261010_90975103.html",
+          "title": "关于对《贵阳市住房公积金管理中心关于提取住房公积金支付自住住房物业费的...",
+          "via": "http",
+          "ok": false,
+          "upper": 3000,
+          "lower": null,
+          "confidence": "low",
+          "reason": "找到上限但缺下限"
+        },
+        {
+          "url": "http://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/fdzdgknrfggw/xxgkgfgwzcjd/202610/t20261010_90975055.html",
+          "title": "关于对《贵阳市住房公积金管理中心关于提取住房公积金装修自住住房的通知》...",
+          "via": "http",
+          "ok": false,
+          "upper": 100000,
+          "lower": null,
+          "confidence": "low",
+          "reason": "找到上限但缺下限"
+        },
+        {
+          "url": "http://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/fdzdgknrfggw/xxgkgfgwzcjd/202605/t20260526_90212965.html",
+          "title": "关于对《贵阳市住房公积金管理中心关于委托按月提取偿还商业住房贷款和省直...",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "http://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/fdzdgknrfggw/xxgkgfgwzcjd/202610/t20261027_91040153.html",
+          "title": "关于对《贵阳市住房公积金提取管理办法》政策解读",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "http://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/fdzdgknrfggw/xxgkgfgwzcjd/202605/t20260506_90141241.html",
+          "title": "关于对《贵阳市住房公积金“商转公”贷款贴息方案》政策解读",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "http://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/fdzdgknrfggw/xxgkgfgwzcjd/202605/t20260506_90141241.html",
+          "title": "关于对《贵阳市住房公积金“商转公”贷款贴息方案》政策解读",
+          "needsAI": true,
+          "relevant": false,
+          "attachment": "http://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/fdzdgknrfggw/xxgkgfgwzcjd/202605/P020260506370044461875.xls"
+        },
+        {
+          "url": "http://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/fdzdgknrfggw/xxgkgfgwzcjd/202602/t20260224_89565913.html",
+          "title": "关于对《贵阳市商业性个人住房贷款转住房公积金个人住房贷款实施办法》政策解读",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        }
+      ]
+    }
+  ],
+  "running": false
+}

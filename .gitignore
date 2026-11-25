@@ -1,0 +1,4 @@
+.DS_Store
+*.log
+collector/data/runs/**/progress.json
+data/snapshots/*.tmp

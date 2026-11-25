@@ -1,0 +1,643 @@
+{
+  "runId": "20261123T114703-eb95ae",
+  "startedAt": "2026-11-23T11:47:03.833Z",
+  "updatedAt": "2026-11-23T11:50:01.366Z",
+  "years": [
+    2026,
+    2025
+  ],
+  "completed": 16,
+  "total": 16,
+  "current": {
+    "id": "四川省",
+    "kind": "social",
+    "year": 2025
+  },
+  "items": [
+    {
+      "id": "北京市",
+      "kind": "social",
+      "year": 2026,
+      "ok": true,
+      "error": null,
+      "upper": 36348,
+      "lower": 7270,
+      "confidence": "high",
+      "url": "https://rsj.beijing.gov.cn/xxgk/2024zcwj/202608/t20260821_4831461.html",
+      "merged": "inserted",
+      "notes": [],
+      "title": "关于2026年度各项社会保险缴费工资基数上下限的通告",
+      "from": "2026-07-01",
+      "to": null,
+      "tried": [
+        {
+          "url": "https://rsj.beijing.gov.cn/xxgk/2024zcwj/202608/t20260821_4831461.html",
+          "title": "关于2026年度各项社会保险缴费工资基数上下限的通告",
+          "via": "http",
+          "ok": true,
+          "upper": 36348,
+          "lower": 7270,
+          "confidence": "high"
+        }
+      ],
+      "observation": {
+        "kind": "social",
+        "scope": "province",
+        "id": "北京市",
+        "province": "北京市",
+        "policyYear": 2026,
+        "from": "2026-07-01",
+        "to": null,
+        "min": 7270,
+        "max": 36348,
+        "basisYear": 2025,
+        "rate": null,
+        "docNo": "京人社发〔2026〕7号",
+        "title": "关于2026年度各项社会保险缴费工资基数上下限的通告 字体大小: 大 中 小 分享 京人社发〔2026〕7号 为确保本市参保单位和参保个人按时足额缴纳2026年度社会保险费,现就各项社会保险缴费工资基数上下限通告如下: 一、自2026年7月",
+        "url": "https://rsj.beijing.gov.cn/xxgk/2024zcwj/202608/t20260821_4831461.html",
+        "publishedAt": "2026-08-20",
+        "via": "http",
+        "ocr": false,
+        "confidence": "high",
+        "evidence": [
+          {
+            "snippet": "关于2026年度各项社会保险缴费工资基数上下限的通告 字体大小: 大 中 小 分享 京人社发〔2026〕7号 为确保本市参保单位和参保个人按时足额缴纳2026年度社会保险费,现就各项社会保险缴费工资基数上下限通告如下: 一、自2026年7月起,本市2026年度职工基本养老保险、失业保险、工伤保险、职工基本医疗保险(含生育)月缴费基数上限确定为36348元,月",
+            "label": "上限",
+            "score": 15
+          },
+          {
+            "snippet": "关于2026年度各项社会保险缴费工资基数上下限的通告 字体大小: 大 中 小 分享 京人社发〔2026〕7号 为确保本市参保单位和参保个人按时足额缴纳2026年度社会保险费,现就各项社会保险缴费工资基数上下限通告如下: 一、自2026年7月起,本市2026年度职工基本养老保险、失业保险、工伤保险、职工基本医疗保险(含生育)月缴费基数上限确定为36348元,月",
+            "label": "下限",
+            "score": 15
+          }
+        ],
+        "notes": [],
+        "hash": "66e49aebd082cdbef1fd78e3ae6690d23d7f45fe",
+        "collectedAt": "2026-11-23T11:47:05.760Z",
+        "runId": "20261123T114703-eb95ae",
+        "status": "verified",
+        "candidatesTried": [
+          {
+            "url": "https://rsj.beijing.gov.cn/xxgk/2024zcwj/202608/t20260821_4831461.html",
+            "title": "关于2026年度各项社会保险缴费工资基数上下限的通告",
+            "via": "http",
+            "ok": true,
+            "upper": 36348,
+            "lower": 7270,
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    {
+      "id": "北京市",
+      "kind": "social",
+      "year": 2025,
+      "ok": false,
+      "error": "候选页面均未抽到上下限",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": [],
+      "tried": [
+        {
+          "url": "https://rsj.beijing.gov.cn/xxgk/tzgg/202610/t20261009_4894652.html",
+          "title": "关于中国银行系统升级期间社保卡相关业务办理方式临时调整的公告",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        }
+      ]
+    },
+    {
+      "id": "江苏省",
+      "kind": "social",
+      "year": 2026,
+      "ok": false,
+      "error": "候选页面均未抽到上下限",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": [],
+      "tried": [
+        {
+          "url": "https://jshrss.jiangsu.gov.cn/art/2026/11/6/art_77277_11855611.html",
+          "title": "省人力资源社会保障厅省财政厅关于2026年调整工伤保险有关待遇...2026-11-06",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://jshrss.jiangsu.gov.cn/art/2025/12/29/art_77261_11701077.html",
+          "title": "最低工资标准调整政策解读",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://jshrss.jiangsu.gov.cn/art/2025/9/29/art_77261_11649257.html",
+          "title": "关于调整全省工伤保险定期待遇的政策解读",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": 4175,
+          "confidence": "low",
+          "reason": "找到下限但缺上限"
+        },
+        {
+          "url": "https://jshrss.jiangsu.gov.cn/art/2024/1/15/art_77261_11124970.html",
+          "title": "最低工资标准调整政策解读",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://jshrss.jiangsu.gov.cn/art/2024/1/15/art_77261_11124932.html",
+          "title": "《关于调整企业职工基本养老保险过渡性养老金计发办法的通知》的政策解读",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        }
+      ]
+    },
+    {
+      "id": "江苏省",
+      "kind": "social",
+      "year": 2025,
+      "ok": false,
+      "error": "候选页面均未抽到上下限",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": [],
+      "tried": [
+        {
+          "url": "https://jshrss.jiangsu.gov.cn/art/2025/12/29/art_77261_11701077.html",
+          "title": "最低工资标准调整政策解读",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://jshrss.jiangsu.gov.cn/art/2025/9/29/art_77261_11649257.html",
+          "title": "关于调整全省工伤保险定期待遇的政策解读",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": 4175,
+          "confidence": "low",
+          "reason": "找到下限但缺上限"
+        },
+        {
+          "url": "https://jshrss.jiangsu.gov.cn/art/2024/1/15/art_77261_11124970.html",
+          "title": "最低工资标准调整政策解读",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://jshrss.jiangsu.gov.cn/art/2024/1/15/art_77261_11124932.html",
+          "title": "《关于调整企业职工基本养老保险过渡性养老金计发办法的通知》的政策解读",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        }
+      ]
+    },
+    {
+      "id": "浙江省",
+      "kind": "social",
+      "year": 2026,
+      "ok": false,
+      "error": "未发现候选公告（站点不可达或无相关栏目）",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": []
+    },
+    {
+      "id": "浙江省",
+      "kind": "social",
+      "year": 2025,
+      "ok": false,
+      "error": "未发现候选公告（站点不可达或无相关栏目）",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": []
+    },
+    {
+      "id": "山东省",
+      "kind": "social",
+      "year": 2026,
+      "ok": false,
+      "error": "候选页面均未抽到上下限",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": [],
+      "tried": [
+        {
+          "url": "https://hrss.shandong.gov.cn/articles/ch00330/202107/59e339aa-5b95-4eb0-ab71-b7dc3e26da94.shtml",
+          "title": "关于临时调整山东省人力资源和社会保障厅政务服务大厅工作时间的通知",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://hrss.shandong.gov.cn/articles/ch00330/201907/065362ca-391c-4c11-b407-b9a3a32fc355.shtml",
+          "title": "关于调整非教育系统政府公派出国留学项目部分类别外语水平要求标准的通知",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://hrss.shandong.gov.cn/articles/ch00330/201809/65574.shtml",
+          "title": "外地调入人员专业技术职务资格确认行政权力事项调整公告",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://hrss.shandong.gov.cn/articles/ch00330/202305/977c4d3f-8e8a-46c3-9e3c-20caeb32155e.shtml",
+          "title": "山东省社会保险公共服务平台上线试运行公告",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://hrss.shandong.gov.cn/articles/ch00330/202208/dcfa9cd3-6e16-479c-bec9-daa74153dbfd.shtml",
+          "title": "山东省人力资源和社会保障厅关于社会保险基金监督举报电话纳入12333电话咨询服务热线的公告",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://hrss.shandong.gov.cn/articles/ch00330/202010/a9bad169-5e25-4979-894d-bda72e71e59a.shtml",
+          "title": "国家税务总局山东省税务局山东省人力资源和社会保障厅山东省财政厅山东省医疗保障局关于企业社会保险费交由税务部门征收的公告",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        }
+      ]
+    },
+    {
+      "id": "山东省",
+      "kind": "social",
+      "year": 2025,
+      "ok": false,
+      "error": "候选页面均未抽到上下限",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": [],
+      "tried": [
+        {
+          "url": "https://hrss.shandong.gov.cn/articles/ch00330/202107/59e339aa-5b95-4eb0-ab71-b7dc3e26da94.shtml",
+          "title": "关于临时调整山东省人力资源和社会保障厅政务服务大厅工作时间的通知",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://hrss.shandong.gov.cn/articles/ch00330/201907/065362ca-391c-4c11-b407-b9a3a32fc355.shtml",
+          "title": "关于调整非教育系统政府公派出国留学项目部分类别外语水平要求标准的通知",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://hrss.shandong.gov.cn/articles/ch00330/201809/65574.shtml",
+          "title": "外地调入人员专业技术职务资格确认行政权力事项调整公告",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://hrss.shandong.gov.cn/articles/ch00330/202208/dcfa9cd3-6e16-479c-bec9-daa74153dbfd.shtml",
+          "title": "山东省人力资源和社会保障厅关于社会保险基金监督举报电话纳入12333电话咨询服务热线的公告",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://hrss.shandong.gov.cn/articles/ch00330/202010/a9bad169-5e25-4979-894d-bda72e71e59a.shtml",
+          "title": "国家税务总局山东省税务局山东省人力资源和社会保障厅山东省财政厅山东省医疗保障局关于企业社会保险费交由税务部门征收的公告",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://hrss.shandong.gov.cn/articles/ch00330/201809/65650.shtml",
+          "title": "关于济南邦得人力资源有限公司和山东浩然人力资源管理有限公司代办申报退休等社会保险相关业务的通告",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        }
+      ]
+    },
+    {
+      "id": "河南省",
+      "kind": "social",
+      "year": 2026,
+      "ok": true,
+      "error": null,
+      "upper": 19560,
+      "lower": 3912,
+      "confidence": "high",
+      "url": "http://hrss.henan.gov.cn/2026/10-10/3435886.html",
+      "merged": "inserted",
+      "notes": [],
+      "title": "河南省人力资源和社会保障厅河南省医疗保障局河南省财政厅国家税务总局河南省税务局关于公布2026年度社会保险缴费基数上下限标准的通知",
+      "from": "2026-07-01",
+      "to": null,
+      "tried": [
+        {
+          "url": "http://hrss.henan.gov.cn/2026/10-10/3435886.html",
+          "title": "河南省人力资源和社会保障厅河南省医疗保障局河南省财政厅国家税务总局河南省税务局关于公布2026年度社会保险缴费基数上下限标准的通知",
+          "via": "http",
+          "ok": true,
+          "upper": 19560,
+          "lower": 3912,
+          "confidence": "high"
+        }
+      ],
+      "observation": {
+        "kind": "social",
+        "scope": "province",
+        "id": "河南省",
+        "province": "河南省",
+        "policyYear": 2026,
+        "from": "2026-07-01",
+        "to": null,
+        "min": 3912,
+        "max": 19560,
+        "basisYear": 2025,
+        "rate": null,
+        "docNo": "〔2026〕62号",
+        "title": "河南省人力资源和社会保障厅 河南省医疗保障局 河南省财政厅 国家税务总局河南省税务局关于公布2026年度社会保险缴费基数上下限标准的通知_履职依据_河南省人力资源和社会保障厅 进入适老模式无障碍阅读 首页> 政务公开 > 信息公开 > 法定",
+        "url": "http://hrss.henan.gov.cn/2026/10-10/3435886.html",
+        "publishedAt": "2026-09-30",
+        "via": "http",
+        "ocr": false,
+        "confidence": "high",
+        "evidence": [
+          {
+            "snippet": "| 各省辖市、济源示范区人力资源社会保障局、医保局、财政局,航空港区民政和社会保障局、财政金融和国有资产管理局,国家税务总局各省辖市税务局、国家税务总局郑州航空港经济综合实验区、济源产城融合示范区税务局: 为做好2026年度全省社会保险费征缴和相关待遇核定工作,现就全省社会保险缴费基数有关问题通知如下: 自2026年7月1日起,全省社会保险(含基本养老保险、",
+            "label": "上限",
+            "score": 15
+          },
+          {
+            "snippet": "| 各省辖市、济源示范区人力资源社会保障局、医保局、财政局,航空港区民政和社会保障局、财政金融和国有资产管理局,国家税务总局各省辖市税务局、国家税务总局郑州航空港经济综合实验区、济源产城融合示范区税务局: 为做好2026年度全省社会保险费征缴和相关待遇核定工作,现就全省社会保险缴费基数有关问题通知如下: 自2026年7月1日起,全省社会保险(含基本养老保险、",
+            "label": "下限",
+            "score": 15
+          }
+        ],
+        "notes": [],
+        "hash": "b6fc939c82a1f9d6aaa7e4de8053ed61b70eeffc",
+        "collectedAt": "2026-11-23T11:48:58.357Z",
+        "runId": "20261123T114703-eb95ae",
+        "status": "verified",
+        "candidatesTried": [
+          {
+            "url": "http://hrss.henan.gov.cn/2026/10-10/3435886.html",
+            "title": "河南省人力资源和社会保障厅河南省医疗保障局河南省财政厅国家税务总局河南省税务局关于公布2026年度社会保险缴费基数上下限标准的通知",
+            "via": "http",
+            "ok": true,
+            "upper": 19560,
+            "lower": 3912,
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    {
+      "id": "河南省",
+      "kind": "social",
+      "year": 2025,
+      "ok": false,
+      "error": "未发现候选公告（站点不可达或无相关栏目）",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": []
+    },
+    {
+      "id": "湖北省",
+      "kind": "social",
+      "year": 2026,
+      "ok": false,
+      "error": "正文是 PDF/附件，已加入 AI 识别队列（1 篇）",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": [],
+      "tried": [
+        {
+          "url": "http://rst.hubei.gov.cn/zfxxgk/zc/gfxwj/202408/t20240812_5300082.shtml",
+          "title": "湖北省人力资源和社会保障厅关于印发《湖北省社会保险基金监督举报工作管理实...",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "http://rst.hubei.gov.cn/zfxxgk/zc/gfxwj/202408/t20240812_5300082.shtml",
+          "title": "湖北省人力资源和社会保障厅关于印发《湖北省社会保险基金监督举报工作管理实...",
+          "needsAI": true,
+          "relevant": false,
+          "attachment": "http://rst.hubei.gov.cn/zfxxgk/zc/gfxwj/202408/P020240812580900488836.docx"
+        }
+      ]
+    },
+    {
+      "id": "湖北省",
+      "kind": "social",
+      "year": 2025,
+      "ok": false,
+      "error": "正文是 PDF/附件，已加入 AI 识别队列（1 篇）",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": [],
+      "tried": [
+        {
+          "url": "http://rst.hubei.gov.cn/zfxxgk/zc/gfxwj/202408/t20240812_5300082.shtml",
+          "title": "湖北省人力资源和社会保障厅关于印发《湖北省社会保险基金监督举报工作管理实...",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "http://rst.hubei.gov.cn/zfxxgk/zc/gfxwj/202408/t20240812_5300082.shtml",
+          "title": "湖北省人力资源和社会保障厅关于印发《湖北省社会保险基金监督举报工作管理实...",
+          "needsAI": true,
+          "relevant": false,
+          "attachment": "http://rst.hubei.gov.cn/zfxxgk/zc/gfxwj/202408/P020240812580900488836.docx"
+        }
+      ]
+    },
+    {
+      "id": "广东省",
+      "kind": "social",
+      "year": 2026,
+      "ok": false,
+      "error": "候选页面均未抽到上下限",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": [],
+      "tried": [
+        {
+          "url": "https://hrss.gd.gov.cn/zwgk/xxgkml/gzdt/content/post_4942224.html",
+          "title": "广东省9月1日起调整提高最低工资标准",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        }
+      ]
+    },
+    {
+      "id": "广东省",
+      "kind": "social",
+      "year": 2025,
+      "ok": false,
+      "error": "候选页面均未抽到上下限",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": [],
+      "tried": [
+        {
+          "url": "https://hrss.gd.gov.cn/zwgk/xxgkml/gzdt/content/post_4942224.html",
+          "title": "广东省9月1日起调整提高最低工资标准",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        }
+      ]
+    },
+    {
+      "id": "四川省",
+      "kind": "social",
+      "year": 2026,
+      "ok": false,
+      "error": "未发现候选公告（站点不可达或无相关栏目）",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": []
+    },
+    {
+      "id": "四川省",
+      "kind": "social",
+      "year": 2025,
+      "ok": false,
+      "error": "未发现候选公告（站点不可达或无相关栏目）",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": []
+    }
+  ],
+  "running": false
+}

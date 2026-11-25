@@ -1,0 +1,45 @@
+{
+  "city": "深圳",
+  "province": "广东省",
+  "kind": "housing",
+  "site": "https://zjj.sz.gov.cn/ztfw/zfgjj/",
+  "year": 2026,
+  "fetchedAt": "2026-11-23T10:56:32.194Z",
+  "ok": false,
+  "via": "http",
+  "error": "未找到含基数上下限的公告",
+  "home": {
+    "url": "https://zjj.sz.gov.cn/ztfw/zfgjj/",
+    "textLen": 1911
+  },
+  "listPages": [
+    "https://zjj.sz.gov.cn/index.html?f=1"
+  ],
+  "candidates": [
+    {
+      "title": "关于向联柏皮具制品（深圳）有限公司送达《责令限期缴存决定书》（深公积金责限〔2026〕02-22824至22828号）的公告",
+      "url": "https://zjj.sz.gov.cn/xxgk/zfws/content/post_13059153.html"
+    },
+    {
+      "title": "关于向联柏皮具制品（深圳）有限公司送达《责令限期缴存决定书》（深公积金责限〔2026〕02-22824至22828号）的公告",
+      "url": "https://zjj.sz.gov.cn/ztfw/zfgjj/zfws/wfbg/content/post_13059141.html"
+    },
+    {
+      "title": "关于向深圳碳中和生物燃气股份有限公司送达《责令限期缴存决定书》（深公积金责限〔2026〕02-24263至24266号）的公告",
+      "url": "https://zjj.sz.gov.cn/ztfw/zfgjj/zfws/wfbg/content/post_13059043.html"
+    },
+    {
+      "title": "深圳市住房和建设局关于《2026年深圳市社会主体出租的保障性租赁住房项目多渠道筹集认定及监管技术服务》的采购公告",
+      "url": "https://zjj.sz.gov.cn/xxgk/tzgg/content/post_13074806.html"
+    },
+    {
+      "title": "关于向深圳市善心文化培训有限公司送达《核查通知书》（深公积金核查〔2026〕01-40546号）的公告",
+      "url": "https://zjj.sz.gov.cn/xxgk/zfws/content/post_13072841.html"
+    },
+    {
+      "title": "关于向一脉通（深圳）智能科技有限公司送达《核查通知书》（深公积金核查〔2026〕02-24102号）的公告",
+      "url": "https://zjj.sz.gov.cn/xxgk/zfws/content/post_13059161.html"
+    }
+  ],
+  "result": null
+}

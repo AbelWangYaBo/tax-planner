@@ -1,0 +1,48 @@
+{
+  "city": "广州",
+  "province": "广东省",
+  "kind": "housing",
+  "site": "http://gjj.gz.gov.cn/",
+  "year": 2026,
+  "fetchedAt": "2026-11-23T10:56:23.677Z",
+  "ok": false,
+  "via": "http",
+  "error": "未找到含基数上下限的公告",
+  "home": {
+    "url": "http://gjj.gz.gov.cn/",
+    "textLen": 1645
+  },
+  "listPages": [
+    "http://gjj.gz.gov.cn/gkmlpt/guide",
+    "https://gjj.gz.gov.cn/gg/tzgg/index.html",
+    "http://gjj.gz.gov.cn/gkmlpt/index",
+    "http://gjj.gz.gov.cn/gkmlpt/annualreport"
+  ],
+  "candidates": [
+    {
+      "title": "广州住房公积金管理中心关于2026年度住房公积金缴存调整有关问题的通知",
+      "url": "http://gjj.gz.gov.cn/gg/tzgg/content/post_10879601.html"
+    },
+    {
+      "title": "广州住房公积金管理中心2026年数据安全溯源平台（三期）建设项目采购公告",
+      "url": "http://gjj.gz.gov.cn/gg/tzgg/content/post_10984918.html"
+    },
+    {
+      "title": "广州住房公积金管理中心2026年标识服务项目采购公告",
+      "url": "http://gjj.gz.gov.cn/gg/tzgg/content/post_10957605.html"
+    },
+    {
+      "title": "广州住房公积金管理中心2026年商用密码应用方案编制与备案服务项目采购公告",
+      "url": "http://gjj.gz.gov.cn/gg/tzgg/content/post_10955370.html"
+    },
+    {
+      "title": "广州住房公积金管理中心2026年桌面设备维护服务项目采购公告",
+      "url": "http://gjj.gz.gov.cn/gg/tzgg/content/post_10891164.html"
+    },
+    {
+      "title": "广州住房公积金管理中心2026年办公用品项目采购公告",
+      "url": "http://gjj.gz.gov.cn/gg/tzgg/content/post_10809936.html"
+    }
+  ],
+  "result": null
+}

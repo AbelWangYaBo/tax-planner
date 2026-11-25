@@ -1,0 +1,82 @@
+{
+  "updatedAt": "2026-11-23T11:26:21.908Z",
+  "items": [
+    {
+      "key": "housing:杭州:2026",
+      "id": "杭州",
+      "kind": "housing",
+      "scope": "city",
+      "province": "浙江省",
+      "year": 2026,
+      "attachment": "https://gjj.hangzhou.gov.cn/cms_files/filemanager/1568099/attach/20267/05bea603588e491483f107735ae7b254.pdf",
+      "pageUrl": "https://gjj.hangzhou.gov.cn/col/col1229468386/art/2026/art_09cee14331fb44f2967fca0b8ac2ce27.html",
+      "title": "[种子]",
+      "status": "done",
+      "addedAt": "2026-11-23T11:15:01.608Z",
+      "hits": 2,
+      "verifiedAt": "2026-11-23T11:15:39.670Z",
+      "lastSeen": "2026-11-23T11:16:28.106Z"
+    },
+    {
+      "key": "housing:杭州:2025",
+      "id": "杭州",
+      "kind": "housing",
+      "scope": "city",
+      "province": "浙江省",
+      "year": 2025,
+      "attachment": "https://gjj.hangzhou.gov.cn/cms_files/filemanager/1568099/attach/20257/989356567D7747E23457013784E3C750.pdf",
+      "pageUrl": "https://gjj.hangzhou.gov.cn/col/col1229468386/art/2025/art_19b51666b8ea4f7c9543a4d8bc2839db.html",
+      "title": "[种子]",
+      "status": "done",
+      "addedAt": "2026-11-23T11:15:05.859Z",
+      "hits": 2,
+      "verifiedAt": "2026-11-23T11:15:39.670Z",
+      "lastSeen": "2026-11-23T11:16:31.200Z"
+    },
+    {
+      "key": "housing:上海:2025",
+      "id": "上海",
+      "kind": "housing",
+      "scope": "city",
+      "province": "上海市",
+      "year": 2025,
+      "attachment": "https://www.shzfgjj.cn/html/newxxgk/xxgknb/img/20260129152954324.pdf",
+      "pageUrl": "https://www.shzfgjj.cn/html/newxxgk/xxgknb/228270.html",
+      "title": "上海市公积金管理中心2025年政府信息公开工作年度报告",
+      "status": "done",
+      "addedAt": "2026-11-23T11:15:50.346Z",
+      "hits": 1,
+      "note": "该年度已由官方 HTML 公告核验，无需读 PDF"
+    },
+    {
+      "key": "housing:西安:2025",
+      "id": "西安",
+      "kind": "housing",
+      "scope": "city",
+      "province": "陕西省",
+      "year": 2025,
+      "attachment": "https://zfgjj.xa.gov.cn/web_files/zfgjj/file/2025/07/11/202507111432037598194.docx",
+      "pageUrl": "https://zfgjj.xa.gov.cn/gzdt/tzgg/1927557639416963074.html",
+      "title": "西安住房公积金管理中心关于做好2025年度住房公积金缴存基数调整工作的通知",
+      "status": "done",
+      "addedAt": "2026-11-23T11:17:06.578Z",
+      "hits": 1,
+      "note": "该年度已由官方 HTML 公告核验，无需读 PDF"
+    },
+    {
+      "key": "housing:太原:2025",
+      "id": "太原",
+      "kind": "housing",
+      "scope": "city",
+      "province": "山西省",
+      "year": 2025,
+      "attachment": "http://zfgjj.taiyuan.gov.cn/u/cms/site98/202507/02162449ua7r.docx",
+      "pageUrl": "http://zfgjj.taiyuan.gov.cn/zcwj/20250702/30238059.html",
+      "title": "太原市住房公积金管理中心关于做好2025年度住房公积金缴存基数和...",
+      "status": "done",
+      "addedAt": "2026-11-23T11:17:48.550Z",
+      "hits": 1,
+      "note": "附件是空白《基数调整情况说明书》表格，不是通知正文"
+    }
+  ]
+}

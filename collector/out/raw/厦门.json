@@ -1,0 +1,34 @@
+{
+  "city": "厦门",
+  "province": "福建省",
+  "kind": "housing",
+  "site": "http://gjj.xm.gov.cn/",
+  "year": 2026,
+  "fetchedAt": "2026-11-23T10:58:27.303Z",
+  "ok": false,
+  "via": "http",
+  "error": "未找到含基数上下限的公告",
+  "home": {
+    "url": "http://gjj.xm.gov.cn/",
+    "textLen": 769
+  },
+  "listPages": [
+    "http://gjj.xm.gov.cn/zwgk/tzgg/",
+    "http://gjj.xm.gov.cn/zcfg/"
+  ],
+  "candidates": [
+    {
+      "title": "厦门中实-竞争性磋商-2026-ZS1304-公积金信访咨询服务-成交结果公告",
+      "url": "http://gjj.xm.gov.cn/zwgk/tzgg/202608/t20260827_3014501.htm"
+    },
+    {
+      "title": "《关于优化调整住房公积金使用政策的通知》公开征求意见的公告",
+      "url": "http://gjj.xm.gov.cn/zwgk/tzgg/202611/t20261120_3027023.htm"
+    },
+    {
+      "title": "关于《关于优化调整住房公积金使用政策的通知》公开征求意见的公告",
+      "url": "http://gjj.xm.gov.cn/zwgk/tzgg/202609/t20260912_3016907.htm"
+    }
+  ],
+  "result": null
+}

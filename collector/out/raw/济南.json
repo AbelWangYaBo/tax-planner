@@ -1,0 +1,59 @@
+{
+  "city": "济南",
+  "province": "山东省",
+  "kind": "housing",
+  "site": "https://gjj.jinan.gov.cn/",
+  "year": 2026,
+  "fetchedAt": "2026-11-23T10:59:19.765Z",
+  "ok": true,
+  "via": "http",
+  "error": null,
+  "home": {
+    "url": "https://gjj.jinan.gov.cn/",
+    "textLen": 1660
+  },
+  "listPages": [
+    "https://gjj.jinan.gov.cn/col/col121817/art/2026/art_ae3cd5d426f94a90a0c96836aaa314c7.html?type=FUaRhQW7Lo9974tywtQmQ",
+    "https://gjj.jinan.gov.cn/col/col121817/art/2026/art_09ccbcce72074d688331ece8c3ce25a9.html?type=FUaRhQW7Lo9974tywtQmQ",
+    "https://gjj.jinan.gov.cn/col/col121817/art/2026/art_bb38563d60a247f6ae22cbb796b9cf36.html?type=FUaRhQW7Lo9974tywtQmQ"
+  ],
+  "candidates": [
+    {
+      "title": "济南住房公积金中心关于调整2026年度住房公积金缴存基数的通知",
+      "url": "https://gjj.jinan.gov.cn/col/col65559/art/2026/art_a025e5da370e4af08b1c1214b23a704c.html?type=4JnkXemNbirDhO2Om8bBC"
+    },
+    {
+      "title": "关于调整2026年度住房公积金缴存基数的政策解读",
+      "url": "https://gjj.jinan.gov.cn/col/col121817/art/2026/art_09ccbcce72074d688331ece8c3ce25a9.html?type=FUaRhQW7Lo9974tywtQmQ"
+    },
+    {
+      "title": "关于2026年国庆节假期停办公积金业务的公告",
+      "url": "https://gjj.jinan.gov.cn/col/col11195/art/2026/art_3735a40d861c4de5a405a79728efcef9.html"
+    },
+    {
+      "title": "关于2026年住房公积金年度结息工作有关事宜的公告",
+      "url": "https://gjj.jinan.gov.cn/col/col65559/art/2026/art_f0ede84d9c4a4c358e12e72ac528e567.html"
+    },
+    {
+      "title": "济南住房公积金中心关于调整...",
+      "url": "https://gjj.jinan.gov.cn/col/col65549/art/2026/art_fae7459b258c466db4db15c670525c97.html"
+    }
+  ],
+  "result": {
+    "upper": 33902,
+    "lower": 2400,
+    "period": {
+      "from": "2026-07-01",
+      "to": "2027-06-30",
+      "text": "2026年7月1日至2027年6月30日"
+    },
+    "confidence": "medium",
+    "snippets": [
+      "2026年度职工住房公积金缴存基数上限为本市上一年度城镇非私营单位就业人员月平均工资的3倍,即33902元",
+      "缴存基数下限不得低于省政府公布的我市各区县月最低工资标准,单位住所地为历下区、市中区、槐荫区、天桥区、历城区的最低住房公积金月缴存基数为2400元"
+    ],
+    "title": "济南住房公积金中心关于调整2026年度住房公积金缴存基数的通知",
+    "url": "https://gjj.jinan.gov.cn/col/col65559/art/2026/art_a025e5da370e4af08b1c1214b23a704c.html?type=4JnkXemNbirDhO2Om8bBC",
+    "score": 89
+  }
+}

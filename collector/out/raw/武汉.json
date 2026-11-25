@@ -1,0 +1,32 @@
+{
+  "city": "武汉",
+  "province": "湖北省",
+  "kind": "housing",
+  "site": "https://gjj.wuhan.gov.cn/",
+  "year": 2026,
+  "fetchedAt": "2026-11-23T10:57:26.626Z",
+  "ok": false,
+  "via": "cdp",
+  "error": "未找到含基数上下限的公告",
+  "home": {
+    "url": "https://gjj.wuhan.gov.cn/",
+    "textLen": 222
+  },
+  "listPages": [
+    "https://gjj.wuhan.gov.cn/#",
+    "https://gjj.wuhan.gov.cn/zwgk/xxgkzn/index.html",
+    "https://gjj.wuhan.gov.cn/zwgk/xxgkgd/index.html",
+    "https://gjj.wuhan.gov.cn/zwgk/ndbg/index.html"
+  ],
+  "candidates": [
+    {
+      "title": "2026年国庆节放假通知",
+      "url": "https://gjj.wuhan.gov.cn/xxfw/zdgz/gzbsjz/zxgg/202609/t20260928_2854129.html"
+    },
+    {
+      "title": "2026年中秋节放假通知",
+      "url": "https://gjj.wuhan.gov.cn/xxfw/zdgz/gzbsjz/zxgg/202609/t20260920_2851091.html"
+    }
+  ],
+  "result": null
+}

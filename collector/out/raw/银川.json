@@ -1,0 +1,64 @@
+{
+  "city": "银川",
+  "province": "宁夏回族自治区",
+  "kind": "housing",
+  "site": "https://gjj.yinchuan.gov.cn/",
+  "year": 2026,
+  "fetchedAt": "2026-11-23T11:03:15.716Z",
+  "ok": true,
+  "via": "http",
+  "error": null,
+  "home": {
+    "url": "https://gjj.yinchuan.gov.cn/",
+    "textLen": 1880
+  },
+  "listPages": [
+    "https://gjj.yinchuan.gov.cn/zcfg.htm",
+    "http://www.yinchuan.gov.cn/xxgk/bmxxgkml/zfgjjglzx/xxgkml_2829/gkxx_2830/",
+    "http://www.yinchuan.gov.cn/xxgk/bmxxgkml/zfgjjglzx/xxgkzn_2827/",
+    "http://www.yinchuan.gov.cn/xxgk/bmxxgkml/zfgjjglzx/xxgknb_2828/"
+  ],
+  "candidates": [
+    {
+      "title": "银川住房公积金管理中心关于2026年度住房公积金缴存基数调整的通知",
+      "url": "https://gjj.yinchuan.gov.cn/info/1025/32428.htm"
+    },
+    {
+      "title": "2026年预售楼盘发放公积金个人贷款贷前公告第47号",
+      "url": "https://gjj.yinchuan.gov.cn/info/1109/33678.htm"
+    },
+    {
+      "title": "2026年预售楼盘发放公积金个人贷款贷前公告第46号",
+      "url": "https://gjj.yinchuan.gov.cn/info/1109/33558.htm"
+    },
+    {
+      "title": "2026年预售楼盘发放公积金个人贷款贷前公告第45号",
+      "url": "https://gjj.yinchuan.gov.cn/info/1109/33548.htm"
+    },
+    {
+      "title": "2026年预售楼盘发放公积金个人贷款贷前公告第44号",
+      "url": "https://gjj.yinchuan.gov.cn/info/1109/33538.htm"
+    },
+    {
+      "title": "2026年预售楼盘发放公积金个人贷款贷前公告第43号",
+      "url": "https://gjj.yinchuan.gov.cn/info/1109/33258.htm"
+    }
+  ],
+  "result": {
+    "upper": 33747,
+    "lower": 2235,
+    "period": {
+      "from": "2026-07-01",
+      "to": "2027-06-30",
+      "text": "2026年7月1日至2027年6月30日"
+    },
+    "confidence": "medium",
+    "snippets": [
+      "2026年度银川市职工住房公积金最高月缴存基数上限为33747元,月缴存额上限为8100元",
+      "住房公积金最低工资基数不低于宁夏回族自治区人民政府公布的最低工资标准执行,银川市兴庆区、金凤区、西夏区、永宁县、贺兰县、灵武市执行一类区最低工资标准每人每月2235元,月缴存额下限为224元"
+    ],
+    "title": "银川住房公积金管理中心关于2026年度住房公积金缴存基数调整的通知",
+    "url": "https://gjj.yinchuan.gov.cn/info/1025/32428.htm",
+    "score": 89
+  }
+}

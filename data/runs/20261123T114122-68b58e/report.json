@@ -1,0 +1,181 @@
+{
+  "runId": "20261123T114122-68b58e",
+  "startedAt": "2026-11-23T11:41:22.509Z",
+  "finishedAt": "2026-11-23T11:41:24.937Z",
+  "durationMs": 2424,
+  "years": [
+    2026,
+    2025
+  ],
+  "total": 2,
+  "ok": 2,
+  "high": 2,
+  "conflicts": 0,
+  "snapshot": "/Volumes/APFS_2/abel/agent-benchmark/tax-planner/data/snapshots/2026-11-23-143223dbb6.json",
+  "items": [
+    {
+      "id": "上海",
+      "kind": "housing",
+      "year": 2026,
+      "ok": true,
+      "error": null,
+      "upper": 37731,
+      "lower": 2740,
+      "confidence": "high",
+      "url": "https://www.shzfgjj.cn/html/newxxgk/zcwj/gfxwj/228478.html",
+      "merged": "inserted",
+      "notes": [
+        "公积金上下限比值 13.77 异常"
+      ],
+      "title": "[种子]",
+      "from": "2026-07-01",
+      "to": null,
+      "tried": [
+        {
+          "url": "https://www.shzfgjj.cn/html/newxxgk/zcwj/gfxwj/228478.html",
+          "title": "[种子]",
+          "via": "http",
+          "ok": true,
+          "upper": 37731,
+          "lower": 2740,
+          "confidence": "high"
+        }
+      ],
+      "observation": {
+        "kind": "housing",
+        "scope": "city",
+        "id": "上海",
+        "province": "上海市",
+        "policyYear": 2026,
+        "from": "2026-07-01",
+        "to": null,
+        "min": 2740,
+        "max": 37731,
+        "basisYear": 2025,
+        "rate": {
+          "min": 0.1,
+          "max": 0.24
+        },
+        "docNo": "沪公积金管委会〔2026〕3号",
+        "title": "关于2026年度上海市调整住房公积金缴存基数、比例以及月缴存额上下限的通知 文号:沪公积金管委会〔2026〕3号 索取号:SY4250087880-2026-228478 产生日期:2026-08-18 信息名称:关于2026年度上海市调整",
+        "url": "https://www.shzfgjj.cn/html/newxxgk/zcwj/gfxwj/228478.html",
+        "publishedAt": "2026-08-18",
+        "via": "http",
+        "ocr": false,
+        "confidence": "high",
+        "evidence": [
+          {
+            "snippet": "住房公积金缴存基数最高不超过37731元,最低不低于2740元",
+            "label": "不超过",
+            "score": 16
+          },
+          {
+            "snippet": "住房公积金缴存基数最高不超过37731元,最低不低于2740元",
+            "label": "不低于",
+            "score": 11
+          }
+        ],
+        "notes": [
+          "公积金上下限比值 13.77 异常"
+        ],
+        "hash": "b9a0fbd5d5583fe85c8f91273c7e50b0d92d25e5",
+        "collectedAt": "2026-11-23T11:41:23.261Z",
+        "runId": "20261123T114122-68b58e",
+        "status": "verified",
+        "candidatesTried": [
+          {
+            "url": "https://www.shzfgjj.cn/html/newxxgk/zcwj/gfxwj/228478.html",
+            "title": "[种子]",
+            "via": "http",
+            "ok": true,
+            "upper": 37731,
+            "lower": 2740,
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    {
+      "id": "上海",
+      "kind": "housing",
+      "year": 2025,
+      "ok": true,
+      "error": null,
+      "upper": 37302,
+      "lower": 2690,
+      "confidence": "high",
+      "url": "https://www.shzfgjj.cn/html/newxxgk/zcjd/228183.html",
+      "merged": "duplicate",
+      "notes": [
+        "公积金上下限比值 13.87 异常"
+      ],
+      "title": "[种子]",
+      "from": "2025-07-01",
+      "to": "2026-06-30",
+      "tried": [
+        {
+          "url": "https://www.shzfgjj.cn/html/newxxgk/zcjd/228183.html",
+          "title": "[种子]",
+          "via": "http",
+          "ok": true,
+          "upper": 37302,
+          "lower": 2690,
+          "confidence": "high"
+        }
+      ],
+      "observation": {
+        "kind": "housing",
+        "scope": "city",
+        "id": "上海",
+        "province": "上海市",
+        "policyYear": 2025,
+        "from": "2025-07-01",
+        "to": "2026-06-30",
+        "min": 2690,
+        "max": 37302,
+        "basisYear": 2024,
+        "rate": {
+          "min": 0.05,
+          "max": 0.07
+        },
+        "docNo": null,
+        "title": "2025年度基数调整问答 一、2025年度住房公积金基数调整何时开始? 答:2025年度(2025年7月-2026年6月)住房公积金基数调整工作于2025年7月1日起开始 二、职工住房公积金缴存基数如何计算? 答:住房公积金缴存基数应按照职",
+        "url": "https://www.shzfgjj.cn/html/newxxgk/zcjd/228183.html",
+        "publishedAt": "2025-07-01",
+        "via": "http",
+        "ocr": false,
+        "confidence": "high",
+        "evidence": [
+          {
+            "snippet": "故2025年度缴存基数上限据此计算为37302元",
+            "label": "上限",
+            "score": 15
+          },
+          {
+            "snippet": "故2025年度缴存基数下限仍为2690元",
+            "label": "下限",
+            "score": 15
+          }
+        ],
+        "notes": [
+          "公积金上下限比值 13.87 异常"
+        ],
+        "hash": "3ded6b8259c1df04ad8bab37b32b019a567e8fd4",
+        "collectedAt": "2026-11-23T11:41:24.305Z",
+        "runId": "20261123T114122-68b58e",
+        "status": "verified",
+        "candidatesTried": [
+          {
+            "url": "https://www.shzfgjj.cn/html/newxxgk/zcjd/228183.html",
+            "title": "[种子]",
+            "via": "http",
+            "ok": true,
+            "upper": 37302,
+            "lower": 2690,
+            "confidence": "high"
+          }
+        ]
+      }
+    }
+  ]
+}

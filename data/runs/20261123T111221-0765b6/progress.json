@@ -1,0 +1,137 @@
+{
+  "runId": "20261123T111221-0765b6",
+  "startedAt": "2026-11-23T11:12:21.997Z",
+  "updatedAt": "2026-11-23T11:12:30.733Z",
+  "years": [
+    2026,
+    2025
+  ],
+  "completed": 2,
+  "total": 2,
+  "current": {
+    "id": "杭州",
+    "kind": "housing",
+    "year": 2025
+  },
+  "items": [
+    {
+      "id": "杭州",
+      "kind": "housing",
+      "year": 2026,
+      "ok": false,
+      "error": "正文是 PDF/附件，已加入 AI 识别队列（4 篇）",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": [],
+      "tried": [
+        {
+          "url": "https://gjj.hangzhou.gov.cn/col/col1229468386/art/2026/art_09cee14331fb44f2967fca0b8ac2ce27.html",
+          "title": "[种子]",
+          "needsAI": true,
+          "attachment": "https://gjj.hangzhou.gov.cn/cms_files/jcms1/web3096/site/script/pdf/web/viewer.html?pdfurl=/cms_files/filemanager/1568099/attach/20267/05bea603588e491483f107735ae7b254.pdf"
+        },
+        {
+          "url": "https://gjj.hangzhou.gov.cn/col/col1229468386/art/2026/art_770bf086bc7145df81a1e84204b895f0.html",
+          "title": "杭州住房公积金管理中心关于开展2026年度住房公积金年度验审工作的通知",
+          "needsAI": true,
+          "attachment": "https://gjj.hangzhou.gov.cn/cms_files/jcms1/web3096/site/script/pdf/web/viewer.html?pdfurl=/cms_files/filemanager/1568099/attach/20267/6315577263e84e11955fe7b4bf7723ec.pdf"
+        },
+        {
+          "url": "https://gjj.hangzhou.gov.cn/col/col1229287768/art/2026/art_d3fffa96513c4a9997499bc91b2d7e6c.html",
+          "title": "杭州住房公积金管理中心2025年工作总结和2026年工作计划",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://zfgb.hangzhou.gov.cn/10/102220263/t113220263024/530202.shtml",
+          "title": "杭州市人民政府关于调整市区最低工资标准的通知",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": 2660,
+          "confidence": "low",
+          "reason": "找到下限但缺上限"
+        },
+        {
+          "url": "https://gjj.hangzhou.gov.cn/art/2024/10/10/art_1229287759_1846257.html",
+          "title": "杭州住房公积金管理委员会关于调整优化住房公积金信贷政策的通知",
+          "needsAI": true,
+          "attachment": "https://gjj.hangzhou.gov.cn/api-gateway/jpaas-web-server/front/document/file-download?fileUrl=/cms_files/jcms1/web3149/site/attach/0/f2a0d27df7de4d6a977a3c23f1165895.pdf"
+        },
+        {
+          "url": "https://gjj.hangzhou.gov.cn/art/2024/5/17/art_1229287759_1843133.html",
+          "title": "杭州住房公积金管理委员会关于调整住房公积金贷款家庭住房套数认定标准有关政策的通知",
+          "needsAI": true,
+          "attachment": "https://gjj.hangzhou.gov.cn/api-gateway/jpaas-web-server/front/document/file-download?fileUrl=/cms_files/jcms1/web3149/site/attach/0/5a2636dadfd24d4e9c536020b5315aa5.pdf"
+        }
+      ]
+    },
+    {
+      "id": "杭州",
+      "kind": "housing",
+      "year": 2025,
+      "ok": false,
+      "error": "正文是 PDF/附件，已加入 AI 识别队列（4 篇）",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": [],
+      "tried": [
+        {
+          "url": "https://gjj.hangzhou.gov.cn/col/col1229468386/art/2025/art_19b51666b8ea4f7c9543a4d8bc2839db.html",
+          "title": "[种子]",
+          "needsAI": true,
+          "attachment": "https://gjj.hangzhou.gov.cn/cms_files/jcms1/web3096/site/script/pdf/web/viewer.html?pdfurl=/cms_files/filemanager/1568099/attach/20257/989356567D7747E23457013784E3C750.pdf"
+        },
+        {
+          "url": "https://gjj.hangzhou.gov.cn/col/col1229287768/art/2026/art_d3fffa96513c4a9997499bc91b2d7e6c.html",
+          "title": "杭州住房公积金管理中心2025年工作总结和2026年工作计划",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.hangzhou.gov.cn/col/col1229468386/art/2025/art_682a5baed58e42609423b22bd84f3d3e.html",
+          "title": "杭州住房公积金管理中心关于开展2025年住房公积金验审工作的通知",
+          "needsAI": true,
+          "attachment": "https://gjj.hangzhou.gov.cn/cms_files/jcms1/web3096/site/script/pdf/web/viewer.html?pdfurl=/cms_files/filemanager/1568099/attach/20257/28D5AB4C3FFD8BF5708269C74F13B077.pdf"
+        },
+        {
+          "url": "https://zfgb.hangzhou.gov.cn/10/102220263/t113220263024/530202.shtml",
+          "title": "杭州市人民政府关于调整市区最低工资标准的通知",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": 2660,
+          "confidence": "low",
+          "reason": "找到下限但缺上限"
+        },
+        {
+          "url": "https://gjj.hangzhou.gov.cn/art/2024/10/10/art_1229287759_1846257.html",
+          "title": "杭州住房公积金管理委员会关于调整优化住房公积金信贷政策的通知",
+          "needsAI": true,
+          "attachment": "https://gjj.hangzhou.gov.cn/api-gateway/jpaas-web-server/front/document/file-download?fileUrl=/cms_files/jcms1/web3149/site/attach/0/f2a0d27df7de4d6a977a3c23f1165895.pdf"
+        },
+        {
+          "url": "https://gjj.hangzhou.gov.cn/art/2024/5/17/art_1229287759_1843133.html",
+          "title": "杭州住房公积金管理委员会关于调整住房公积金贷款家庭住房套数认定标准有关政策的通知",
+          "needsAI": true,
+          "attachment": "https://gjj.hangzhou.gov.cn/api-gateway/jpaas-web-server/front/document/file-download?fileUrl=/cms_files/jcms1/web3149/site/attach/0/5a2636dadfd24d4e9c536020b5315aa5.pdf"
+        }
+      ]
+    }
+  ],
+  "running": false
+}

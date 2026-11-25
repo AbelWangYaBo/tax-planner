@@ -1,0 +1,62 @@
+{
+  "city": "南宁",
+  "province": "广西壮族自治区",
+  "kind": "housing",
+  "site": "https://gjj.nanning.gov.cn/",
+  "year": 2026,
+  "fetchedAt": "2026-11-23T11:00:05.904Z",
+  "ok": true,
+  "via": "http",
+  "error": null,
+  "home": {
+    "url": "https://gjj.nanning.gov.cn/",
+    "textLen": 2067
+  },
+  "listPages": [
+    "https://gjj.nanning.gov.cn/xxgk/",
+    "https://gjj.nanning.gov.cn/xxgk/fdzdgknr/zwdt/zxgg/"
+  ],
+  "candidates": [
+    {
+      "title": "南宁住房公积金管理中心关于调整2026年度住房公积金缴存基数上下限的通知",
+      "url": "https://gjj.nanning.gov.cn/xxgk/zdxzjchgfxwj/t6746601.html"
+    },
+    {
+      "title": "南宁住房公积金管理中心关于2026年国庆节放假安排的通知",
+      "url": "https://gjj.nanning.gov.cn/xxgk/fdzdgknr/zwdt/zxgg/t6736504.html"
+    },
+    {
+      "title": "南宁住房公积金管理中心关于2026年中秋节放假安排的通知",
+      "url": "https://gjj.nanning.gov.cn/xxgk/fdzdgknr/zwdt/zxgg/t6730258.html"
+    },
+    {
+      "title": "南宁住房公积金管理中心关于开展2026年第二季度“公开大接访”活动的通知",
+      "url": "https://gjj.nanning.gov.cn/xxgk/fdzdgknr/zwdt/zxgg/t6668071.html"
+    },
+    {
+      "title": "南宁住房公积金管理中心关于2026年住房公积金结息和对账工作有关事项工作的通知",
+      "url": "https://gjj.nanning.gov.cn/xxgk/fdzdgknr/zwdt/zxgg/t6665848.html"
+    },
+    {
+      "title": "南宁住房公积金管理中心关于2026年端午节放假安排的通知",
+      "url": "https://gjj.nanning.gov.cn/xxgk/fdzdgknr/zwdt/zxgg/t6661248.html"
+    }
+  ],
+  "result": {
+    "upper": 29277,
+    "lower": 2200,
+    "period": {
+      "from": "2026-01-01",
+      "to": null,
+      "text": "自2026年1月1日起"
+    },
+    "confidence": "medium",
+    "snippets": [
+      "一、2026年度我市住房公积金缴存基数上限为29277元,单位和个人月缴存额上限各为3513元,合计为7026元",
+      "二、2026年度我市住房公积金缴存基数下限为2200元,单位和个人月缴存额下限各为110元,合计为220元"
+    ],
+    "title": "南宁住房公积金管理中心关于调整2026年度住房公积金缴存基数上下限的通知",
+    "url": "https://gjj.nanning.gov.cn/xxgk/zdxzjchgfxwj/t6746601.html",
+    "score": 91
+  }
+}

@@ -1,0 +1,435 @@
+{
+  "runId": "20261123T111918-8cd74a",
+  "startedAt": "2026-11-23T11:19:18.260Z",
+  "updatedAt": "2026-11-23T11:20:22.459Z",
+  "years": [
+    2026,
+    2025
+  ],
+  "completed": 4,
+  "total": 4,
+  "current": {
+    "id": "成都",
+    "kind": "housing",
+    "year": 2025
+  },
+  "items": [
+    {
+      "id": "武汉",
+      "kind": "housing",
+      "year": 2026,
+      "ok": false,
+      "error": "候选页面均未抽到上下限",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": [],
+      "tried": [
+        {
+          "url": "https://gjj.wuhan.gov.cn/zwgk/zc/gfxwj/202605/t20260511_2762746.html",
+          "title": "【其他】武公中规〔2026〕4号《武汉住房公积金管理中心关于印发武汉市灵活就业人员住房公积金缴存使用管理办法、缴存提取管理实施细则和个人住房贷款实施细则的通知》",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.wuhan.gov.cn/xxfw/zdgz/gzbsjz/zxyw/202611/t20261117_2880841.html",
+          "title": "武汉住房公积金管理中心参加2026年度《行风连线》直播节目履职担当赋能高效政务",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.wuhan.gov.cn/zwgk/zc/gfxwj/202611/t20261104_2874124.html",
+          "title": "【提取】武公中规〔2026〕6号《武汉住房公积金管理中心关于印发武汉住房公积金提取管理办法及提取管理实施细则的通知》",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.wuhan.gov.cn/zwgk/zc/gfxwj/202605/t20260511_2762714.html",
+          "title": "【贷款】武公中规〔2026〕3号《关于印发武汉住房公积金异地个人住房贷款实施细则的通知》",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.wuhan.gov.cn/zwgk/zc/gfxwj/202604/t20260403_2748856.html",
+          "title": "【贷款】武公中规〔2026〕2号武汉住房公积金管理中心关于优化住房公积金使用政策的通知",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.wuhan.gov.cn/zwgk/zc/gfxwj/202604/t20260413_2752292.html",
+          "title": "【委托扣划】武公中规〔2026〕1号《武汉住房公积金管理中心关于印发委托扣划住房公积金偿还住房公积金贷款实施细则的通知》",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        }
+      ]
+    },
+    {
+      "id": "武汉",
+      "kind": "housing",
+      "year": 2025,
+      "ok": false,
+      "error": "候选页面均未抽到上下限",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": [],
+      "tried": [
+        {
+          "url": "https://gjj.wuhan.gov.cn/zwgk/zc/gfxwj/202512/t20251230_2704304.html",
+          "title": "【贷款】武公中规〔2025〕2号《武汉个人住房商业贷款转住房公积金贷款实施细则》",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.wuhan.gov.cn/zwgk/ndbg/202603/t20260326_2745342.html",
+          "title": "武汉住房公积金2025年年度报告",
+          "via": "http",
+          "ok": false,
+          "upper": 560.25,
+          "lower": null,
+          "confidence": "low",
+          "reason": "找到上限但缺下限"
+        },
+        {
+          "url": "https://gjj.wuhan.gov.cn/zwgk/ndbg/202601/t20260115_2711929.html",
+          "title": "武汉住房公积金管理中心2025年政府信息公开工作年度报告",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.wuhan.gov.cn/bsfw/bmgj/gjjjsq_95309/hkbjjsq/index.html",
+          "title": "公积金计算器",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.wuhan.gov.cn/xxfw/zdgz/gzbsjz/zxyw/tpxw/202605/t20260511_2762954.html",
+          "title": "武汉公积金中心：召开树立和践行正确政绩观学习教育工作部署会",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://gjj.wuhan.gov.cn/xxfw/zdgz/gzbsjz/zxyw/202611/t20261117_2881114.html",
+          "title": "住房公积金提取新政热点问题答疑",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        }
+      ]
+    },
+    {
+      "id": "成都",
+      "kind": "housing",
+      "year": 2026,
+      "ok": true,
+      "error": null,
+      "upper": 32969,
+      "lower": 2330,
+      "confidence": "high",
+      "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156365/2026-07/31/content_d0fc769d206943f99514a012d02bb981.shtml",
+      "merged": "inserted",
+      "notes": [
+        "公积金上下限比值 14.15 异常"
+      ],
+      "title": "《成都住房公积金管理委员会关于调整成都住房公积金缴存基数及租房提取额度的通知》解...",
+      "from": "2026-01-01",
+      "to": null,
+      "tried": [
+        {
+          "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156365/2026-07/31/content_d0fc769d206943f99514a012d02bb981.shtml",
+          "title": "《成都住房公积金管理委员会关于调整成都住房公积金缴存基数及租房提取额度的通知》解...",
+          "via": "cdp",
+          "ok": true,
+          "upper": 32969,
+          "lower": 2330,
+          "confidence": "high"
+        }
+      ],
+      "observation": {
+        "kind": "housing",
+        "scope": "city",
+        "id": "成都",
+        "province": "四川省",
+        "policyYear": 2026,
+        "from": "2026-01-01",
+        "to": null,
+        "min": 2330,
+        "max": 32969,
+        "basisYear": 2025,
+        "rate": {
+          "min": 0.05,
+          "max": 0.12
+        },
+        "docNo": "成公积金委〔2026〕5号",
+        "title": "网站首页 政务公开 政府信息公开 中心概况 机构职能 领导分工 组织机构 法制信息 普法工作 行政执法 公开年报 年度报告 年报解读 涉企行政检查公示 行政检查事项和依据 行政检查频次上限 行政检查标准 专项检查计划 行政检查文书 骗提套取",
+        "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156365/2026-07/31/content_d0fc769d206943f99514a012d02bb981.shtml",
+        "publishedAt": "2026-07-31",
+        "via": "cdp",
+        "ocr": false,
+        "confidence": "high",
+        "evidence": [
+          {
+            "snippet": "根据市统计局公布的2025年全市城镇非私营单位就业人员年平均工资,我市住房公积金缴存基数上限为32969元",
+            "label": "上限",
+            "score": 12
+          },
+          {
+            "snippet": "根据2025年全市月最低工资标准,我市住房公积金缴存基数下限为:城市新区(四川天府新区、成都东部新区、成都高新区)和中心城区(锦江区、青羊区、金牛区、武侯区、成华区、龙泉驿区、青白江区、新都区、温江区、双流区、郫都区、新津区)2330元",
+            "label": "下限",
+            "score": -2
+          }
+        ],
+        "notes": [
+          "公积金上下限比值 14.15 异常"
+        ],
+        "hash": "55215089829ce36545fbcb213558698e91a42063",
+        "collectedAt": "2026-11-23T11:20:09.655Z",
+        "runId": "20261123T111918-8cd74a",
+        "status": "verified",
+        "candidatesTried": [
+          {
+            "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156365/2026-07/31/content_d0fc769d206943f99514a012d02bb981.shtml",
+            "title": "《成都住房公积金管理委员会关于调整成都住房公积金缴存基数及租房提取额度的通知》解...",
+            "via": "cdp",
+            "ok": true,
+            "upper": 32969,
+            "lower": 2330,
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    {
+      "id": "成都",
+      "kind": "housing",
+      "year": 2025,
+      "ok": true,
+      "error": null,
+      "upper": 32969,
+      "lower": 2330,
+      "confidence": "medium",
+      "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156365/2026-07/31/content_d0fc769d206943f99514a012d02bb981.shtml",
+      "merged": "duplicate",
+      "notes": [
+        "执行期起始 2026-01-01 与目标年度 2025 不符",
+        "公积金上下限比值 14.15 异常"
+      ],
+      "title": "《成都住房公积金管理委员会关于调整成都住房公积金缴存基数及租房提取额度的通知》解...",
+      "from": "2026-01-01",
+      "to": null,
+      "tried": [
+        {
+          "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156365/2026-07/31/content_d0fc769d206943f99514a012d02bb981.shtml",
+          "title": "《成都住房公积金管理委员会关于调整成都住房公积金缴存基数及租房提取额度的通知》解...",
+          "via": "cdp",
+          "ok": true,
+          "upper": 32969,
+          "lower": 2330,
+          "confidence": "medium"
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s/u4eT32kGHIB_xr5-9Qkeew",
+          "title": "@单位经办人看过来，这里有一份缴存基数调整攻略→",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156365/2024-02/05/content_6ae407301ee94df0aab2338ed6d90925.shtml",
+          "title": "灵活就业人员缴存公积金小贴士",
+          "via": "cdp",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156366/2023-01/01/content_a8085418c4cb40feb6373e7d47edf36f.shtml",
+          "title": "《成都住房公积金管理委员会关于调整我市提取住房公积金支付房屋租赁费用有关事项的通...",
+          "via": "cdp",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156367/2025-08/14/content_48b34f0f1ec74ac2b791457a20534932.shtml",
+          "title": "《成都住房公积金管理委员会等4部门关于成德眉资缴存职工在四市区域内非缴存地购房有关...",
+          "via": "cdp",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        },
+        {
+          "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156358/2026-08/19/content_73e43d59e0d24c879f00b1d7650eba20.shtml",
+          "title": "国务院关于修改《住房公积金管理条例》的决定",
+          "via": "cdp",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        }
+      ],
+      "observation": {
+        "kind": "housing",
+        "scope": "city",
+        "id": "成都",
+        "province": "四川省",
+        "policyYear": 2025,
+        "from": "2026-01-01",
+        "to": null,
+        "min": 2330,
+        "max": 32969,
+        "basisYear": 2024,
+        "rate": {
+          "min": 0.05,
+          "max": 0.12
+        },
+        "docNo": "成府规〔2025〕4号",
+        "title": "网站首页 政务公开 政府信息公开 中心概况 机构职能 领导分工 组织机构 法制信息 普法工作 行政执法 公开年报 年度报告 年报解读 涉企行政检查公示 行政检查事项和依据 行政检查频次上限 行政检查标准 专项检查计划 行政检查文书 骗提套取",
+        "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156365/2026-07/31/content_d0fc769d206943f99514a012d02bb981.shtml",
+        "publishedAt": "2026-07-31",
+        "via": "cdp",
+        "ocr": false,
+        "confidence": "medium",
+        "evidence": [
+          {
+            "snippet": "根据市统计局公布的2025年全市城镇非私营单位就业人员年平均工资,我市住房公积金缴存基数上限为32969元",
+            "label": "上限",
+            "score": 12
+          },
+          {
+            "snippet": "根据2025年全市月最低工资标准,我市住房公积金缴存基数下限为:城市新区(四川天府新区、成都东部新区、成都高新区)和中心城区(锦江区、青羊区、金牛区、武侯区、成华区、龙泉驿区、青白江区、新都区、温江区、双流区、郫都区、新津区)2330元",
+            "label": "下限",
+            "score": -2
+          }
+        ],
+        "notes": [
+          "执行期起始 2026-01-01 与目标年度 2025 不符",
+          "公积金上下限比值 14.15 异常"
+        ],
+        "hash": "55215089829ce36545fbcb213558698e91a42063",
+        "collectedAt": "2026-11-23T11:20:11.830Z",
+        "runId": "20261123T111918-8cd74a",
+        "status": "suspect",
+        "candidatesTried": [
+          {
+            "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156365/2026-07/31/content_d0fc769d206943f99514a012d02bb981.shtml",
+            "title": "《成都住房公积金管理委员会关于调整成都住房公积金缴存基数及租房提取额度的通知》解...",
+            "via": "cdp",
+            "ok": true,
+            "upper": 32969,
+            "lower": 2330,
+            "confidence": "medium"
+          },
+          {
+            "url": "https://mp.weixin.qq.com/s/u4eT32kGHIB_xr5-9Qkeew",
+            "title": "@单位经办人看过来，这里有一份缴存基数调整攻略→",
+            "via": "http",
+            "ok": false,
+            "upper": null,
+            "lower": null,
+            "confidence": "low",
+            "reason": "未找到基数上下限"
+          },
+          {
+            "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156365/2024-02/05/content_6ae407301ee94df0aab2338ed6d90925.shtml",
+            "title": "灵活就业人员缴存公积金小贴士",
+            "via": "cdp",
+            "ok": false,
+            "upper": null,
+            "lower": null,
+            "confidence": "low",
+            "reason": "未找到基数上下限"
+          },
+          {
+            "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156366/2023-01/01/content_a8085418c4cb40feb6373e7d47edf36f.shtml",
+            "title": "《成都住房公积金管理委员会关于调整我市提取住房公积金支付房屋租赁费用有关事项的通...",
+            "via": "cdp",
+            "ok": false,
+            "upper": null,
+            "lower": null,
+            "confidence": "low",
+            "reason": "未找到基数上下限"
+          },
+          {
+            "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156367/2025-08/14/content_48b34f0f1ec74ac2b791457a20534932.shtml",
+            "title": "《成都住房公积金管理委员会等4部门关于成德眉资缴存职工在四市区域内非缴存地购房有关...",
+            "via": "cdp",
+            "ok": false,
+            "upper": null,
+            "lower": null,
+            "confidence": "low",
+            "reason": "未找到基数上下限"
+          },
+          {
+            "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156358/2026-08/19/content_73e43d59e0d24c879f00b1d7650eba20.shtml",
+            "title": "国务院关于修改《住房公积金管理条例》的决定",
+            "via": "cdp",
+            "ok": false,
+            "upper": null,
+            "lower": null,
+            "confidence": "low",
+            "reason": "未找到基数上下限"
+          }
+        ]
+      }
+    }
+  ],
+  "running": false
+}

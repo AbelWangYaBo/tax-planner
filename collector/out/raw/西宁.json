@@ -1,0 +1,18 @@
+{
+  "city": "西宁",
+  "province": "青海省",
+  "kind": "housing",
+  "site": "https://gjj.xining.gov.cn/",
+  "year": 2026,
+  "fetchedAt": "2026-11-23T11:02:59.961Z",
+  "ok": false,
+  "via": "cdp",
+  "error": "未找到含基数上下限的公告",
+  "home": {
+    "url": "chrome-error://chromewebdata/",
+    "textLen": 337
+  },
+  "listPages": [],
+  "candidates": [],
+  "result": null
+}

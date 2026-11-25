@@ -1,0 +1,18 @@
+{
+  "city": "拉萨",
+  "province": "西藏自治区",
+  "kind": "housing",
+  "site": "https://gjj.lasa.gov.cn/",
+  "year": 2026,
+  "fetchedAt": "2026-11-23T11:03:41.752Z",
+  "ok": false,
+  "via": "cdp",
+  "error": "未找到含基数上下限的公告",
+  "home": {
+    "url": "chrome-error://chromewebdata/",
+    "textLen": 331
+  },
+  "listPages": [],
+  "candidates": [],
+  "result": null
+}

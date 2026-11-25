@@ -1,0 +1,64 @@
+{
+  "city": "上海",
+  "province": "上海市",
+  "kind": "housing",
+  "site": "https://www.shzfgjj.cn/",
+  "year": 2026,
+  "fetchedAt": "2026-11-23T10:55:22.411Z",
+  "ok": true,
+  "via": "http",
+  "error": null,
+  "home": {
+    "url": "https://www.shzfgjj.cn/",
+    "textLen": 2318
+  },
+  "listPages": [
+    "https://www.shzfgjj.cn/html/newxxgk/index.html",
+    "https://www.shzfgjj.cn/html/newxxgk/zcwj/gjjfg/index.html",
+    "https://www.shzfgjj.cn/html/zcjetz/jttz/index.html",
+    "https://www.shzfgjj.cn/html/newxxgk/xxgknb/index.html"
+  ],
+  "candidates": [
+    {
+      "title": "重要新闻 最新公告 重要新闻更多+ 2026年度住房公积金缴存基数调整温馨提示",
+      "url": "https://www.shzfgjj.cn/#zyxw-01"
+    },
+    {
+      "title": "2026年度基数调整问答",
+      "url": "https://www.shzfgjj.cn/html/newxxgk/zcjd/228480.html"
+    },
+    {
+      "title": "个人业务 单位业务 业主查询 单位业务 无法登录，点击帮助 --> 关于2026年11月提取还贷计划安排的通知",
+      "url": "https://zwdtuser.sh.gov.cn/uc/naturalUser/jump.do?redirect_uri=https%3A%2F%2Fpersons.shzfgjj.cn%2Fgjjapi%2Fsso%2Fredirect%3Ftype%3Dapp"
+    },
+    {
+      "title": "更多+ 关于2026年11月提取还贷计划安排的通知",
+      "url": "https://www.shzfgjj.cn/html/newszxgg/index.html"
+    },
+    {
+      "title": "基数调整专栏",
+      "url": "https://www.shzfgjj.cn/static/jstz/index.html"
+    },
+    {
+      "title": "关于本市公积金贷款政策调整的业务问答",
+      "url": "https://www.shzfgjj.cn/html/newxxgk/zcjd/228290.html"
+    }
+  ],
+  "result": {
+    "upper": 37302,
+    "lower": 2740,
+    "period": {
+      "from": "2026-01-01",
+      "to": null,
+      "text": "2026年1月1日起"
+    },
+    "confidence": "medium",
+    "snippets": [
+      "(1)已完成基数调整的单位中,若有填报工资大于2025年度缴存基数上限(37302元)的职工,市公积金中心将根据2026年度上限自动为该职工重新核定基数,变更月缴存额,并短信通知单位",
+      "故2026年度缴存基数下限为2740元"
+    ],
+    "title": "2026年度基数调整问答",
+    "url": "https://www.shzfgjj.cn/html/newxxgk/zcjd/228480.html",
+    "score": 87
+  }
+}

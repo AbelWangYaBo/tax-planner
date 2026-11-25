@@ -1,0 +1,117 @@
+{
+  "runId": "20261123T115200-7aed9e",
+  "startedAt": "2026-11-23T11:52:00.830Z",
+  "finishedAt": "2026-11-23T11:52:04.128Z",
+  "durationMs": 3277,
+  "years": [
+    2025,
+    2024
+  ],
+  "total": 2,
+  "ok": 1,
+  "high": 1,
+  "conflicts": 0,
+  "snapshot": "/Volumes/APFS_2/abel/agent-benchmark/tax-planner/data/snapshots/2026-11-23-286819a05e.json",
+  "items": [
+    {
+      "id": "北京市",
+      "kind": "social",
+      "year": 2025,
+      "ok": true,
+      "error": null,
+      "upper": 35811,
+      "lower": 7162,
+      "confidence": "high",
+      "url": "https://rsj.beijing.gov.cn/xxgk/2024zcwj/202509/t20250918_4204880.html",
+      "merged": "inserted",
+      "notes": [],
+      "title": "[种子]",
+      "from": "2025-07-01",
+      "to": null,
+      "tried": [
+        {
+          "url": "https://rsj.beijing.gov.cn/xxgk/2024zcwj/202509/t20250918_4204880.html",
+          "title": "[种子]",
+          "via": "http",
+          "ok": true,
+          "upper": 35811,
+          "lower": 7162,
+          "confidence": "high"
+        }
+      ],
+      "observation": {
+        "kind": "social",
+        "scope": "province",
+        "id": "北京市",
+        "province": "北京市",
+        "policyYear": 2025,
+        "from": "2025-07-01",
+        "to": null,
+        "min": 7162,
+        "max": 35811,
+        "basisYear": 2024,
+        "rate": null,
+        "docNo": "京人社发〔2025〕11号",
+        "title": "关于2025年度各项社会保险缴费工资基数上下限的通告 字体大小: 大 中 小 分享 京人社发〔2025〕11号 为确保本市参保单位和参保个人按时足额缴纳2025年度社会保险费,现就各项社会保险缴费工资基数上下限通告如下: 一、自2025年7",
+        "url": "https://rsj.beijing.gov.cn/xxgk/2024zcwj/202509/t20250918_4204880.html",
+        "publishedAt": "2025-09-17",
+        "via": "http",
+        "ocr": false,
+        "confidence": "high",
+        "evidence": [
+          {
+            "snippet": "关于2025年度各项社会保险缴费工资基数上下限的通告 字体大小: 大 中 小 分享 京人社发〔2025〕11号 为确保本市参保单位和参保个人按时足额缴纳2025年度社会保险费,现就各项社会保险缴费工资基数上下限通告如下: 一、自2025年7月起,本市2025年度职工基本养老保险、失业保险、工伤保险、职工基本医疗保险(含生育)月缴费基数上限确定为35811元,",
+            "label": "上限",
+            "score": 15
+          },
+          {
+            "snippet": "关于2025年度各项社会保险缴费工资基数上下限的通告 字体大小: 大 中 小 分享 京人社发〔2025〕11号 为确保本市参保单位和参保个人按时足额缴纳2025年度社会保险费,现就各项社会保险缴费工资基数上下限通告如下: 一、自2025年7月起,本市2025年度职工基本养老保险、失业保险、工伤保险、职工基本医疗保险(含生育)月缴费基数上限确定为35811元,",
+            "label": "下限",
+            "score": 15
+          }
+        ],
+        "notes": [],
+        "hash": "3be93f95cac4764c1a3b15a257b08d73c059591f",
+        "collectedAt": "2026-11-23T11:52:02.402Z",
+        "runId": "20261123T115200-7aed9e",
+        "status": "verified",
+        "candidatesTried": [
+          {
+            "url": "https://rsj.beijing.gov.cn/xxgk/2024zcwj/202509/t20250918_4204880.html",
+            "title": "[种子]",
+            "via": "http",
+            "ok": true,
+            "upper": 35811,
+            "lower": 7162,
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    {
+      "id": "北京市",
+      "kind": "social",
+      "year": 2024,
+      "ok": false,
+      "error": "候选页面均未抽到上下限",
+      "upper": null,
+      "lower": null,
+      "confidence": null,
+      "url": null,
+      "merged": null,
+      "notes": [],
+      "tried": [
+        {
+          "url": "https://rsj.beijing.gov.cn/xxgk/tzgg/202610/t20261009_4894652.html",
+          "title": "关于中国银行系统升级期间社保卡相关业务办理方式临时调整的公告",
+          "via": "http",
+          "ok": false,
+          "upper": null,
+          "lower": null,
+          "confidence": "low",
+          "reason": "未找到基数上下限"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "city": "宁波",
+  "province": "浙江省",
+  "kind": "housing",
+  "site": "https://zjj.ningbo.gov.cn/",
+  "year": 2026,
+  "fetchedAt": "2026-11-23T10:59:21.616Z",
+  "ok": false,
+  "via": "cdp",
+  "error": "未找到含基数上下限的公告",
+  "home": {
+    "url": "chrome-error://chromewebdata/",
+    "textLen": 337
+  },
+  "listPages": [],
+  "candidates": [],
+  "result": null
+}

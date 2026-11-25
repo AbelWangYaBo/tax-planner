@@ -1,0 +1,18 @@
+{
+  "city": "长春",
+  "province": "吉林省",
+  "kind": "housing",
+  "site": "https://gjj.cc.jl.gov.cn/",
+  "year": 2026,
+  "fetchedAt": "2026-11-23T11:01:18.798Z",
+  "ok": false,
+  "via": "cdp",
+  "error": "未找到含基数上下限的公告",
+  "home": {
+    "url": "chrome-error://chromewebdata/",
+    "textLen": 334
+  },
+  "listPages": [],
+  "candidates": [],
+  "result": null
+}

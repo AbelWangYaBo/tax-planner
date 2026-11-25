@@ -1,0 +1,16 @@
+{
+  "runId": "20261123T114125-8344dd",
+  "startedAt": "2026-11-23T11:41:25.013Z",
+  "finishedAt": "2026-11-23T11:41:25.063Z",
+  "durationMs": 33,
+  "years": [
+    2026,
+    2025
+  ],
+  "total": 0,
+  "ok": 0,
+  "high": 0,
+  "conflicts": 0,
+  "snapshot": "/Volumes/APFS_2/abel/agent-benchmark/tax-planner/data/snapshots/2026-11-23-fc1154cf5f.json",
+  "items": []
+}

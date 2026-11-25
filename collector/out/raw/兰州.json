@@ -1,0 +1,38 @@
+{
+  "city": "兰州",
+  "province": "甘肃省",
+  "kind": "housing",
+  "site": "https://gjj.lanzhou.gov.cn/",
+  "year": 2026,
+  "fetchedAt": "2026-11-23T11:02:30.210Z",
+  "ok": false,
+  "via": "http",
+  "error": "未找到含基数上下限的公告",
+  "home": {
+    "url": "https://gjj.lanzhou.gov.cn/",
+    "textLen": 1852
+  },
+  "listPages": [
+    "https://gjj.lanzhou.gov.cn/col/col269/index.html",
+    "https://gjj.lanzhou.gov.cn/col/col11687/index.html"
+  ],
+  "candidates": [
+    {
+      "title": "兰州住房公积金管理中心关于调整2026住房公积金年度缴存基数和缴存比例的通知",
+      "url": "https://gjj.lanzhou.gov.cn/art/2026/6/24/art_269_1713737.html"
+    },
+    {
+      "title": "灵活就业人员月缴存额可以调整吗",
+      "url": "https://gjj.lanzhou.gov.cn/art/2026/9/14/art_11687_1737388.html"
+    },
+    {
+      "title": "灵活就业人员月缴存额可以调整吗",
+      "url": "https://gjj.lanzhou.gov.cn/art/2026/9/14/art_283_1737404.html"
+    },
+    {
+      "title": "兰州住房公积金管理中心关于阶段性调整住房公积金提取政策的通知",
+      "url": "https://gjj.lanzhou.gov.cn/art/2025/3/31/art_269_1475774.html"
+    }
+  ],
+  "result": null
+}

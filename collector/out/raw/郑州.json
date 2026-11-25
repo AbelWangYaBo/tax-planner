@@ -1,0 +1,62 @@
+{
+  "city": "郑州",
+  "province": "河南省",
+  "kind": "housing",
+  "site": "https://zzgjj.zhengzhou.gov.cn/",
+  "year": 2026,
+  "fetchedAt": "2026-11-23T10:58:01.866Z",
+  "ok": true,
+  "via": "http",
+  "error": null,
+  "home": {
+    "url": "https://zzgjj.zhengzhou.gov.cn/",
+    "textLen": 2292
+  },
+  "listPages": [
+    "http://public.zhengzhou.gov.cn/?d=49",
+    "https://zzgjj.zhengzhou.gov.cn/gjjg/10200414.jhtml"
+  ],
+  "candidates": [
+    {
+      "title": "《郑州住房公积金管理中心关于调整2026年度住房公积金缴存基数的通知》政策解读 2026-08-12",
+      "url": "https://public.zhengzhou.gov.cn/D3602Y/10200403.jhtml"
+    },
+    {
+      "title": "《郑州住房公积金管理中心关于调整2026年度住房公积金缴存基数的通知》政策解读 2026-08-12",
+      "url": "https://zzgjj.zhengzhou.gov.cn/gjjg/10200414.jhtml"
+    },
+    {
+      "title": "郑州住房公积金管理中心关于调整2026年度住房公积金缴存基数的通知 2026-08-11",
+      "url": "https://zzgjj.zhengzhou.gov.cn/gjjg/10200396.jhtml"
+    },
+    {
+      "title": "《郑州住房公积金管理中心关于优化调整住房公积金提取政策的通知》政策解读 2026-09-29",
+      "url": "https://public.zhengzhou.gov.cn/D3602Y/10273543.jhtml"
+    },
+    {
+      "title": "郑州住房公积金管理中心关于优化调整住房公积金提取政策的通知 2026-09-29",
+      "url": "https://zzgjj.zhengzhou.gov.cn/extract/10273615.jhtml"
+    },
+    {
+      "title": "郑州住房公积金管理中心关于规范性文件清理结果的通知 2026-11-06",
+      "url": "https://public.zhengzhou.gov.cn/D0106Y/10337131.jhtml"
+    }
+  ],
+  "result": {
+    "upper": 28849,
+    "lower": 2350,
+    "period": {
+      "from": "2026-07-01",
+      "to": "2027-06-30",
+      "text": "2026年7月1日至2027年6月30日"
+    },
+    "confidence": "medium",
+    "snippets": [
+      "小张2025年月平均工资为30000元,已超上限,则其2026年度缴存基数按上限28849元核定",
+      "小李2025年月平均工资为2000元,低于下限,则其缴存基数按下限2350元核定"
+    ],
+    "title": "《郑州住房公积金管理中心关于调整2026年度住房公积金缴存基数的通知》政策解读 2026-08-12",
+    "url": "https://public.zhengzhou.gov.cn/D3602Y/10200403.jhtml",
+    "score": 89
+  }
+}

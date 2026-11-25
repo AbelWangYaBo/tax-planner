@@ -1,0 +1,18 @@
+{
+  "city": "长沙",
+  "province": "湖南省",
+  "kind": "housing",
+  "site": "https://gjj.changsha.gov.cn/",
+  "year": 2026,
+  "fetchedAt": "2026-11-23T10:58:06.779Z",
+  "ok": false,
+  "via": "cdp",
+  "error": "未找到含基数上下限的公告",
+  "home": {
+    "url": "chrome-error://chromewebdata/",
+    "textLen": 343
+  },
+  "listPages": [],
+  "candidates": [],
+  "result": null
+}

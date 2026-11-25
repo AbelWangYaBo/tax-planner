@@ -1,0 +1,78 @@
+{
+  "housing:北京": {
+    "2025": [
+      "https://gjj.beijing.gov.cn/web/zwgk61/2024zcwj/436433461/743765441/index.html"
+    ],
+    "2026": [
+      "https://gjj.beijing.gov.cn/web/zwgk61/2024zcwj/436433461/744103382/index.html"
+    ]
+  },
+  "housing:广州": {
+    "2025": [
+      "http://gjj.gz.gov.cn/gg/tzgg/content/post_10338393.html"
+    ],
+    "2026": [
+      "http://gjj.gz.gov.cn/gg/tzgg/content/post_10879601.html"
+    ]
+  },
+  "housing:南京": {
+    "2026": [
+      "https://gjj.nanjing.gov.cn/zwgk/tzgg/202607/t20260717_5878580.html"
+    ]
+  },
+  "housing:南宁": {
+    "2025": [
+      "https://gjj.nanning.gov.cn/xxgk/zdxzjchgfxwj/t6386750.html"
+    ],
+    "2026": [
+      "https://gjj.nanning.gov.cn/xxgk/zdxzjchgfxwj/t6746601.html"
+    ]
+  },
+  "housing:银川": {
+    "2025": [
+      "https://gjj.yinchuan.gov.cn/info/1025/28957.htm"
+    ],
+    "2026": [
+      "https://gjj.yinchuan.gov.cn/info/1025/32428.htm"
+    ]
+  },
+  "housing:成都": {
+    "2026": [
+      "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156365/2026-07/31/content_d0fc769d206943f99514a012d02bb981.shtml"
+    ]
+  },
+  "housing:上海": {
+    "2025": [
+      "https://www.shzfgjj.cn/html/newxxgk/zcjd/228183.html"
+    ],
+    "2026": [
+      "https://www.shzfgjj.cn/html/newxxgk/zcwj/gfxwj/228478.html"
+    ]
+  },
+  "housing:天津": {
+    "2026": [
+      "https://gk.tj.gov.cn/zcwjk/zfgjj/zcwj/202607/t20260717_7337480.html"
+    ]
+  },
+  "social:上海市": {
+    "2025": [
+      "https://rsj.sh.gov.cn/tgsgg_17341/20250918/t0035_1435637.html"
+    ],
+    "2026": [
+      "https://rsj.sh.gov.cn/tgsgg_17341/20260818/t0035_1443203.html"
+    ]
+  },
+  "social:北京市": {
+    "2025": [
+      "https://rsj.beijing.gov.cn/xxgk/2024zcwj/202509/t20250918_4204880.html"
+    ],
+    "2026": [
+      "https://rsj.beijing.gov.cn/xxgk/2024zcwj/202608/t20260821_4831461.html"
+    ]
+  },
+  "social:河南省": {
+    "2026": [
+      "http://hrss.henan.gov.cn/2026/10-10/3435886.html"
+    ]
+  }
+}

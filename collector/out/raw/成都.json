@@ -1,0 +1,56 @@
+{
+  "city": "成都",
+  "province": "四川省",
+  "kind": "housing",
+  "site": "https://cdzfgjj.chengdu.gov.cn/",
+  "year": 2026,
+  "fetchedAt": "2026-11-23T10:57:32.599Z",
+  "ok": true,
+  "via": "cdp",
+  "error": null,
+  "home": {
+    "url": "https://cdzfgjj.chengdu.gov.cn/",
+    "textLen": 3433
+  },
+  "listPages": [
+    "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156337/news_zxgkdy.shtml",
+    "https://cdzfgjj.chengdu.gov.cn/gkml/zfxxgkzn/column-index-1.shtml",
+    "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156358/news_zcfg.shtml",
+    "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156365/news_zcjd.shtml"
+  ],
+  "candidates": [
+    {
+      "title": "《成都住房公积金缴存管理实施细则（2026年修订）》解读",
+      "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156365/2026-09/20/content_91ecb538e99e4c799637fbcaea39686e.shtml"
+    },
+    {
+      "title": "《成都住房公积金缴存管理办法（2026年修订）》政策解读",
+      "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156365/2026-09/20/content_7459835cd99a40a5ad63bf397b688a4a.shtml"
+    },
+    {
+      "title": "《成都住房公积金管理委员会关于调整成都住房公积金缴存基数及租房提取额度的通知》解...",
+      "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156365/2026-07/31/content_d0fc769d206943f99514a012d02bb981.shtml"
+    },
+    {
+      "title": "@单位经办人 看过来，这里有一份缴存基数调整攻略→",
+      "url": "https://mp.weixin.qq.com/s/u4eT32kGHIB_xr5-9Qkeew"
+    }
+  ],
+  "result": {
+    "upper": 32969,
+    "lower": 2330,
+    "period": {
+      "from": "2026-01-01",
+      "to": null,
+      "text": "自2026年1月1日起"
+    },
+    "confidence": "medium",
+    "snippets": [
+      "根据市统计局公布的2025年全市城镇非私营单位就业人员年平均工资,我市住房公积金缴存基数上限为32969元",
+      "根据2025年全市月最低工资标准,我市住房公积金缴存基数下限为:城市新区(四川天府新区、成都东部新区、成都高新区)和中心城区(锦江区、青羊区、金牛区、武侯区、成华区、龙泉驿区、青白江区、新都区、温江区、双流区、郫都区、新津区)2330元"
+    ],
+    "title": "《成都住房公积金管理委员会关于调整成都住房公积金缴存基数及租房提取额度的通知》解...",
+    "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156365/2026-07/31/content_d0fc769d206943f99514a012d02bb981.shtml",
+    "score": 69
+  }
+}

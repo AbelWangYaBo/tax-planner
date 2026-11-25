@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>个税测算与年终奖方案对比</title>
+<style>
+  :root{
+    --bg:#f4f6f8;
+    --card:#ffffff;
+    --line:#e3e7ec;
+    --line-strong:#cfd6de;
+    --ink:#101828;
+    --ink-2:#475467;
+    --ink-3:#8a94a6;
+    --brand:#0f5c53;
+    --brand-soft:#e6f2f0;
+    --danger:#b42318;
+    --danger-soft:#fef3f2;
+    --warn:#b54708;
+    --warn-soft:#fffaeb;
+    --ok:#067647;
+    --ok-soft:#ecfdf3;
+    --info:#175cd3;
+    --info-soft:#eff8ff;
+    --radius:10px;
+    --shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.05);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    background:var(--bg); color:var(--ink); font-size:14px; line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    /* 应用外壳：页面本身不滚动，左右两栏各自滚动 */
+    height:100vh; display:flex; flex-direction:column; overflow:hidden;
+  }
+  .num{font-variant-numeric:tabular-nums; font-feature-settings:"tnum"}
+  code{background:#eef1f4;padding:1px 5px;border-radius:4px;font-size:12px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+
+  header{
+    flex:none;
+    background:var(--brand); color:#fff; padding:18px 24px;
+    display:flex; align-items:baseline; gap:14px; flex-wrap:wrap;
+  }
+  header h1{font-size:17px;margin:0;font-weight:600;letter-spacing:.2px}
+  header .sub{font-size:12.5px;color:#b8d6d1}
+
+  main{
+    flex:1 1 auto; min-height:0; overflow:hidden;
+    display:grid; grid-template-columns:minmax(340px,420px) minmax(0,1fr);
+    gap:18px; padding:18px; width:100%; max-width:1560px; margin:0 auto;
+    align-items:stretch;
+  }
+
+  .col{display:flex;flex-direction:column;gap:14px;min-width:0;min-height:0}
+  .col.results{overflow-y:auto;padding-right:4px}
+
+  /* 左栏卡片：表头 + 可滚动正文 + 固定底部按钮 */
+  .card.inputs{flex:1 1 auto;min-height:0;display:flex;flex-direction:column;overflow:hidden}
+  .card.inputs .card-bd{flex:1 1 auto;min-height:0;overflow-y:auto}
+  .card.inputs .actions{flex:none}
+
+  .col.results::-webkit-scrollbar,
+  .card.inputs .card-bd::-webkit-scrollbar{width:7px}
+  .col.results::-webkit-scrollbar-thumb,
+  .card.inputs .card-bd::-webkit-scrollbar-thumb{background:#cfd6de;border-radius:4px}
+
+  /* 窄屏回退为普通文档流 */
+  @media (max-width:1080px){
+    body{height:auto;overflow:auto}
+    main{display:block;overflow:visible;min-height:0}
+    .col.results{overflow:visible;padding-right:0}
+    .card.inputs{display:block;overflow:visible}
+    .card.inputs .card-bd{overflow:visible}
+  }
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+  .card-hd{
+    display:flex;align-items:center;justify-content:space-between;gap:8px;
+    padding:11px 14px;border-bottom:1px solid var(--line);
+  }
+  .card-hd h2{font-size:13px;margin:0;font-weight:600;color:var(--ink);letter-spacing:.2px}
+  .card-hd .hint{font-size:11.5px;color:var(--ink-3)}
+  .card-bd{padding:12px 14px}
+
+  .field{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:9px}
+  .field:last-child{margin-bottom:0}
+  .field label{font-size:13px;color:var(--ink-2);flex:1;min-width:0}
+  .field label .tip{display:block;font-size:11px;color:var(--ink-3);margin-top:1px}
+  .field input[type=number],.field input[type=text],.field select{
+    width:132px;flex:none;padding:6px 9px;border:1px solid var(--line-strong);border-radius:7px;
+    font-size:13px;text-align:right;color:var(--ink);background:#fff;font-variant-numeric:tabular-nums;
+    transition:border-color .15s,box-shadow .15s;
+  }
+  .field select{text-align:left}
+  .field .dual{display:flex;gap:6px;flex:none}
+  .field .dual input{width:64px;padding:6px 6px;text-align:center}
+  .field .dual input::placeholder{color:#b6bfcc;font-size:11px}
+  .field input:focus,.field select:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px rgba(15,92,83,.11)}
+
+  .seg{display:inline-flex;border:1px solid var(--line-strong);border-radius:7px;overflow:hidden;flex:none}
+  .seg label{
+    font-size:12px;padding:5px 10px;cursor:pointer;color:var(--ink-2);background:#fff;margin:0;
+    border-right:1px solid var(--line-strong);white-space:nowrap;
+  }
+  .seg label:last-child{border-right:none}
+  .seg input{position:absolute;opacity:0;pointer-events:none}
+  .seg input:checked + span{color:#fff}
+
+  .seg label:has(input:checked){background:var(--brand);color:#fff}
+  .seg label:has(input:checked) span{color:#fff}
+
+  .checkline{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-2);margin-bottom:9px;cursor:pointer}
+  .checkline input{accent-color:var(--brand);width:15px;height:15px}
+
+  .divider{height:1px;background:var(--line);margin:11px 0}
+  .section-label{font-size:11px;font-weight:600;color:var(--ink-3);letter-spacing:.6px;text-transform:uppercase;margin:0 0 8px}
+
+  .actions{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line);position:sticky;bottom:0;background:#fff;border-radius:0 0 var(--radius) var(--radius)}
+  button{
+    font-family:inherit;font-size:13px;border-radius:8px;cursor:pointer;padding:9px 16px;
+    border:1px solid transparent;transition:filter .15s,background .15s;font-weight:500;
+  }
+  button.primary{background:var(--brand);color:#fff;flex:1}
+  button.primary:hover{filter:brightness(1.08)}
+  button.ghost{background:#fff;border-color:var(--line-strong);color:var(--ink-2)}
+  button.ghost:hover{background:#f7f9fa}
+
+  /* ---------- 结果区 ---------- */
+  .stats{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+  @media (max-width:1280px){ .stats{grid-template-columns:repeat(3,1fr)} }
+  @media (max-width:760px){ .stats{grid-template-columns:repeat(2,1fr)} }
+  .stat{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:13px 15px;box-shadow:var(--shadow)}
+  .stat .k{font-size:11.5px;color:var(--ink-3);letter-spacing:.3px;margin-bottom:4px}
+  .stat .v{font-size:21px;font-weight:600;letter-spacing:-.4px}
+  .stat .s{font-size:11.5px;color:var(--ink-3);margin-top:3px}
+  .stat.hl{background:linear-gradient(135deg,#0f5c53,#137a6e);border-color:#0f5c53}
+  .stat.hl .k{color:#a9ccc7} .stat.hl .v{color:#fff} .stat.hl .s{color:#a9ccc7}
+  .pos{color:var(--danger)} .neg{color:var(--ok)}
+
+  .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .table-scroll table{min-width:900px}
+  .table-scroll::-webkit-scrollbar{height:8px}
+  .table-scroll::-webkit-scrollbar-thumb{background:#cfd6de;border-radius:4px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th{
+    text-align:right;font-weight:500;color:var(--ink-3);font-size:11.5px;
+    padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap;letter-spacing:.2px;
+  }
+  th:first-child{text-align:left}
+  td{text-align:right;padding:10px;border-bottom:1px solid #f0f2f5;font-variant-numeric:tabular-nums;white-space:nowrap}
+  td:first-child{text-align:left;font-variant-numeric:normal;white-space:normal}
+  tr:last-child td{border-bottom:none}
+  tr.best td{background:var(--brand-soft)}
+  tr.best td:first-child{font-weight:600;color:var(--brand)}
+  .plan-name{font-weight:500}
+  .plan-desc{font-size:11.5px;color:var(--ink-3);font-weight:400;margin-top:2px}
+
+  .kv{display:grid;grid-template-columns:1fr auto;gap:6px 14px;font-size:13px}
+  .kv .k{color:var(--ink-2)}
+  .kv .v{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .kv .total{border-top:1px solid var(--line);padding-top:7px;margin-top:3px;font-weight:600;color:var(--ink)}
+  .kv .v.total{font-weight:600}
+
+  .alert{display:flex;gap:9px;padding:10px 12px;border-radius:8px;font-size:12.5px;margin-bottom:8px;line-height:1.5}
+  .alert:last-child{margin-bottom:0}
+  .alert .ico{flex:none;font-weight:700;font-size:13px;line-height:1.45}
+  .alert b{display:block;font-size:12.5px;margin-bottom:2px;font-weight:600}
+  .alert.danger{background:var(--danger-soft);color:#7a271a;border:1px solid #fecdca}
+  .alert.warn{background:var(--warn-soft);color:#7a2e0e;border:1px solid #fedf89}
+  .alert.ok,.alert.success{background:var(--ok-soft);color:#054f31;border:1px solid #abefc6}
+  .alert.info{background:var(--info-soft);color:#194185;border:1px solid #b2ddff}
+
+  .opt-box{
+    background:linear-gradient(135deg,#0f5c53,#137a6e);color:#fff;border-radius:var(--radius);
+    padding:16px 18px;
+  }
+  .opt-box .lbl{font-size:11.5px;color:#a9ccc7;letter-spacing:.4px}
+  .opt-box .big{font-size:15px;font-weight:600;margin:5px 0 9px}
+  .opt-box .split{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+  .opt-box .chip{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:8px;padding:7px 11px;font-size:12px}
+  .opt-box .chip b{display:block;font-size:14px;margin-top:1px;font-variant-numeric:tabular-nums}
+
+  details{border-top:1px solid var(--line)}
+  details:first-of-type{border-top:none}
+  summary{
+    cursor:pointer;padding:10px 14px;font-size:12.5px;color:var(--ink-2);user-select:none;
+    list-style:none;display:flex;align-items:center;gap:6px;
+  }
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"▸";font-size:10px;color:var(--ink-3);transition:transform .15s}
+  details[open] summary::before{transform:rotate(90deg)}
+  summary:hover{color:var(--ink)}
+  details .inner{padding:0 14px 14px}
+
+  .tiny{font-size:11.5px;color:var(--ink-3)}
+
+  /* 节税建议 */
+  .sug{display:flex;gap:10px;padding:11px 12px;border:1px solid var(--line);border-radius:8px;margin-bottom:8px;background:#fff}
+  .sug:last-child{margin-bottom:0}
+  .sug-tag{flex:none;width:5px;border-radius:3px;background:var(--line-strong)}
+  .sug.strong{border-color:#abefc6;background:#fbfefc}
+  .sug.strong .sug-tag{background:var(--ok)}
+  .sug.check .sug-tag{background:#f79009}
+  .sug.info .sug-tag{background:#2e90fa}
+  .sug-body{flex:1;min-width:0}
+  .sug-title{font-size:12.5px;font-weight:600;color:var(--ink);margin-bottom:3px;
+    display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+  .sug-save{font-size:12px;font-weight:600;color:var(--ok);white-space:nowrap}
+  .sug-detail{font-size:12px;color:var(--ink-2);line-height:1.55}
+  .sug-note{font-size:11px;color:var(--ink-3);margin-top:4px;line-height:1.5}
+
+  /* 任职单位卡片 */
+  .emp{border:1px solid var(--line-strong);border-radius:8px;padding:10px 11px;margin-bottom:9px;background:#fcfdfe}
+  .emp-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+  .emp-title{font-size:12px;font-weight:600;color:var(--brand);letter-spacing:.3px}
+  .emp-del{border:1px solid var(--line-strong);background:#fff;color:var(--ink-3);font-size:11.5px;
+    padding:3px 9px;border-radius:6px;cursor:pointer;font-family:inherit;line-height:1.4}
+  .emp-del:hover{color:var(--danger);border-color:#fecdca;background:var(--danger-soft)}
+  .emp .field{margin-bottom:7px}
+  .emp .field label{font-size:12.5px}
+  .city-hint{font-size:11px;color:var(--ink-3);margin:-3px 0 8px;line-height:1.5}
+  .section-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px}
+  .section-head .section-label{margin:0}
+  .locate-btn{border:1px solid var(--line-strong);background:#fff;color:var(--ink-2);font-size:11.5px;
+    padding:4px 9px;border-radius:6px;cursor:pointer;font-family:inherit;line-height:1.4;white-space:nowrap}
+  .locate-btn:hover:not(:disabled){border-color:var(--brand);color:var(--brand);background:var(--brand-soft)}
+  .locate-btn:disabled{opacity:.55;cursor:default}
+  .locate-hint{font-size:11px;color:var(--ink-3);margin:0 0 8px;line-height:1.5}
+  .locate-hint.ok{color:var(--ok)}
+  .locate-hint.err{color:var(--warn)}
+  /* 逐月收入录入表 */
+  .grid-wrap{max-height:250px;overflow-y:auto;border:1px solid var(--line);border-radius:7px;margin-bottom:7px}
+  .month-grid{width:100%;border-collapse:collapse;font-size:11.5px}
+  .month-grid th{position:sticky;top:0;z-index:1;background:#f7f9fa;font-weight:500;color:var(--ink-3);
+    padding:5px 3px;text-align:center;border-bottom:1px solid var(--line);font-size:10.5px;white-space:nowrap}
+  .month-grid td{padding:1px 2px;text-align:center;border-bottom:1px solid #f2f4f6}
+  .month-grid tbody tr:last-child td{border-bottom:none}
+  .month-grid input{width:100%;padding:5px 4px;border:1px solid transparent;background:transparent;
+    font-size:11.5px;text-align:right;font-variant-numeric:tabular-nums;border-radius:4px;
+    font-family:inherit;color:var(--ink)}
+  .month-grid input:hover{background:#fff;border-color:var(--line)}
+  .month-grid input:focus{outline:none;background:#fff;border-color:var(--brand);box-shadow:0 0 0 2px rgba(15,92,83,.1)}
+  .month-grid .mg-m{color:var(--ink-3);font-size:10.5px;width:26px}
+  .month-grid .mg-sum{color:var(--ink-2);font-variant-numeric:tabular-nums;font-size:11px;padding-right:5px}
+  .month-grid tfoot td{font-weight:600;background:#f7f9fa;font-size:11px;padding:5px 4px}
+  .grid-actions{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:6px}
+  .mini-btn{font-family:inherit;font-size:11px;padding:4px 8px;border:1px solid var(--line-strong);
+    background:#fff;color:var(--ink-2);border-radius:6px;cursor:pointer;line-height:1.4}
+  .mini-btn:hover{border-color:var(--brand);color:var(--brand);background:var(--brand-soft)}
+  .add-btn{width:100%;padding:9px;border:1px dashed var(--line-strong);background:#fff;color:var(--ink-2);
+    border-radius:8px;font-size:12.5px;cursor:pointer;font-family:inherit}
+  .add-btn:hover{border-color:var(--brand);color:var(--brand);background:var(--brand-soft)}
+  .field .dual select{width:auto;padding:6px 3px;font-size:12px;flex:1;min-width:0}
+  .conclusion{
+    padding:11px 14px;border-top:1px solid var(--line);background:#fafbfc;
+    font-size:12.5px;color:var(--ink-2);line-height:1.6;
+    border-radius:0 0 var(--radius) var(--radius);
+  }
+  .footnote{font-size:11.5px;color:var(--ink-3);padding:0 4px 8px;line-height:1.6}
+  .empty{padding:40px 14px;text-align:center;color:var(--ink-3);font-size:13px}
+
+  /* ---------- 数据来源 / 一键更新 ---------- */
+  .data-bar{margin-left:auto;display:flex;align-items:center;gap:10px}
+  .data-ver{font-size:12px;color:#d7ece8;white-space:nowrap}
+  .hbtn{
+    flex:none;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.08);
+    color:#fff;border-radius:8px;padding:5px 11px;font-size:12.5px;cursor:pointer;
+  }
+  .hbtn:hover{background:rgba(255,255,255,.16)}
+  .hbtn[disabled]{opacity:.5;cursor:not-allowed}
+  .badge{display:inline-block;font-size:11px;padding:0 6px;border-radius:999px;margin-left:4px;vertical-align:1px}
+  .badge.ok{background:var(--ok-soft);color:var(--ok);border:1px solid #abefc6}
+  .badge.warn{background:var(--warn-soft);color:var(--warn);border:1px solid #fedf89}
+  .badge.info{background:var(--info-soft);color:var(--info);border:1px solid #b2ddff}
+  .src-link{color:var(--ink-3);text-decoration:none;border-bottom:1px dotted var(--ink-3);margin-left:4px}
+  .src-link:hover{color:var(--brand);border-color:var(--brand)}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>个税测算与年终奖方案对比</h1>
+  <span class="sub">工资 · n 薪 · 年终奖 · 劳务报酬 · 多处任职 · 股权激励</span>
+  <div class="data-bar">
+    <span id="dataVersion" class="data-ver">数据加载中…</span>
+    <button id="refreshBtn" class="hbtn" title="重新访问地方政务站核对基数；按住 Alt 点击可全量更新">检查更新</button>
+  </div>
+</header>
+
+<main>
+  <!-- ================= 输入区 ================= -->
+  <div class="col">
+    <div class="card inputs">
+      <div class="card-hd"><h2>输入条件</h2><span class="hint">单位：元</span></div>
+      <div class="card-bd">
+
+        <p class="section-label">基础信息</p>
+        <div class="field">
+          <label>专项附加扣除（月）<span class="tip">子女教育 2000 / 房贷 1000 / 租房 1500 / 赡养老人 3000 等</span></label>
+          <input type="number" id="specialMonthly" placeholder="0" min="0" step="100" />
+        </div>
+        <div class="field">
+          <label>抵扣方式<span class="tip">影响每月到手与汇算结果</span></label>
+          <select id="specialDeferMode">
+            <option value="monthly" selected>单位按月代扣（每月到手更高，汇算基本不补不退）</option>
+            <option value="annual">平时不扣、汇算统一填写（每月到手更低，汇算退税）</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>其他扣除（年）<span class="tip">个人养老金 12000、商业健康险 2400 等</span></label>
+          <input type="number" id="otherAnnual" placeholder="0" min="0" step="1000" />
+        </div>
+
+        <div class="divider"></div>
+        <div class="section-head">
+          <p class="section-label">任职单位</p>
+          <button type="button" class="locate-btn" id="locateBtn">📍 定位当前城市</button>
+        </div>
+        <p class="locate-hint" id="locateHint"></p>
+        <input type="file" id="fileInput" accept=".csv,.xlsx" style="display:none" />
+        <div id="employers"></div>
+        <button type="button" class="add-btn" id="addEmployer">＋ 增加任职单位</button>
+        <p class="tiny" style="margin:9px 0 0;line-height:1.55">
+          同时打两份工选「多处任职」，社保公积金不会重复缴；年内跳槽选「换工作」，按新单位所在地和工资单列。
+        </p>
+
+        <div class="divider"></div>
+        <p class="section-label">其他所得</p>
+        <div class="field">
+          <label>劳务报酬（年总额）</label>
+          <input type="number" id="laborTotal" placeholder="0" min="0" step="1000" />
+        </div>
+        <div class="field">
+          <label style="padding-left:12px;color:var(--ink-3);font-size:12px">└ 收款笔数</label>
+          <input type="number" id="laborCount" value="0" min="0" step="1" />
+        </div>
+        <div class="field">
+          <label>稿酬（年总额）</label>
+          <input type="number" id="royaltyTotal" placeholder="0" min="0" step="1000" />
+        </div>
+        <div class="field">
+          <label style="padding-left:12px;color:var(--ink-3);font-size:12px">└ 收款笔数</label>
+          <input type="number" id="royaltyCount" value="0" min="0" step="1" />
+        </div>
+        <div class="field">
+          <label>特许权使用费（年总额）</label>
+          <input type="number" id="licenseTotal" placeholder="0" min="0" step="1000" />
+        </div>
+        <div class="field">
+          <label style="padding-left:12px;color:var(--ink-3);font-size:12px">└ 收款笔数</label>
+          <input type="number" id="licenseCount" value="0" min="0" step="1" />
+        </div>
+        <div class="field">
+          <label>股权激励收入<span class="tip">股票期权 / 限制性股票，单独计税</span></label>
+          <input type="number" id="equity" placeholder="0" min="0" step="1000" />
+        </div>
+        <p class="tiny" id="dataNotice" style="margin:10px 0 0;line-height:1.55"></p>
+      </div>
+      <div class="actions">
+        <button class="primary" id="calcBtn">测算</button>
+        <button class="ghost" id="exampleBtn">示例</button>
+        <button class="ghost" id="resetBtn">重置</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 结果区 ================= -->
+  <div class="col results" id="results">
+    <div class="empty">填写左侧条件后点击「测算」</div>
+  </div>
+</main>
+
+<script src="cities.js"></script>
+<script src="sheet-io.js"></script>
+<script src="tax-core.js"></script>
+<script>
+(function () {
+  'use strict';
+  const $ = (id) => document.getElementById(id);
+  const num = (id) => {
+    const v = parseFloat(($(id) || {}).value);
+    return Number.isFinite(v) ? v : 0;
+  };
+  const M = (n) => '¥' + Number(n || 0).toLocaleString('zh-CN', {
+    minimumFractionDigits: 2, maximumFractionDigits: 2,
+  });
+  const M0 = (n) => '¥' + Math.round(Number(n) || 0).toLocaleString('zh-CN');
+  const P = (r) => (Number(r || 0) * 100).toFixed(2) + '%';
+  const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const fmt0 = (n) => Math.round(Number(n) || 0).toLocaleString('zh-CN');
+
+  /* ================= 任职单位：状态与渲染 ================= */
+  const STORAGE_KEY = 'taxplanner.city.v2';
+
+  // 记住上次选择，回访时直接命中，省去重新选择
+  function savedCity() {
+    try {
+      const v = localStorage.getItem(STORAGE_KEY);
+      if (v && CityData.getCity(v)) return v;
+    } catch (e) { /* 隐私模式下 localStorage 不可用 */ }
+    return null;
+  }
+  function rememberCity(id) {
+    try { localStorage.setItem(STORAGE_KEY, id); } catch (e) { /* 忽略 */ }
+  }
+
+  let emps = [newEmp('primary')];
+
+  function newEmp(type) {
+    return {
+      type: type || 'primary',
+      cityId: savedCity() || '北京',
+      incomeMode: 'fixed',
+      monthly: '',      // 基本工资
+      allowance: '',    // 补贴 / 补助（应税，但多数单位不计入社保基数）
+      months: 12,
+      grid: [],
+      baseOverride: '',
+      socialRate: null,
+      housingMode: 'rate',
+      housingRate: null,
+      housingEmployerRate: null,
+      housingAmount: '',
+      housingEmployerAmount: '',
+      housingFloor: '',
+      housingCap: '',
+      linkHousing: true,
+      structure: '12',
+      nSalary: '',
+      nSalaryAsBonus: false,
+      bonus: '',
+    };
+  }
+
+  function provinceOf(cityId) {
+    for (const pr of CityData.DATA.provinces) {
+      if (pr.cities.some((c) => c.id === cityId)) return pr.name;
+    }
+    return CityData.DATA.provinces[0].name;
+  }
+  function citiesOf(name) {
+    const pr = CityData.DATA.provinces.find((x) => x.name === name);
+    return pr ? pr.cities : CityData.DATA.provinces[0].cities;
+  }
+  function cityOf(id) { return CityData.getCity(id); }
+  const numOf = (v) => { const x = parseFloat(v); return Number.isFinite(x) ? x : 0; };
+
+  // 比例以「百分数」在状态与输入框间往返
+  function ratePct(e, kind) {
+    const saved = kind === 'social' ? e.socialRate : e.housingRate;
+    if (saved !== null && saved !== undefined && saved !== '') return Number(saved);
+    if (kind === 'social') return 10.5;
+    return CityData.defaultHousingRate(cityOf(e.cityId)) * 100;
+  }
+
+  // 单位社保比例：默认 27.5%（养老 16 + 医疗约 9.8 + 失业 0.5 + 工伤 0.2~1.9 + 生育 0.8），可改
+  function socialEmpRatePct(e) {
+    const v = e.socialEmpRate;
+    if (v !== null && v !== undefined && v !== '') return Number(v);
+    return 27.5;
+  }
+
+  function empRatePct(e) {
+    const v = e.housingEmployerRate;
+    if (v !== null && v !== undefined && v !== '') return Number(v);
+    return ratePct(e, 'housing');
+  }
+
+  // 按比例换算成金额，供「切到按金额」时预填
+  function amountFromRate(e) {
+    const city = cityOf(e.cityId);
+    const lim = city && city.housing ? city.housing : { min: 0, max: 0 };
+    let base = numOf(e.monthly);
+    if (lim.min > 0 && base < lim.min) base = lim.min;
+    if (lim.max > 0 && base > lim.max) base = lim.max;
+    return Math.round(base * (ratePct(e, 'housing') / 100));
+  }
+
+  function fmtRange(r) {
+    if (!r) return '—';
+    const f = (n) => Number(n).toLocaleString('zh-CN', { maximumFractionDigits: 2 });
+    return f(r.min) + '–' + f(r.max) + ' 元';
+  }
+
+  function periodText(lim) {
+    // 显示「调整前 → 调整后」两段，让用户看清年中变化
+    if (!lim) return '—';
+    const p = fmtRange(lim.prev);
+    const c = fmtRange(lim.curr);
+    return p === c ? p : p + ' → ' + c + '（' + lim.adjustMonth + ' 月起）';
+  }
+
+  function badge(meta, label) {
+    if (!meta) return '';
+    if (meta.status === 'official') {
+      const doc = meta.doc ? '<span class="src">' + esc(meta.doc) + '</span>' : '';
+      const link = meta.source
+        ? '<a class="src-link" href="' + esc(meta.source) + '" target="_blank" rel="noopener">原文</a>'
+        : '';
+      return '<span class="badge ok">' + label + '·官方</span>' + doc + link;
+    }
+    if (meta.status === 'suspect' || meta.status === 'conflict') {
+      return '<span class="badge warn">' + label + '·待复核</span>';
+    }
+    if (meta.status === 'legacy') return '<span class="badge warn">' + label + '·旧口径待核验</span>';
+    return '';
+  }
+
+  function cityHint(city) {
+    if (!city) return '';
+    let t = '社保基数 ' + esc(periodText(city.social)) + badge(city.social.meta, '社保');
+    t += city.housing
+      ? ' · 公积金基数 ' + esc(periodText(city.housing)) + badge(city.housing.meta, '公积金')
+      : ' · 公积金未收录，可在下方手动填写';
+    if (city.housing && city.housing.note) t += '。' + esc(city.housing.note);
+    return t;
+  }
+
+  // 公积金区块：按比例 / 按金额，单位与个人可联动
+  function housingBlock(e) {
+    const link = e.linkHousing !== false;
+    const mode = e.housingMode === 'amount' ? 'amount' : 'rate';
+    const modeSel = '<select data-k="housingMode" style="width:104px">'
+      + '<option value="rate"' + (mode === 'rate' ? ' selected' : '') + '>按比例</option>'
+      + '<option value="amount"' + (mode === 'amount' ? ' selected' : '') + '>按金额</option>'
+      + '</select>';
+
+    let html = '<div class="field"><label>公积金缴存方式</label>' + modeSel + '</div>';
+
+    if (mode === 'rate') {
+      html += '<div class="field"><label>公积金个人比例</label>'
+        + '<input type="number" data-k="housingRate" value="' + ratePct(e, 'housing').toFixed(1)
+        + '" min="0" max="100" step="0.5" /></div>';
+    } else {
+      html += '<div class="field"><label>公积金个人月缴</label>'
+        + '<input type="number" data-k="housingAmount" value="' + esc(e.housingAmount)
+        + '" placeholder="0" min="0" step="100" /></div>';
+    }
+
+    html += '<label class="checkline"><input type="checkbox" data-k="linkHousing"'
+      + (link ? ' checked' : '') + ' /><span>单位缴存与个人一致</span></label>';
+
+    if (!link) {
+      html += mode === 'rate'
+        ? '<div class="field"><label>公积金单位比例</label>'
+          + '<input type="number" data-k="housingEmployerRate" value="' + empRatePct(e).toFixed(1)
+          + '" min="0" max="100" step="0.5" /></div>'
+        : '<div class="field"><label>公积金单位月缴</label>'
+          + '<input type="number" data-k="housingEmployerAmount" value="' + esc(e.housingEmployerAmount)
+          + '" placeholder="0" min="0" step="100" /></div>';
+    }
+
+    if (mode === 'amount') {
+      html += '<p class="city-hint" style="margin:-2px 0 8px">按金额填报时不套用城市基数上下限，'
+        + '适合缴存基数与实际工资不一致（如差额自担）的情况。</p>';
+    }
+    return html;
+  }
+
+  /**
+   * 自动推算的缴费基数：默认只取「基本工资」，不含奖金提成与补助。
+   * 依据：法定口径虽是上年度月均全额工资，但多数单位实际按基本工资或固定基数申报，
+   * 取基本工资是更贴近现实的默认值；用户可随时在「缴费基数」里改成实际核定数。
+   */
+  function autoBase(e) {
+    if (e.incomeMode === 'monthly') {
+      const grid = ensureGrid(e);
+      if (!grid.length) return 0;
+      return Math.round(grid.reduce((t, r) => t + numOf(r.b), 0) / grid.length);
+    }
+    return numOf(e.monthly);
+  }
+
+  // 保证逐月表格有与任职月数等长的行
+  function ensureGrid(e) {
+    const n = Math.max(0, Math.min(12, Math.floor(numOf(e.months) || 0)));
+    if (!Array.isArray(e.grid)) e.grid = [];
+    while (e.grid.length < n) e.grid.push({ b: '', x: '', a: '' });
+    if (e.grid.length > n) e.grid.length = n;
+    return e.grid;
+  }
+
+  function monthGrid(e, idx) {
+    const grid = ensureGrid(e);
+    const rows = grid.map((g, i) => {
+      const sum = numOf(g.b) + numOf(g.x) + numOf(g.a);
+      return '<tr>'
+        + '<td class="mg-m">' + (i + 1) + '</td>'
+        + '<td><input type="number" data-g="' + i + '-b" value="' + esc(g.b) + '" placeholder="0" /></td>'
+        + '<td><input type="number" data-g="' + i + '-x" value="' + esc(g.x) + '" placeholder="0" /></td>'
+        + '<td><input type="number" data-g="' + i + '-a" value="' + esc(g.a) + '" placeholder="0" /></td>'
+        + '<td class="mg-sum" data-sum="' + idx + '-' + i + '">' + fmt0(sum) + '</td>'
+        + '</tr>';
+    }).join('');
+
+    const total = grid.reduce((t, g) => t + numOf(g.b) + numOf(g.x) + numOf(g.a), 0);
+    const avg = grid.length ? total / grid.length : 0;
+
+    return '<div class="grid-wrap"><table class="month-grid">'
+      + '<thead><tr><th>月</th><th>基本工资</th><th>奖金/提成</th><th>补助</th><th>小计</th></tr></thead>'
+      + '<tbody>' + (rows || '<tr><td colspan="5" style="padding:10px;color:#8a94a6">请先设置任职月数</td></tr>') + '</tbody>'
+      + '<tfoot><tr><td>合计</td><td colspan="3"></td><td class="mg-sum" data-total="' + idx + '">' + fmt0(total) + '</td></tr></tfoot>'
+      + '</table></div>'
+      + '<div class="grid-actions">'
+      + '<button type="button" class="mini-btn" data-act="fill">均分填充</button>'
+      + '<button type="button" class="mini-btn" data-act="clear">清空</button>'
+      + '<button type="button" class="mini-btn" data-act="template">下载模板</button>'
+      + '<button type="button" class="mini-btn" data-act="import">导入表格</button>'
+      + '</div>'
+      + '<p class="city-hint" data-avg="' + idx + '" style="margin:0 0 8px">合计 ' + fmt0(total)
+      + ' 元，月均 ' + fmt0(avg) + ' 元</p>';
+  }
+
+  // 公积金未收录的城市：给用户手填上下限的入口
+  function housingLimitFields(e) {
+    return '<span style="display:block;margin-top:5px">'
+      + '<span style="color:var(--ink-3)">公积金下限</span> '
+      + '<input type="number" data-k="housingFloor" value="' + esc(e.housingFloor) + '" placeholder="元/月" '
+      + 'style="width:78px;padding:3px 6px;border:1px solid var(--line-strong);border-radius:5px;font-size:11px;text-align:right" />'
+      + ' <span style="color:var(--ink-3)">上限</span> '
+      + '<input type="number" data-k="housingCap" value="' + esc(e.housingCap) + '" placeholder="元/月" '
+      + 'style="width:78px;padding:3px 6px;border:1px solid var(--line-strong);border-radius:5px;font-size:11px;text-align:right" />'
+      + '</span>';
+  }
+
+  function empCard(e, idx) {
+    const isPrimary = e.type === 'primary';
+    const isSecondary = e.type === 'secondary';
+    const provName = provinceOf(e.cityId);
+    const cities = citiesOf(provName);
+    const city = cityOf(e.cityId);
+
+    const provOpts = CityData.DATA.provinces.map((pr) =>
+      '<option value="' + esc(pr.name) + '"' + (pr.name === provName ? ' selected' : '') + '>'
+      + esc(pr.name) + '</option>').join('');
+    const cityOpts = cities.map((c) =>
+      '<option value="' + esc(c.id) + '"' + (c.id === e.cityId ? ' selected' : '') + '>'
+      + esc(c.name) + '</option>').join('');
+
+    const head = '<div class="emp-head"><span class="emp-title">'
+      + (isPrimary ? '主工作' : (isSecondary ? '兼职 / 多处任职' : '另一段任职'))
+      + '</span>'
+      + (isPrimary ? '' : '<button type="button" class="emp-del" data-k="del">删除</button>')
+      + '</div>';
+
+    const typeSel = isPrimary ? '' :
+      '<div class="field"><label>类型</label><select data-k="type" style="width:172px">'
+      + '<option value="change"' + (e.type === 'change' ? ' selected' : '') + '>换工作（另缴社保）</option>'
+      + '<option value="secondary"' + (e.type === 'secondary' ? ' selected' : '') + '>多处任职（不缴社保）</option>'
+      + '</select></div>';
+
+    const mode = e.incomeMode === 'monthly' ? 'monthly' : 'fixed';
+
+    const common = '<div class="field"><label>任职月数</label>'
+      + '<input type="number" data-k="months" value="' + esc(e.months) + '" min="0" max="12" step="1" /></div>'
+      + '<div class="field"><label>收入方式</label><select data-k="incomeMode" style="width:118px">'
+      + '<option value="fixed"' + (mode === 'fixed' ? ' selected' : '') + '>固定月薪</option>'
+      + '<option value="monthly"' + (mode === 'monthly' ? ' selected' : '') + '>逐月录入</option>'
+      + '</select></div>'
+      + (mode === 'monthly'
+        ? monthGrid(e, idx)
+        : '<div class="field"><label>月基本工资</label>'
+          + '<input type="number" data-k="monthly" value="' + esc(e.monthly) + '" placeholder="0" min="0" step="500" /></div>'
+          + '<div class="field"><label>月补贴 / 补助<span class="tip">房补、交通补助等，计入个税但通常不计入社保基数</span></label>'
+          + '<input type="number" data-k="allowance" value="' + esc(e.allowance) + '" placeholder="0" min="0" step="100" /></div>'
+          + '<p class="city-hint" data-total2="' + idx + '" style="margin:0 0 8px">月税前合计 '
+          + fmt0(numOf(e.monthly) + numOf(e.allowance)) + ' 元</p>');
+
+    if (isSecondary) {
+      return '<div class="emp" data-idx="' + idx + '">' + head + typeSel + common + '</div>';
+    }
+
+    const structSel = [12, 13, 14, 15, 16].map((n) =>
+      '<option value="' + n + '"' + (String(n) === String(e.structure || '12') ? ' selected' : '') + '>'
+      + n + ' 薪</option>').join('');
+
+    const simNote = idx > 0
+      ? '<p class="city-hint">与主工作任职月份重叠时，5,000 元/月减除费用会被重复预扣，汇算时合并。</p>'
+      : '';
+
+    return '<div class="emp" data-idx="' + idx + '">' + head + typeSel
+      + '<div class="field"><label>省份 / 城市</label><div class="dual">'
+      + '<select data-k="province">' + provOpts + '</select>'
+      + '<select data-k="city">' + cityOpts + '</select>'
+      + '</div></div>'
+      + '<p class="city-hint">' + cityHint(city) + (city && !city.housing ? housingLimitFields(e) : '') + '</p>'
+      + common
+      + '<div class="field"><label>社保个人比例</label>'
+      + '<input type="number" data-k="socialRate" value="' + ratePct(e, 'social').toFixed(1) + '" min="0" max="100" step="0.5" /></div>'
+      + '<div class="field"><label>社保单位比例<span class="tip">用于测算公司用工成本，含养老/医疗/失业/工伤/生育</span></label>'
+      + '<input type="number" data-k="socialEmpRate" value="' + socialEmpRatePct(e).toFixed(1) + '" min="0" max="100" step="0.5" /></div>'
+      + '<div class="field"><label>缴费基数（月）<span class="tip">社保公积金按此基数缴，与当月收入无关</span></label>'
+      + '<input type="number" data-k="baseOverride" value="' + esc(e.baseOverride)
+      + '" placeholder="自动 ' + fmt0(autoBase(e)) + '" min="0" step="500" /></div>'
+      + '<p class="city-hint" style="margin:-3px 0 9px">默认取基本工资（不含奖金提成与补助）；'
+      + '很多单位按固定基数申报，请以你的实际核定数填写。</p>'
+      + housingBlock(e)
+      + '<div class="field"><label>薪酬结构</label><select data-k="structure">' + structSel + '</select></div>'
+      + '<div class="field"><label>n 薪金额</label>'
+      + '<input type="number" data-k="nSalary" value="' + esc(e.nSalary) + '" placeholder="0" min="0" step="500" /></div>'
+      + '<label class="checkline"><input type="checkbox" data-k="nSalaryAsBonus"'
+      + (e.nSalaryAsBonus ? ' checked' : '') + ' /><span>n 薪按「全年一次性奖金」发放</span></label>'
+      + '<div class="field"><label>年终奖（预计）</label>'
+      + '<input type="number" data-k="bonus" value="' + esc(e.bonus) + '" placeholder="0" min="0" step="1000" /></div>'
+      + simNote
+      + '</div>';
+  }
+
+  function renderEmps() {
+    $('employers').innerHTML = emps.map(empCard).join('');
+  }
+
+  function syncCard(field) {
+    const box = field.closest('.emp');
+    if (!box) return null;
+    const e = emps[Number(box.dataset.idx)];
+    if (!e) return null;
+    box.querySelectorAll('[data-k]').forEach((f) => {
+      const k = f.dataset.k;
+      if (k === 'del' || k === 'province') return;
+      if (k === 'city') { e.cityId = f.value; return; }
+      if (f.type === 'checkbox') { e[k] = f.checked; return; }
+      e[k] = f.value;
+    });
+    box.querySelectorAll('[data-g]').forEach((f) => {
+      const parts = f.dataset.g.split('-');
+      ensureGrid(e)[Number(parts[0])][parts[1]] = f.value;
+    });
+    return e;
+  }
+
+  $('employers').addEventListener('change', (ev) => {
+    const f = ev.target.closest('[data-k]');
+    if (!f) return;
+    const e = syncCard(f);
+    if (!e) return;
+    const k = f.dataset.k;
+    if (k === 'province') {
+      const cs = citiesOf(f.value);
+      e.cityId = cs[0].id;
+      e.socialRate = null; e.housingRate = null; e.housingEmployerRate = null;
+      renderEmps();
+    } else if (k === 'city') {
+      e.socialRate = null; e.housingRate = null; e.housingEmployerRate = null;
+      if (Number(f.closest('.emp').dataset.idx) === 0) rememberCity(e.cityId);
+      renderEmps();
+    } else if (k === 'type') {
+      renderEmps();
+    } else if (k === 'structure') {
+      const n = parseInt(f.value, 10);
+      e.nSalary = n > 12 ? String(Math.round(numOf(e.monthly) * (n - 12))) : '';
+      renderEmps();
+    } else if (k === 'incomeMode') {
+      if (e.incomeMode === 'monthly') {
+        // 从固定月薪带入基准值，省去逐行填写
+        ensureGrid(e);
+        const m = numOf(e.monthly);
+        if (m > 0) e.grid.forEach((g) => { if (!numOf(g.b)) g.b = String(m); });
+      }
+      renderEmps();
+    } else if (k === 'months') {
+      if (e.incomeMode === 'monthly') renderEmps();
+    } else if (k === 'housingMode') {
+      if (e.housingMode === 'amount' && !numOf(e.housingAmount)) {
+        const amt = amountFromRate(e);
+        e.housingAmount = amt ? String(amt) : '';
+        e.housingEmployerAmount = e.housingAmount;
+      }
+      renderEmps();
+    } else if (k === 'linkHousing') {
+      if (!e.linkHousing) {
+        e.housingEmployerRate = ratePct(e, 'housing');
+        e.housingEmployerAmount = e.housingAmount;
+      }
+      renderEmps();
+    }
+  });
+
+  // 逐月表格输入：只更新小计，不重绘整张卡片（避免丢焦点）
+  $('employers').addEventListener('input', (ev) => {
+    const gEl = ev.target.closest('[data-g]');
+    if (gEl) {
+      const box = gEl.closest('.emp');
+      const idx = Number(box.dataset.idx);
+      const e = emps[idx];
+      if (!e) return;
+      const parts = gEl.dataset.g.split('-');
+      ensureGrid(e)[Number(parts[0])][parts[1]] = gEl.value;
+
+      const sum = numOf(e.grid[Number(parts[0])].b) + numOf(e.grid[Number(parts[0])].x)
+        + numOf(e.grid[Number(parts[0])].a);
+      const sumCell = box.querySelector('[data-sum="' + idx + '-' + parts[0] + '"]');
+      if (sumCell) sumCell.textContent = fmt0(sum);
+
+      const total = e.grid.reduce((t, g) => t + numOf(g.b) + numOf(g.x) + numOf(g.a), 0);
+      const totalCell = box.querySelector('[data-total="' + idx + '"]');
+      if (totalCell) totalCell.textContent = fmt0(total);
+      const avgCell = box.querySelector('[data-avg="' + idx + '"]');
+      if (avgCell) {
+        avgCell.textContent = '合计 ' + fmt0(total) + ' 元，月均 '
+          + fmt0(e.grid.length ? total / e.grid.length : 0) + ' 元';
+      }
+      const bo = box.querySelector('[data-k="baseOverride"]');
+      if (bo) bo.placeholder = '自动 ' + fmt0(autoBase(e));
+      return;
+    }
+
+    const f = ev.target.closest('[data-k]');
+    if (!f) return;
+    const e = syncCard(f);
+    if (!e) return;
+    const box = f.closest('.emp');
+    const key = f.dataset.k;
+
+    if (key === 'monthly' || key === 'allowance') {
+      // 月税前合计
+      const totalCell = box.querySelector('[data-total2]');
+      if (totalCell) {
+        totalCell.textContent = '月税前合计 ' + fmt0(numOf(e.monthly) + numOf(e.allowance)) + ' 元';
+      }
+      // 自动缴费基数占位
+      const bo = box.querySelector('[data-k="baseOverride"]');
+      if (bo) bo.placeholder = '自动 ' + fmt0(autoBase(e));
+    }
+
+    if (key === 'monthly') {
+      const st = box.querySelector('[data-k="structure"]');
+      const n = st ? parseInt(st.value, 10) : 12;
+      if (n > 12) {
+        e.nSalary = String(Math.round(numOf(f.value) * (n - 12)));
+        const ns = box.querySelector('[data-k="nSalary"]');
+        if (ns) ns.value = e.nSalary;
+      }
+    }
+  });
+
+  let importTarget = 0;
+
+  $('employers').addEventListener('click', (ev) => {
+    const btn = ev.target.closest('[data-k="del"]');
+    if (btn) {
+      const idx = Number(btn.closest('.emp').dataset.idx);
+      emps.splice(idx, 1);
+      if (!emps.length) emps = [newEmp('primary')];
+      renderEmps();
+      return;
+    }
+
+    const act = ev.target.closest('[data-act]');
+    if (!act) return;
+    const box = act.closest('.emp');
+    const idx = Number(box.dataset.idx);
+    const e = emps[idx];
+    if (!e) return;
+    const kind = act.dataset.act;
+
+    if (kind === 'fill') {
+      syncCard(act);
+      const grid = ensureGrid(e);
+      const v = numOf(grid[0] && grid[0].b) || numOf(e.monthly);
+      if (!(v > 0)) {
+        setLocateHint('请先在第一个月填写基本工资，再点「均分填充」', 'err');
+        return;
+      }
+      grid.forEach((g) => { g.b = String(v); });
+      renderEmps();
+    } else if (kind === 'clear') {
+      e.grid = ensureGrid(e).map(() => ({ b: '', x: '', a: '' }));
+      renderEmps();
+    } else if (kind === 'template') {
+      syncCard(act);
+      downloadTemplate(idx);
+    } else if (kind === 'import') {
+      importTarget = idx;
+      $('fileInput').click();
+    }
+  });
+
+  /* ---------- 模板下载 / 导入 ---------- */
+  function downloadTemplate(idx) {
+    const e = emps[idx];
+    if (!e) return;
+    const grid = ensureGrid(e);
+    const rows = grid.map((g, i) => [i + 1, numOf(g.b), numOf(g.x), numOf(g.a)]);
+    const blob = SheetIO.buildCsv(['月份', '基本工资', '奖金提成', '补助'], rows);
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = '工资明细模板.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+    setLocateHint('模板已下载，用 Excel / WPS 打开填写后导入即可（另存为 .xlsx 也支持）', 'ok');
+  }
+
+  function applyImportedRows(idx, rows) {
+    const e = emps[idx];
+    if (!e) return;
+
+    // 有表头就按列名定位，没有就按默认列序
+    let header = null;
+    let start = 0;
+    const headLine = (rows[0] || []).map((c) => String(c || '')).join(',');
+    if (/月|工资|奖金|补助/.test(headLine)) { header = rows[0]; start = 1; }
+
+    const findCol = (keys, fallback) => {
+      if (!header) return fallback;
+      for (let i = 0; i < header.length; i++) {
+        const h = String(header[i] || '').replace(/\s/g, '');
+        if (keys.some((k) => h.indexOf(k) >= 0)) return i;
+      }
+      return fallback;
+    };
+    const cM = findCol(['月份', '月'], 0);
+    const cB = findCol(['基本工资', '工资'], 1);
+    const cX = findCol(['奖金', '提成', '绩效'], 2);
+    const cA = findCol(['补助', '补贴'], 3);
+
+    const grid = Array.from({ length: 12 }, () => ({ b: '', x: '', a: '' }));
+    let maxMonth = 0;
+    let count = 0;
+
+    for (let r = start; r < rows.length; r++) {
+      const row = rows[r] || [];
+      const m = Math.round(numOf(row[cM]));
+      if (!(m >= 1 && m <= 12)) continue;
+      const b = numOf(row[cB]);
+      const x = numOf(row[cX]);
+      const a = numOf(row[cA]);
+      grid[m - 1] = {
+        b: b ? String(b) : '',
+        x: x ? String(x) : '',
+        a: a ? String(a) : '',
+      };
+      if (b || x || a) maxMonth = Math.max(maxMonth, m);
+      count++;
+    }
+
+    if (!count) throw new Error('未识别到 1–12 月的工资数据');
+
+    e.incomeMode = 'monthly';
+    e.months = Math.max(1, maxMonth || count);
+    e.grid = grid.slice(0, e.months);
+    renderEmps();
+    calc();
+    setLocateHint('已导入 ' + count + ' 个月的数据（任职月数调整为 ' + e.months + '）', 'ok');
+  }
+
+  $('fileInput').addEventListener('change', async (ev) => {
+    const file = ev.target.files && ev.target.files[0];
+    ev.target.value = '';
+    if (!file) return;
+    try {
+      const rows = await SheetIO.parseFile(file);
+      applyImportedRows(importTarget, rows);
+    } catch (err) {
+      setLocateHint('导入失败：' + (err && err.message ? err.message : err), 'err');
+    }
+  });
+
+  $('addEmployer').addEventListener('click', () => {
+    emps.push(newEmp('change'));
+    renderEmps();
+  });
+
+  /* ================= 定位当前城市 ================= */
+  function setLocateHint(text, kind) {
+    const el = $('locateHint');
+    if (!el) return;
+    el.textContent = text || '';
+    el.className = 'locate-hint' + (kind ? ' ' + kind : '');
+  }
+
+  function applyCity(cityId) {
+    emps[0].cityId = cityId;
+    emps[0].socialRate = null;
+    emps[0].housingRate = null;
+    emps[0].housingEmployerRate = null;
+    rememberCity(cityId);
+    renderEmps();
+    calc();
+  }
+
+  function locate() {
+    if (!navigator.geolocation) {
+      setLocateHint('当前浏览器不支持定位，请手动选择城市', 'err');
+      return;
+    }
+    $('locateBtn').disabled = true;
+    setLocateHint('定位中…');
+
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        $('locateBtn').disabled = false;
+        const hit = CityData.nearestCity(pos.coords.latitude, pos.coords.longitude);
+        if (!hit) {
+          setLocateHint('未能匹配到已收录的城市，请手动选择', 'err');
+          return;
+        }
+        // 省级条目覆盖全省，距离再远也是对的；城市级条目靠得太远则不自动套用
+        const provinceWide = /^(全省|全区)/.test(hit.city.name);
+        const label = provinceWide
+          ? hit.city.province
+          : hit.city.province + ' · ' + hit.city.name;
+        const km = Math.round(hit.km);
+
+        if (provinceWide || hit.km <= 400) {
+          applyCity(hit.city.id);
+          setLocateHint('已定位到 ' + label + '（约 ' + km + ' 公里）。不准确可手动修改。', 'ok');
+        } else {
+          setLocateHint('最近收录的是 ' + label + '（约 ' + km + ' 公里），可能不准，请手动确认。', 'err');
+        }
+      },
+      (err) => {
+        $('locateBtn').disabled = false;
+        setLocateHint(
+          err && err.code === 1
+            ? '已拒绝定位授权，请在下方手动选择城市'
+            : '定位失败，请手动选择城市',
+          'err'
+        );
+      },
+      { enableHighAccuracy: false, timeout: 8000, maximumAge: 600000 }
+    );
+  }
+
+  $('locateBtn').addEventListener('click', locate);
+
+  /* ---------- 交互：填了收入总额时，笔数自动从 0 提到 1 ---------- */
+  [['laborTotal', 'laborCount'], ['royaltyTotal', 'royaltyCount'], ['licenseTotal', 'licenseCount']]
+    .forEach(([totalId, countId]) => {
+      $(totalId).addEventListener('input', () => {
+        if (num(totalId) > 0 && num(countId) <= 0) $(countId).value = 1;
+      });
+    });
+
+  /* ---------- 读取输入 ---------- */
+  function readInput() {
+    return {
+      employers: emps.map((e) => {
+        const mode = e.incomeMode === 'monthly' ? 'monthly' : 'fixed';
+        const grid = mode === 'monthly' ? ensureGrid(e) : null;
+        const incomes = grid ? grid.map((g) => numOf(g.b) + numOf(g.x) + numOf(g.a)) : null;
+        const monthCount = grid ? grid.length : numOf(e.months);
+        const total = incomes ? incomes.reduce((a, b) => a + b, 0) : 0;
+        const avg = incomes && incomes.length ? total / incomes.length : 0;
+
+        const override = numOf(e.baseOverride);
+        const base = {
+          type: e.type,
+          // 固定模式：基本工资 + 补贴；逐月模式：月均合计
+          monthly: mode === 'monthly' ? Math.round(avg) : numOf(e.monthly) + numOf(e.allowance),
+          months: monthCount,
+          // 未指定时默认取基本工资（不含奖金提成与补助）
+          baseMonthly: override > 0 ? override : autoBase(e),
+        };
+        if (incomes) base.incomes = incomes;
+        if (e.type === 'secondary') return base;
+        const city = cityOf(e.cityId);
+        const zero = { min: 0, max: 0 };
+        const sLim = city && city.social
+          ? city.social
+          : { prev: zero, curr: zero, adjustMonth: 7 };
+        const manual = { min: numOf(e.housingFloor), max: numOf(e.housingCap) };
+        const hLim = city && city.housing
+          ? city.housing
+          : { prev: manual, curr: manual, adjustMonth: 7 };
+        const link = e.linkHousing !== false;
+        // 用 ratePct 而不是 numOf：切换城市后比例为 null，
+        // 必须回落到新城市的默认值，否则 parseFloat(null)=0 会把公积金算成 0
+        const hRate = ratePct(e, 'housing') / 100;
+        const hEmpRate = link ? hRate : empRatePct(e) / 100;
+        const hAmt = numOf(e.housingAmount);
+        const hEmpAmt = link ? hAmt : numOf(e.housingEmployerAmount);
+
+        return Object.assign(base, {
+          social: {
+            rate: ratePct(e, 'social') / 100,
+            employerRate: socialEmpRatePct(e) / 100,
+            prev: { floor: sLim.prev.min, cap: sLim.prev.max },
+            curr: { floor: sLim.curr.min, cap: sLim.curr.max },
+            adjustMonth: sLim.adjustMonth,
+          },
+          housing: {
+            mode: e.housingMode === 'amount' ? 'amount' : 'rate',
+            rate: hRate,
+            employerRate: hEmpRate,
+            monthly: hAmt,
+            employerMonthly: hEmpAmt,
+            prev: { floor: hLim.prev.min, cap: hLim.prev.max },
+            curr: { floor: hLim.curr.min, cap: hLim.curr.max },
+            adjustMonth: hLim.adjustMonth,
+          },
+          nSalary: numOf(e.nSalary),
+          nSalaryAsBonus: !!e.nSalaryAsBonus,
+          bonus: numOf(e.bonus),
+        });
+      }),
+      specialMonthly: num('specialMonthly'),
+      specialDefer: (($('specialDeferMode') || {}).value === 'annual'),
+      otherAnnual: num('otherAnnual'),
+      labor: { total: num('laborTotal'), count: num('laborCount') },
+      royalty: { total: num('royaltyTotal'), count: num('royaltyCount') },
+      license: { total: num('licenseTotal'), count: num('licenseCount') },
+      equity: num('equity'),
+    };
+  }
+
+  /* ---------- 渲染 ---------- */
+  function render(r) {
+    if (!(r.totalIncome > 0)) {
+      $('results').innerHTML = '<div class="empty">请先填写「月税前工资」或其他收入后点击「测算」</div>';
+      return;
+    }
+    lastResult = r;
+    const opt = r.optimal;
+    const settle = opt.settle;
+    const settleClass = settle > 0.005 ? 'pos' : (settle < -0.005 ? 'neg' : '');
+    const settleLabel = settle > 0.005 ? '需补税' : (settle < -0.005 ? '可退税' : '无需补退');
+    const settleText = settle === 0 ? '¥0.00' : M(Math.abs(settle));
+
+    const rows = r.plans.map((p) => {
+      const isBest = p.key === opt.key;
+      const gap = p.gapToBest <= 0.005 ? '—' : '+' + M(p.gapToBest);
+      return `<tr class="${isBest ? 'best' : ''}">
+        <td><div class="plan-name">${esc(p.label)}${isBest ? ' ★' : ''}</div>
+            <div class="plan-desc">${esc(p.desc)}</div></td>
+        <td>${M(p.separatePart)}</td>
+        <td>${M(p.includedPart)}</td>
+        <td>${M(p.bonusSepTax)}</td>
+        <td>${M(p.compTax)}</td>
+        <td><b>${M(p.totalTax)}</b></td>
+        <td>${M(p.net)}</td>
+        <td>${gap}</td>
+      </tr>`;
+    }).join('');
+
+    const planTable = r.bonusPool <= 0
+      ? `<div class="empty" style="padding:26px 14px">本年度未填写年终奖，不涉及「单独计税 / 并入综合所得」的选择。</div>`
+      : `<table>
+            <thead><tr>
+              <th>方案</th><th>单独计税部分</th><th>并入综合所得</th>
+              <th>年终奖税额</th><th>综合所得税额</th><th>全年总税额</th>
+              <th>到手收入</th><th>较最优</th>
+            </tr></thead>
+            <tbody>${rows}</tbody>
+          </table>`;
+
+    const planConclusion = r.bonusPool <= 0 ? '' :
+      `<div class="conclusion">${esc(r.conclusion)}</div>`;
+
+    const alerts = r.alerts.map((a) => {
+      const icon = { danger: '!', warn: '!', success: '✓', ok: '✓', info: 'i' }[a.level] || 'i';
+      return `<div class="alert ${esc(a.level)}"><span class="ico">${icon}</span>
+        <span><b>${esc(a.title)}</b>${esc(a.text)}</span></div>`;
+    }).join('');
+
+    const w = r.withheld;
+    const withRows = [
+      ['工资薪金预扣', w.wage],
+      ['劳务报酬预扣', w.labor],
+      ['稿酬预扣', w.royalty],
+      ['特许权使用费预扣', w.license],
+      ['年终奖（按单独计税预扣）', w.bonus],
+      ['股权激励（单独计税）', w.equity],
+    ].filter((x) => x[1] > 0)
+      .map((x) => `<div class="k">${esc(x[0])}</div><div class="v">${M(x[1])}</div>`).join('');
+
+    const clampTag = (c) => (c === 'cap' ? '（已按上限封顶）' : c === 'floor' ? '（已按下限保底）' : '');
+
+    const TYPE_LABEL = { primary: '主工作', change: '换工作', secondary: '多处任职' };
+    const empRows = r.employers.length > 1
+      ? r.employers.map((e, i) => `
+          <div class="k">${esc(TYPE_LABEL[e.type] || '任职')} ${i + 1}：${e.incomes ? '逐月录入' : '月薪 ' + M(e.monthly)} × ${e.months} 个月</div>
+          <div class="v">收入 ${M(e.sim.income)}｜预扣 ${M(e.sim.tax)}</div>`).join('')
+      : '';
+    const socialRows = `
+      <div class="k">社保缴费基数</div><div class="v">${M(r.social.base)}${clampTag(r.social.clamp)}</div>
+      <div class="k">社保个人比例 / 月缴（主雇主）</div><div class="v">${P(r.social.rate)} / ${M(r.social.monthly)}</div>
+      ${r.housing.mode === 'amount'
+        ? '<div class="k">公积金缴存方式</div><div class="v">按金额填报（不套用基数上下限）</div>'
+          + '<div class="k">公积金个人月缴（主雇主）</div><div class="v">' + M(r.housing.monthly) + '</div>'
+          + '<div class="k">公积金单位月缴（主雇主）</div><div class="v">' + M(r.housing.employerMonthly) + '</div>'
+        : '<div class="k">公积金缴存基数</div><div class="v">' + M(r.housing.base) + clampTag(r.housing.clamp) + '</div>'
+          + '<div class="k">公积金个人比例 / 月缴（主雇主）</div><div class="v">' + P(r.housing.rate) + ' / ' + M(r.housing.monthly) + '</div>'
+          + '<div class="k">公积金单位比例 / 月缴（主雇主）</div><div class="v">' + P(r.housing.employerRate) + ' / ' + M(r.housing.employerMonthly) + '</div>'}
+      <div class="k">个人缴存合计（全年）</div><div class="v">${M(r.housing.employee)}</div>
+      <div class="k">单位缴存合计（全年）</div><div class="v">${M(r.housing.employer)}</div>
+      <div class="k total">公积金账户到账（双边）</div><div class="v total">${M(r.housing.total)}</div>
+    `;
+
+    const b = r.base;
+    const calcRows = `
+      <div class="k">综合所得收入额</div><div class="v">${M(b.baseIncomeAmount)}</div>
+      <div class="k">− 减除费用（6 万）</div><div class="v">${M(60000)}</div>
+      <div class="k">− 专项扣除（社保 + 公积金）</div><div class="v">${M(b.socialTotal)}</div>
+      <div class="k" style="padding-left:18px;font-size:11.5px;color:var(--ink-3)">└ 社保 ${M(b.socialInsuranceTotal)}｜公积金个人 ${M(b.housingEmployeeTotal)}</div><div class="v"></div>
+      <div class="k">− 专项附加扣除</div><div class="v">${M(b.specialTotal)}</div>
+      <div class="k">− 其他扣除</div><div class="v">${M(b.otherTotal)}</div>
+      <div class="k total">= 综合所得应纳税所得额</div><div class="v total">${M(b.baseTaxable)}</div>
+      <div class="k" style="margin-top:6px">并入奖金的应纳税所得额</div><div class="v">${M(opt.compTaxable)}</div>
+      <div class="k">× 适用税率 − 速算扣除数</div><div class="v">${M(opt.compTax)}</div>
+      <div class="k">+ 年终奖单独计税</div><div class="v">${M(opt.bonusSepTax)}</div>
+      <div class="k">+ 股权激励单独计税</div><div class="v">${M(r.equityTax)}</div>
+      <div class="k total">= 全年应纳税额</div><div class="v total">${M(opt.totalTax)}</div>
+      <div class="k">− 全年已预缴</div><div class="v">${M(w.total)}</div>
+      <div class="k total">= 汇算应补（退）</div>
+      <div class="v total ${settleClass}">${settle > 0 ? M(settle) : (settle < 0 ? '−' + M(-settle) : '¥0.00')}</div>
+    `;
+
+    const defer = !!(r.input && r.input.specialDefer);
+    const altTitle = defer ? '到手（若改按月抵扣）' : '到手（若改汇算统一扣除）';
+    const monthRows = r.primary.sim.rows.map((x) => `
+      <tr><td>${x.month} 月</td><td>${M(x.income)}</td><td>${M(x.taxable)}</td>
+      <td>${M(x.tax)}</td><td>${M(x.cumTax)}</td>
+      <td><b>${M(x.net)}</b></td><td class="tiny">${M(x.netAlt == null ? x.net : x.netAlt)}</td></tr>`).join('');
+
+    const zoneRows = r.blindZones.map((z) => `
+      <tr><td>${M0(z.from)}</td><td>${M0(z.to)}</td><td>${M0(z.width)}</td></tr>`).join('');
+
+    const sugRows = (r.suggestions || []).map((sg) => `
+      <div class="sug ${esc(sg.tag || 'info')}">
+        <div class="sug-tag"></div>
+        <div class="sug-body">
+          <div class="sug-title"><span>${esc(sg.title)}</span>${
+            sg.saving ? '<span class="sug-save">约省 ' + M(sg.saving) + '</span>' : ''
+          }</div>
+          <div class="sug-detail">${esc(sg.detail)}</div>
+          ${sg.note ? '<div class="sug-note">' + esc(sg.note) + '</div>' : ''}
+        </div>
+      </div>`).join('');
+
+    const sugTotal = (r.suggestions || []).reduce((t, sg) => t + (Number(sg.saving) || 0), 0);
+
+    const html = `
+      <div class="stats">
+        <div class="stat hl">
+          <div class="k">预计到手（现金）</div>
+          <div class="v">${M(opt.net)}</div>
+          <div class="s">＋公积金账户 = ${M(opt.totalValue)}</div>
+        </div>
+        <div class="stat">
+          <div class="k">住房公积金（双边）</div>
+          <div class="v">${M(r.housing.total)}</div>
+          <div class="s">个人 ${M(r.housing.employee)} ｜ 单位 ${M(r.housing.employer)}</div>
+        </div>
+        <div class="stat">
+          <div class="k">全年总税额</div>
+          <div class="v">${M(opt.totalTax)}</div>
+          <div class="s">综合税负率 ${P(opt.effectiveRate)}</div>
+        </div>
+        <div class="stat">
+          <div class="k">汇算${settleLabel}</div>
+          <div class="v ${settleClass}">${settleText}</div>
+          <div class="s">${r.optKind === 'split' ? '相对默认（单独计税）预缴' : '已预缴 ' + M(w.total)}</div>
+        </div>
+        <div class="stat">
+          <div class="k">年终奖筹划空间</div>
+          <div class="v">${r.bonusPool > 0 ? M(Math.max(...r.plans.map(p => p.gapToBest))) : '—'}</div>
+          <div class="s">相对最不利方案</div>
+        </div>
+        <div class="stat">
+          <div class="k">公司用工成本（年）</div>
+          <div class="v">${M(r.employerCost.total)}</div>
+          <div class="s">工资 ${M(r.employerCost.payroll)} ｜ 单位社保公积金 ${M(r.employerCost.social + r.employerCost.housing)}</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-hd">
+          <h2>方案对比</h2>
+          <span class="hint">年终奖如何计税，直接决定总税负</span>
+        </div>
+        <div class="card-bd" style="padding:0">
+          <div class="table-scroll">${planTable}</div>
+          ${planConclusion}
+        </div>
+      </div>
+
+      ${r.bonusPool > 0 ? `<div class="opt-box">
+        <div class="lbl">最优方案</div>
+        <div class="big">${esc(opt.label)}</div>
+        <div class="split">
+          <div class="chip">单独计税<b>${M(opt.separatePart)}</b></div>
+          <div class="chip">并入综合所得<b>${M(opt.includedPart)}</b></div>
+          <div class="chip">全年总税额<b>${M(opt.totalTax)}</b></div>
+        </div>
+      </div>` : ''}
+
+      ${alerts ? `<div class="card"><div class="card-hd"><h2>提示与风险</h2></div>
+        <div class="card-bd">${alerts}</div></div>` : ''}
+
+      <div class="card">
+        <div class="card-hd">
+          <h2>合法节税建议</h2>
+          <span class="hint">${sugTotal > 0 ? '合计可再省 ' + M(sugTotal) : '按你填写的数据自动生成'}</span>
+        </div>
+        <div class="card-bd">${sugRows || '<div class="tiny">暂无可执行的建议</div>'}</div>
+        <div class="conclusion" style="display:flex;justify-content:space-between;align-items:center;gap:10px">
+          <span>以上均为法定扣除与计税方式选择，不涉及虚列扣除等违法操作。</span>
+          <button class="mini-btn" id="copyPrompt" style="flex:none">复制 AI 咨询提示词</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <details open>
+          <summary>计算结果明细（最优方案）</summary>
+          <div class="inner"><div class="kv">${calcRows}</div></div>
+        </details>
+        ${empRows ? `<details>
+          <summary>任职单位明细</summary>
+          <div class="inner"><div class="kv">${empRows}</div></div>
+        </details>` : ''}
+        <details>
+          <summary>预缴构成</summary>
+          <div class="inner"><div class="kv">${withRows || '<div class="k">本年无预缴</div><div class="v">¥0.00</div>'}</div></div>
+        </details>
+        <details>
+          <summary>公司用工成本明细（单位视角）</summary>
+          <div class="inner"><div class="kv">
+            <div class="k">应付工资总额（含年终奖、n 薪）</div><div class="v">${M(r.employerCost.payroll)}</div>
+            <div class="k">＋ 单位社保（按各月基数 × 单位比例）</div><div class="v">${M(r.employerCost.social)}</div>
+            <div class="k">＋ 单位公积金</div><div class="v">${M(r.employerCost.housing)}</div>
+            <div class="k total">= 公司实际用工成本</div><div class="v total">${M(r.employerCost.total)}</div>
+            <div class="k">单位缴费占工资比例</div><div class="v">${P(r.employerCost.ratio)}</div>
+            <div class="k">折合每月平均成本</div><div class="v">${M(r.employerCost.perMonth)}</div>
+          </div>
+          <p class="tiny" style="margin:8px 0 0">单位社保比例按各任职卡片中的「社保单位比例」计算，默认 27.5%，各地险种费率不同请自行核对；未含残保金、工会经费、补充商保等。</p>
+          </div>
+        </details>
+        <details>
+          <summary>社保与公积金明细（含缴费基数上下限）</summary>
+          <div class="inner"><div class="kv">${socialRows}</div></div>
+        </details>
+        <details>
+          <summary>工资逐月累计预扣明细（主雇主）</summary>
+          <div class="inner">
+            <table>
+              <thead><tr><th>月份</th><th>本月收入</th><th>累计应纳税所得额</th><th>本月预扣</th><th>累计预扣</th><th>本月到手</th><th>${altTitle}</th></tr></thead>
+              <tbody>${monthRows || '<tr><td colspan="7" class="tiny">无工资数据</td></tr>'}</tbody>
+            </table>
+            <p class="tiny" style="margin:8px 0 0">到手 = 本月收入 − 本月预扣 − 个人社保 − 个人公积金；专项附加扣除只减税、不出现金。
+              当前按「${defer ? '平时不扣、汇算统一填写' : '单位按月代扣'}」测算，右侧对照列为另一种口径的每月到手，
+              两者全年合计的差额会在汇算时补回或退回。</p>
+          </div>
+        </details>
+        <details>
+          <summary>年终奖税率盲区（多发不如少发的区间）</summary>
+          <div class="inner">
+            <p class="tiny" style="margin:0 0 8px">年终奖落在下列区间内，税后收入会低于区间起点，建议调整发放金额或拆分。</p>
+            <table>
+              <thead><tr><th>临界点</th><th>盲区上界</th><th>盲区宽度</th></tr></thead>
+              <tbody>${zoneRows}</tbody>
+            </table>
+          </div>
+        </details>
+      </div>
+
+      <div class="footnote">
+        本工具为测算参考，结果取决于输入数据的完整性。社保与公积金按填写的缴费基数上下限计算（留空或填 0 视同不限制）；
+        稿酬、劳务报酬按等分模拟每笔预扣；年终奖单独计税与股权激励单独计税政策执行至 2027-12-31。
+        实际申报以税务机关认定为准。
+      </div>
+    `;
+
+    $('results').innerHTML = html;
+  }
+
+  /* ---------- 计算 ---------- */
+  function calc() {
+    try {
+      const input = readInput();
+      const r = window.TaxCore.compute(input);
+      render(r);
+    } catch (e) {
+      $('results').innerHTML = `<div class="card"><div class="card-bd">
+        <div class="alert danger"><span class="ico">!</span><span><b>计算失败</b>${esc(e.message)}</span></div>
+      </div></div>`;
+      console.error(e);
+    }
+  }
+
+  $('calcBtn').addEventListener('click', calc);
+  document.querySelectorAll('.card.inputs input, .card.inputs select').forEach((el) => {
+    el.addEventListener('keydown', (e) => { if (e.key === 'Enter') calc(); });
+  });
+
+  /* ---------- 复制 AI 咨询提示词 ---------- */
+  let lastResult = null;
+
+  function buildPrompt(r) {
+    const L = [];
+    L.push('我在做个人所得税测算，请基于以下数据给出**合法**的节税建议。');
+    L.push('前提：不得建议虚列专项附加扣除、阴阳合同、虚构劳务等违法手段。');
+    L.push('');
+    L.push('【收入】');
+    L.push('- 工资薪金：' + M(r.base.wageIncome) + '/年');
+    if (r.bonusPool > 0) L.push('- 年终奖：' + M(r.bonusPool));
+    if (r.labor.gross > 0) L.push('- 劳务报酬：' + M(r.labor.gross));
+    if (r.royalty.gross > 0) L.push('- 稿酬：' + M(r.royalty.gross));
+    if (r.license.gross > 0) L.push('- 特许权使用费：' + M(r.license.gross));
+    if (r.equityTax > 0) L.push('- 股权激励：已单独计税');
+    L.push('');
+    L.push('【扣除】');
+    L.push('- 社保个人缴纳：' + M(r.base.socialInsuranceTotal));
+    L.push('- 公积金个人缴存：' + M(r.base.housingEmployeeTotal) + '（单位另缴 ' + M(r.base.housingEmployerTotal) + '）');
+    L.push('- 专项附加扣除：' + M(r.base.specialTotal));
+    L.push('- 其他扣除：' + M(r.base.otherTotal));
+    L.push('- 任职单位数：' + r.employers.length);
+    L.push('');
+    L.push('【测算结果】');
+    L.push('- 综合所得应纳税所得额：' + M(r.base.baseTaxable));
+    L.push('- 全年总税额：' + M(r.optimal.totalTax));
+    L.push('- 汇算应补（退）：' + M(r.optimal.settle));
+    L.push('- 当前年终奖方案：' + r.optimal.label);
+    L.push('');
+    if (r.suggestions && r.suggestions.length) {
+      L.push('【工具已识别的节税项】');
+      r.suggestions.forEach((sg) => {
+        L.push('- ' + sg.title + (sg.saving ? '（约省 ' + M(sg.saving) + '）' : ''));
+      });
+      L.push('');
+    }
+    L.push('请补充分析：');
+    L.push('1. 我可能遗漏的法定扣除项；');
+    L.push('2. 年终奖发放结构是否还有优化空间；');
+    L.push('3. 其他合法的税务安排（如企业年金、个人养老金、公益捐赠等）。');
+    L.push('每条请说明适用条件、预期效果与合规风险。');
+    return L.join('\n');
+  }
+
+  // 剪贴板：Clipboard API 在无用户手势/未聚焦时可能既不 resolve 也不 reject，
+  // 因此用竞速超时兜底，再退回 execCommand。
+  function legacyCopy(text) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    let ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    document.body.removeChild(ta);
+    return ok;
+  }
+
+  async function copyText(text) {
+    let result = false;
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        const attempt = navigator.clipboard.writeText(text).then(() => true, () => false);
+        const timeout = new Promise((res) => setTimeout(() => res(false), 600));
+        result = await Promise.race([attempt, timeout]);
+      }
+    } catch (e) { result = false; }
+    return result || legacyCopy(text);
+  }
+
+  // 自动复制被拦截时，展开一个可手动全选的文本框
+  function showPromptFallback(btn, text) {
+    const old = document.getElementById('promptFallback');
+    if (old) old.remove();
+    const box = document.createElement('div');
+    box.id = 'promptFallback';
+    box.style.cssText = 'padding:11px 14px;border-top:1px solid var(--line);background:#fafbfc';
+    const tip = document.createElement('div');
+    tip.className = 'tiny';
+    tip.style.marginBottom = '6px';
+    tip.textContent = '浏览器拦截了自动复制，请手动全选复制（Ctrl / Cmd + C）：';
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.cssText = 'width:100%;height:170px;font-family:ui-monospace,Menlo,monospace;'
+      + 'font-size:11.5px;line-height:1.6;border:1px solid var(--line-strong);border-radius:6px;'
+      + 'padding:8px;resize:vertical;color:var(--ink);background:#fff';
+    box.appendChild(tip);
+    box.appendChild(ta);
+    btn.closest('.conclusion').after(box);
+    ta.focus();
+    ta.select();
+  }
+
+  $('results').addEventListener('click', async (ev) => {
+    const btn = ev.target.closest('#copyPrompt');
+    if (!btn || !lastResult) return;
+    btn.disabled = true;
+    const text = buildPrompt(lastResult);
+    const ok = await copyText(text);
+    if (ok) {
+      btn.textContent = '已复制 ✓';
+    } else {
+      btn.textContent = '已展开，请手动复制';
+      showPromptFallback(btn, text);
+    }
+    setTimeout(() => {
+      btn.textContent = '复制 AI 咨询提示词';
+      btn.disabled = false;
+    }, 2200);
+  });
+
+  /* ---------- 示例 / 重置 ---------- */
+  $('exampleBtn').addEventListener('click', () => {
+    const set = (id, v) => { $(id).value = v; };
+    emps = [
+      {
+        type: 'primary', cityId: '北京', monthly: '25500', allowance: '3000', months: 12,
+        socialRate: 10.5, housingRate: 12, structure: '13',
+        nSalary: '25500', nSalaryAsBonus: true, bonus: '100000',
+      },
+      {
+        type: 'secondary', cityId: '北京', monthly: '8000', allowance: '', months: 12,
+        socialRate: null, housingRate: null, structure: '12',
+        nSalary: '', nSalaryAsBonus: false, bonus: '',
+      },
+    ];
+    renderEmps();
+    set('specialMonthly', 3000); set('otherAnnual', 12000);
+    set('laborTotal', 60000); set('laborCount', 3);
+    set('royaltyTotal', 0); set('royaltyCount', 0);
+    set('licenseTotal', 0); set('licenseCount', 0);
+    set('equity', 0);
+    calc();
+  });
+
+  $('resetBtn').addEventListener('click', () => {
+    const set = (id, v) => { $(id).value = v; };
+    emps = [newEmp('primary')];
+    renderEmps();
+    set('specialMonthly', 0); set('otherAnnual', 0);
+    set('laborTotal', 0); set('laborCount', 0);
+    set('royaltyTotal', 0); set('royaltyCount', 0);
+    set('licenseTotal', 0); set('licenseCount', 0);
+    set('equity', 0);
+    $('results').innerHTML = '<div class="empty">填写左侧条件后点击「测算」</div>';
+  });
+
+  /* ---------- 初始化 ---------- */
+  const meta = CityData.DATA;
+  $('dataNotice').textContent =
+    '社保数据：' + meta.socialYear + ' 年度，覆盖 ' + meta.provinces.length + ' 个省级行政区、'
+    + CityData.TOTAL_CITIES + ' 个城市；公积金数据：' + CityData.HOUSING_CITIES + ' 个城市已收录。'
+    + '官方已核验：公积金 ' + (meta.official ? meta.official.housing : 0) + ' 城 / 社保 '
+    + (meta.official ? meta.official.social : 0) + ' 省；其余沿用旧口径，标『待核验』。'
+    + (meta.dataUpdatedAt ? ' 数据更新于 ' + meta.dataUpdatedAt.slice(0, 10) + '。' : '');
+
+  function dataVersionText(s) {
+    const off = meta.official || {};
+    return '数据 ' + meta.socialYear + ' 年度 · 官方 公积金 ' + (off.housing || 0) + ' 城 / 社保 '
+      + (off.social || 0) + ' 省' + (s && s.progress ? ' · 采集中 ' + s.progress.completed + '/' + s.progress.total : '');
+  }
+  $('dataVersion').textContent = dataVersionText(null);
+
+  function currentCityId() {
+    const sel = document.querySelector('.emp [data-k="city"]');
+    return sel ? sel.value : null;
+  }
+
+  let pollTimer = null;
+  function finishRefresh(ok) {
+    if (pollTimer) { clearInterval(pollTimer); pollTimer = null; }
+    $('refreshBtn').disabled = false;
+    $('refreshBtn').textContent = '检查更新';
+    if (ok) location.reload();
+  }
+
+  async function doRefresh(all) {
+    const btn = $('refreshBtn');
+    let health;
+    try {
+      health = await fetch('/api/health', { cache: 'no-store' }).then((r) => r.json());
+    } catch (e) {
+      alert('一键更新需要本地服务：\n\n  node collector/server.js\n\n然后打开 http://127.0.0.1:8787 再点按钮。\n（直接用文件打开时，页面仍可正常测算，只是不能自动更新数据。）');
+      return;
+    }
+    if (health.busy) { alert('正在更新中，请等这一轮跑完。'); return; }
+
+    // 默认只更新当前城市：公积金按城市取，社保按省份取（registry 里省份带「省/市」后缀）
+    const city = currentCityId();
+    let province = null;
+    try {
+      const c = city && CityData.getCity(city);
+      province = c ? c.province : null;
+    } catch (e) { province = null; }
+    const only = city ? [city, province].filter(Boolean) : [];
+    const payload = all ? { kind: 'all', pages: 3 }
+      : { kind: 'all', only, pages: 2 };
+
+    btn.disabled = true;
+    btn.textContent = '更新中…';
+    if (!all) $('dataVersion').textContent = '正在核对 ' + (city || '全国') + ' 的官方公告…';
+    try {
+      const r = await fetch('/api/refresh', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (r.status === 409) { alert('正在更新中'); finishRefresh(false); return; }
+    } catch (e) {
+      alert('触发更新失败：' + e.message);
+      finishRefresh(false);
+      return;
+    }
+
+    pollTimer = setInterval(async () => {
+      try {
+        const st = await fetch('/api/status', { cache: 'no-store' }).then((r2) => r2.json());
+        $('dataVersion').textContent = dataVersionText(st);
+        if (!st.busy) finishRefresh(st.exitCode === 0 || st.exitCode === null);
+      } catch (e) { /* 忽略单次失败 */ }
+    }, 1500);
+  }
+
+  $('refreshBtn').addEventListener('click', (ev) => doRefresh(!!ev.altKey));
+
+  renderEmps();
+  calc();
+
+  // 首次访问（没有记忆的城市）自动尝试定位；回访用户直接使用记忆值
+  if (!savedCity() && navigator.geolocation) {
+    if (navigator.permissions && navigator.permissions.query) {
+      navigator.permissions.query({ name: 'geolocation' })
+        .then((st) => { if (st.state !== 'denied') locate(); })
+        .catch(() => locate());
+    } else {
+      locate();
+    }
+  }
+})();
+</script>
+</body>
+</html>
