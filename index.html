@@ -452,7 +452,8 @@
     const saved = kind === 'social' ? e.socialRate : e.housingRate;
     if (saved !== null && saved !== undefined && saved !== '') return Number(saved);
     if (kind === 'social') return 10.5;
-    return CityData.defaultHousingRate(cityOf(e.cityId)) * 100;
+    // 公积金缴存比例默认 5%（单位与个人同比例，各地允许区间内可改）
+    return 5;
   }
 
   // 单位社保比例：默认 27.5%（养老 16 + 医疗约 9.8 + 失业 0.5 + 工伤 0.2~1.9 + 生育 0.8），可改
